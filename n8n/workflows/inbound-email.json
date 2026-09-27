@@ -1,0 +1,129 @@
+{
+  "id": "boahEmailImapM2",
+  "name": "BOAH - Inbound email (IMAP)",
+  "active": false,
+  "versionId": "6938b05d-75da-5540-af15-a33372ff2d41",
+  "nodes": [
+    {
+      "id": "IMAP mailbox",
+      "name": "IMAP mailbox",
+      "type": "n8n-nodes-base.emailReadImap",
+      "typeVersion": 2.2,
+      "position": [
+        200,
+        300
+      ],
+      "parameters": {
+        "mailbox": "INBOX",
+        "postProcessAction": "nothing",
+        "format": "resolved",
+        "dataPropertyAttachmentsPrefixName": "attachment_",
+        "options": {
+          "customEmailConfig": "[\"UNSEEN\"]",
+          "trackLastMessageId": false,
+          "forceReconnect": 5
+        }
+      },
+      "notes": "Bind your IMAP credential, then publish. No mailbox credential is shipped. Leave unread until BOAH delivery is confirmed. See n8n/README.md for recovery."
+    },
+    {
+      "id": "Normalize email",
+      "name": "Normalize email",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        460,
+        300
+      ],
+      "parameters": {
+        "jsCode": "// Runs once for all IMAP items. Binary bytes are resolved through n8n's storage helper.\nconst output = [];\nconst items = $input.all();\nfunction addresses(value) {\n  const values = Array.isArray(value) ? value.flatMap(v => v.value ?? [v]) : (value?.value ?? []);\n  return values.map(v => ({address: v.address, name: v.name || null}));\n}\nfor (let index = 0; index < items.length; index++) {\n  const item = items[index];\n  const mail = item.json;\n  const senders = addresses(mail.from);\n  if (senders.length !== 1) throw new Error('INVALID_PAYLOAD: exactly one parsed sender is required');\n  const attachments = [];\n  for (const [key, binary] of Object.entries(item.binary ?? {})) {\n    const buffer = await this.helpers.getBinaryDataBuffer(index, key);\n    attachments.push({filename: binary.fileName || key, mime_type: binary.mimeType || 'application/octet-stream', content_base64: buffer.toString('base64')});\n  }\n  output.push({json: {\n    source_type: 'imap', external_message_id: mail.messageId || null,\n    sender: senders[0], recipients: addresses(mail.to), cc: addresses(mail.cc), reply_to: addresses(mail.replyTo),\n    subject: mail.subject || '', received_at: mail.receivedAt || new Date().toISOString(),\n    sent_at: mail.date ? new Date(mail.date).toISOString() : null,\n    text_body: typeof mail.text === 'string' ? mail.text : '',\n    html_body: typeof mail.html === 'string' ? mail.html : null, attachments,\n  }, pairedItem: {item: index}});\n}\nreturn output;\n"
+      }
+    },
+    {
+      "id": "Send to BOAH",
+      "name": "Send to BOAH",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        700,
+        300
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "method": "POST",
+        "url": "http://backend:8000/api/v1/inbound/email",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json }}",
+        "options": {
+          "timeout": 15000,
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Classify delivery",
+      "name": "Classify delivery",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        940,
+        300
+      ],
+      "parameters": {
+        "jsCode": "return $input.all().map(item => {\n  const response = item.json;\n  const body = response.body ?? response;\n  if (response.error) {\n    const error = response.error;\n    const message = String(error.message ?? error);\n    const status = Number(error.httpCode ?? error.statusCode ?? error.status ?? 0);\n    let category = 'UNEXPECTED_WORKFLOW_ERROR';\n    if (/timed?\\s*out|ETIMEDOUT|ESOCKETTIMEDOUT|ECONNABORTED|timeout/i.test(message)) category = 'BACKEND_TIMEOUT';\n    else if (/ECONNREFUSED|ENOTFOUND|EAI_AGAIN|service refused|connection.*(refused|closed)|not.*reachable/i.test(message)) category = 'BACKEND_UNAVAILABLE';\n    else if ((status >= 400 && status < 500) || /\\b(400|413|415|422)\\b|invalid.*payload|could not be processed/i.test(message)) category = 'INVALID_PAYLOAD';\n    else if (status >= 500) category = 'BACKEND_UNAVAILABLE';\n    throw new Error(category + ': bounded delivery attempts exhausted; inspect execution and replay after fixing the cause');\n  }\n  if (!['created', 'duplicate'].includes(body.result) || !body.case_id || !body.message_id) {\n    throw new Error('UNEXPECTED_WORKFLOW_ERROR: unrecognized backend response');\n  }\n  if (body.processing_status === 'failed' || body.status === 'FAILED') {\n    throw new Error('INGESTION_FAILED: backend preserved a failed case ' + body.case_id + '; inspect it, do not create another message identity');\n  }\n  return {json: {...body, delivery_outcome: body.result === 'duplicate' ? 'idempotent_noop' : body.status === 'REVIEW_REQUIRED' ? 'operator_review' : 'accepted'}};\n});\n"
+      }
+    }
+  ],
+  "connections": {
+    "IMAP mailbox": {
+      "main": [
+        [
+          {
+            "node": "Normalize email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize email": {
+      "main": [
+        [
+          {
+            "node": "Send to BOAH",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send to BOAH": {
+      "main": [
+        [
+          {
+            "node": "Classify delivery",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Warsaw",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "errorWorkflow": "boahEmailErrors2"
+  },
+  "pinData": {}
+}

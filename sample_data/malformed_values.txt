@@ -1,0 +1,4 @@
+Customer: Example Customer
+Title: Malformed monetary value
+Estimated value: twelve PLN
+Requested deadline: tomorrow

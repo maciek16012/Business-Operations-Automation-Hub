@@ -1,0 +1,8 @@
+Customer: Example Customer
+Title: Valid business inquiry
+Email: customer@example.com
+Company: Example Manufacturing Sp. z o.o.
+NIP: 5260250274
+Requested deadline: 2099-10-20
+Estimated value: 12 500,00 PLN
+Description: Synthetic quotation request for a production fixture.

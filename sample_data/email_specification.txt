@@ -1,0 +1,3 @@
+NIP: 5260250274
+Estimated value: 12 500,00 PLN
+Requested deadline: 2099-10-20

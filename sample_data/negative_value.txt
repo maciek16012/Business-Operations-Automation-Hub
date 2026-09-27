@@ -1,0 +1,3 @@
+Customer: Example Customer
+Title: Negative monetary value
+Estimated value: -500 PLN

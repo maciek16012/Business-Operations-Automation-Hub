@@ -1,0 +1,6 @@
+Customer: Anna Nowak
+Company: Example Services
+NIP: 1234567890
+Title: Service request
+Estimated value: -500 PLN
+Description: Please provide a quote. Deadline to be agreed.

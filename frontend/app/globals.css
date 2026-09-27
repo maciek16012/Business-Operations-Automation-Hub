@@ -1,0 +1,53 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #18181b;
+  background: #f4f4f5;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.shell {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 4rem); margin: 8px 0 12px; letter-spacing: -0.04em; }
+h2 { margin: 0; }
+.eyebrow { font-size: 12px; letter-spacing: 0.18em; font-weight: 700; }
+.muted { color: #71717a; }
+.panel {
+  margin-top: 28px;
+  padding: 24px;
+  border: 1px solid #d4d4d8;
+  border-radius: 14px;
+  background: white;
+  display: flex;
+  gap: 48px;
+}
+.panel > div { display: grid; gap: 8px; }
+.panel strong { font-size: 28px; }
+.label { color: #71717a; font-size: 13px; }
+.stack { display: grid; gap: 8px; }
+.shell { max-width: 1280px; padding-top: 32px; }
+h1 { font-size: clamp(1.7rem, 4vw, 2.6rem); }
+button { background: #243b53; color: white; border: 0; border-radius: 6px; padding: 10px 14px; cursor: pointer; font: inherit; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button.link { background: none; color: #175b8e; padding: 0; text-align: left; }
+a { color: #175b8e; }
+.toolbar { display: flex !important; align-items: center; flex-wrap: wrap; gap: 12px !important; }
+fieldset { border: 0; padding: 0; margin: 0; }
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 16px; margin: 20px 0; }
+label { display: grid; gap: 6px; text-transform: capitalize; }
+input { font: inherit; padding: 10px; border: 1px solid #b9c3cd; border-radius: 5px; min-width: 0; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { padding: 12px; border-bottom: 1px solid #ddd; text-align: left; vertical-align: top; }
+th { background: #edf2f7; }
+.badge { font-size: 12px; background: #edf2f7; border-radius: 4px; padding: 5px; white-space: nowrap; }
+.error { color: #a22424; }
+.notice { color: #126442; padding: 12px; background: #e7f6ed; }
+.hash, pre { overflow-wrap: anywhere; white-space: pre-wrap; font-size: 12px; }
+li { margin: 16px 0; }
+.panel strong { font-size: inherit; }

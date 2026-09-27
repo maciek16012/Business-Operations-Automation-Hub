@@ -1,0 +1,52 @@
+{
+  "id": "boahEmailErrors2",
+  "name": "BOAH - Email delivery errors",
+  "active": false,
+  "versionId": "e64437f0-bffd-50d1-94b3-264fdf353625",
+  "nodes": [
+    {
+      "id": "Delivery error",
+      "name": "Delivery error",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        200,
+        300
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "Recovery context",
+      "name": "Recovery context",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        460,
+        300
+      ],
+      "parameters": {
+        "jsCode": "const event = $input.first().json;\nconst execution = event.execution ?? {};\nconst trigger = event.trigger ?? {};\nconst message = String(execution.error?.message ?? trigger.error?.message ?? '');\nconst categories = ['BACKEND_TIMEOUT', 'BACKEND_UNAVAILABLE', 'INVALID_PAYLOAD', 'INGESTION_FAILED'];\nconst category = categories.find(c => message.includes(c)) ?? 'UNEXPECTED_WORKFLOW_ERROR';\nreturn [{json: {\n  category, execution_id: execution.id ?? null, execution_url: execution.url ?? null,\n  workflow_id: event.workflow?.id ?? null, failed_node: execution.lastNodeExecuted ?? trigger.error?.node?.name ?? null,\n  action: category === 'INVALID_PAYLOAD' ? 'Correct metadata; replay the same message identity' : category === 'INGESTION_FAILED' ? 'Inspect the preserved BOAH case' : 'Restore service and retry the saved execution with the same Message-ID',\n  automatic_retry: false\n}}];\n"
+      }
+    }
+  ],
+  "connections": {
+    "Delivery error": {
+      "main": [
+        [
+          {
+            "node": "Recovery context",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Warsaw",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all"
+  },
+  "pinData": {}
+}
