@@ -9,6 +9,7 @@ from sqlalchemy import select
 from app.api.dependencies import Service
 from app.core.config import settings
 from app.models.entities import Attachment
+from app.models.operations import AttachmentSecurityScan
 from app.ocr.pipeline import supported
 from app.services.errors import WorkflowError
 
@@ -22,13 +23,17 @@ async def upload(case_id: UUID, service: Service, files: Annotated[list[UploadFi
     incoming = []
     for file in files:
         name = (file.filename or "document.txt").replace("\\", "/").split("/")[-1]
-        if not supported(name, file.content_type or "") and (
-            not name.lower().endswith(".txt")
-            or file.content_type
-            not in {
-                "text/plain",
-                "application/octet-stream",
-            }
+        if (
+            not settings.security_preflight_enabled
+            and not supported(name, file.content_type or "")
+            and (
+                not name.lower().endswith(".txt")
+                or file.content_type
+                not in {
+                    "text/plain",
+                    "application/octet-stream",
+                }
+            )
         ):
             raise WorkflowError(
                 "FILE_TYPE",
@@ -55,6 +60,17 @@ async def download(case_id: UUID, attachment_id: UUID, service: Service):
     )
     if attachment is None:
         raise WorkflowError("NOT_FOUND", "Attachment not found", 404)
+    if settings.security_preflight_enabled:
+        scan = await service.db.scalar(
+            select(AttachmentSecurityScan)
+            .where(AttachmentSecurityScan.attachment_id == attachment.id)
+            .order_by(AttachmentSecurityScan.created_at.desc())
+            .limit(1)
+        )
+        if scan is None or scan.verdict != "SAFE":
+            raise WorkflowError(
+                "ATTACHMENT_QUARANTINED", "Unsafe or unscanned download blocked", 403
+            )
     return Response(
         service.storage.get(attachment.storage_key),
         media_type="application/octet-stream",

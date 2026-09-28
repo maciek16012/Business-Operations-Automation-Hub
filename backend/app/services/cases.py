@@ -5,6 +5,7 @@ from datetime import UTC, datetime
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.core.config import settings
 from app.domain.enums import IssueSeverity
 from app.domain.state_machine import ensure_transition
 from app.extraction.base import ExtractionProvider
@@ -19,7 +20,9 @@ from app.models.entities import (
     ReviewDecision,
     ValidationIssue,
 )
+from app.models.operations import AttachmentSecurityScan, ReviewTask
 from app.services.errors import WorkflowError
+from app.services.operations import close_task, gate, reconcile
 from app.services.serialization import row_json, value_json
 from app.storage.base import ObjectStorage
 from app.validation.engine import ValidationEngine
@@ -85,6 +88,8 @@ class CaseService:
             ("exports", Export),
             ("audit_events", AuditEvent),
             ("ocr_documents", OCRDocument),
+            ("security_scans", AttachmentSecurityScan),
+            ("review_tasks", ReviewTask),
         ):
             result[name] = [row_json(row) for row in await self.rows(model, case.id)]
         inbound = await self.db.scalar(
@@ -158,7 +163,12 @@ class CaseService:
             for i in old
             if not i.resolved
             and i.code
-            in {"EMAIL_ATTACHMENT_UNSUPPORTED", "EMAIL_EXTRACTION_FAILED", "OCR_REVIEW_REQUIRED"}
+            in {
+                "EMAIL_ATTACHMENT_UNSUPPORTED",
+                "EMAIL_EXTRACTION_FAILED",
+                "OCR_REVIEW_REQUIRED",
+                "SECURITY_UNSAFE",
+            }
         )
         keys = {(r.code, r.field_name, r.message) for r in rules}
         active = {(i.code, i.field_name, i.message) for i in old if not i.resolved}
@@ -185,6 +195,7 @@ class CaseService:
         self.audit(case, "validation_performed", {"issues": len(rules), "blocking": blocking})
         self.transition(case, "REVIEW_REQUIRED" if blocking else "READY")
         await self.db.flush()
+        await reconcile(self, case)
 
     async def revalidate(self, case: Case) -> None:
         self.check_editable(case)
@@ -262,6 +273,8 @@ class CaseService:
                     "attachment_uploaded",
                     {"attachment_id": str(attachment.id), "sha256": digest},
                 )
+                if not await gate(self, case, attachment, content):
+                    continue
                 from app.document_routing.processor import process_document
                 from app.ocr import pipeline
 
@@ -308,7 +321,7 @@ class CaseService:
                         )
                     await self.db.flush()
                     continue
-                if email_review and not (
+                if (email_review or settings.security_preflight_enabled) and not (
                     filename.lower().endswith(".txt")
                     and mime.lower().split(";", 1)[0].strip()
                     in {"text/plain", "application/octet-stream"}
@@ -330,7 +343,7 @@ class CaseService:
                 try:
                     fields = await self.provider.extract(self.storage.get(key))
                 except ValueError:
-                    if not email_review:
+                    if not email_review and not settings.security_preflight_enabled:
                         raise
                     self.db.add(
                         ValidationIssue(
@@ -399,3 +412,6 @@ class CaseService:
             ReviewDecision(case_id=case.id, action="reject", comment=reason, actor="operator")
         )
         self.audit(case, "case_rejected", {"reason": reason}, "operator")
+        for task in await self.rows(ReviewTask, case.id):
+            if task.active_key:
+                await close_task(self, case, task, "Case rejected: " + reason)

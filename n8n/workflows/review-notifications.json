@@ -1,0 +1,88 @@
+{
+  "id": "boahReviewM5",
+  "name": "BOAH - Review notifications (local sink)",
+  "active": false,
+  "versionId": "2808cc1b-606e-4bfe-942a-248626a00155",
+  "nodes": [
+    {
+      "id": "Review event",
+      "name": "Review event",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        300
+      ],
+      "webhookId": "boah-review-m5",
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "boah-review-m5",
+        "responseMode": "lastNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "Validate notification",
+      "name": "Validate notification",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        300
+      ],
+      "parameters": {
+        "jsCode": "// Keep only operational identifiers; no document bytes, body, or customer data.\nconst data = $input.first().json.body;\nconst uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;\nif (!data || !uuid.test(data.event_id) || !uuid.test(data.task_id)) {\n  throw new Error('INVALID_NOTIFICATION_ID');\n}\nreturn [{json:{event_id:data.event_id,task_id:data.task_id}}];\n"
+      }
+    },
+    {
+      "id": "Idempotent local sink",
+      "name": "Idempotent local sink",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        450,
+        300
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "parameters": {
+        "method": "POST",
+        "url": "http://backend:8000/api/v1/review-tasks/notifications/receipt",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json }}",
+        "options": {
+          "timeout": 10000
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Review event": {
+      "main": [
+        [
+          {
+            "node": "Validate notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate notification": {
+      "main": [
+        [
+          {
+            "node": "Idempotent local sink",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

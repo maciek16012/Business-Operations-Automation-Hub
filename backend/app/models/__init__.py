@@ -17,3 +17,5 @@ __all__ = [
     "Export",
     "AuditEvent",
 ]
+
+from app.models import operations  # noqa: F401

@@ -1,6 +1,7 @@
 from functools import lru_cache
 from typing import Literal
 
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -26,8 +27,25 @@ class Settings(BaseSettings):
     stp_native_max_image_area_ratio: float = 0.80
     stp_target_rate: float = 0.90
     stp_require_zero_critical_false_accepts: bool = True
+    security_preflight_enabled: bool = True
+    security_fail_closed: bool = True
+    security_max_attachment_bytes: int = 5 * 1024 * 1024
+    security_allowed_mime_types: str = "application/pdf,image/png,image/jpeg,image/tiff,text/plain"
+    clamav_host: str = "localhost"
+    clamav_port: int = 3310
+    clamav_timeout_seconds: float = 30.0
+    review_notifications_enabled: bool = True
+    review_notification_webhook_url: str = "http://n8n:5678/webhook/boah-review-m5"
+    review_notification_timeout_seconds: float = 15.0
     max_upload_bytes: int = 5 * 1024 * 1024
     model_config = SettingsConfigDict(env_file=".env", extra="ignore", case_sensitive=False)
+
+    @field_validator("security_fail_closed")
+    @classmethod
+    def require_fail_closed(cls, value: bool) -> bool:
+        if not value:
+            raise ValueError("M5 does not support fail-open security")
+        return value
 
     @property
     def cors_origins(self) -> list[str]:

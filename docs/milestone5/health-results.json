@@ -1,0 +1,14 @@
+{
+  "backend": {
+    "status": "ok"
+  },
+  "tesseract": {
+    "status": "ok",
+    "engine": "tesseract"
+  },
+  "paddle": {
+    "status": "ok",
+    "engine": "paddle"
+  },
+  "ui_http_status": 200
+}

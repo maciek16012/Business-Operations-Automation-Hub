@@ -14,6 +14,14 @@ from app.services.cases import CaseService
 from app.storage.base import LocalFilesystemStorage
 
 
+@pytest.fixture(autouse=True)
+def legacy_intake_compatibility(monkeypatch):
+    # M1-M4 fixtures deliberately contain fake PDF bytes. M5 tests opt back into
+    # the default fail-closed gate explicitly; production defaults stay enabled.
+    from app.core.config import settings
+    monkeypatch.setattr(settings, "security_preflight_enabled", False)
+
+
 @pytest.fixture
 async def client(tmp_path):
     url = os.getenv("TEST_DATABASE_URL", "sqlite+aiosqlite://")

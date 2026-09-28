@@ -1,0 +1,9 @@
+{
+  "events": 10,
+  "sent": 10,
+  "all_live_events_have_receipts": true,
+  "n8n_replays": 2,
+  "receipts_before_replay": 10,
+  "receipts_after_replay": 10,
+  "no_duplicate_effect": true
+}

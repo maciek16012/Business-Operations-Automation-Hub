@@ -1,0 +1,117 @@
+{
+  "started_at": "2026-09-28T13:01:39.317591+00:00",
+  "checks": [
+    {
+      "scenario": "native_pdf",
+      "case_id": "dd89ba72-a57d-4ebb-9e61-5627099c53df",
+      "verdict": "SAFE",
+      "reason": "ALL_CHECKS_PASSED",
+      "scanner_version": "ClamAV 1.4.6/28137/Mon Sep 28 06:24:12 2026",
+      "threat_name": null,
+      "routes": [
+        "NATIVE_TEXT"
+      ],
+      "task_count": 1,
+      "passed": true
+    },
+    {
+      "scenario": "scan_png",
+      "case_id": "3460f424-3b49-4da6-b29d-96cadb978b8e",
+      "verdict": "SAFE",
+      "reason": "ALL_CHECKS_PASSED",
+      "scanner_version": "ClamAV 1.4.6/28137/Mon Sep 28 06:24:12 2026",
+      "threat_name": null,
+      "routes": [
+        "PRIMARY_OCR"
+      ],
+      "task_count": 0,
+      "passed": true
+    },
+    {
+      "scenario": "scan_jpeg",
+      "case_id": "40c814b1-fb68-4d2b-a603-42ef314cdb73",
+      "verdict": "SAFE",
+      "reason": "ALL_CHECKS_PASSED",
+      "scanner_version": "ClamAV 1.4.6/28137/Mon Sep 28 06:24:12 2026",
+      "threat_name": null,
+      "routes": [
+        "PRIMARY_OCR"
+      ],
+      "task_count": 0,
+      "passed": true
+    },
+    {
+      "scenario": "spoof_extension",
+      "case_id": "b66d338c-5282-45bc-98ae-ab92656cced9",
+      "verdict": "QUARANTINED",
+      "reason": "TYPE_MISMATCH",
+      "scanner_version": "ClamAV 1.4.6/28137/Mon Sep 28 06:24:12 2026",
+      "threat_name": null,
+      "routes": [],
+      "task_count": 1,
+      "passed": true
+    },
+    {
+      "scenario": "spoof_mime",
+      "case_id": "d481102f-b3b0-4fc5-86bc-b1d1b201fe94",
+      "verdict": "QUARANTINED",
+      "reason": "TYPE_MISMATCH",
+      "scanner_version": "ClamAV 1.4.6/28137/Mon Sep 28 06:24:12 2026",
+      "threat_name": null,
+      "routes": [],
+      "task_count": 1,
+      "passed": true
+    },
+    {
+      "scenario": "executable",
+      "case_id": "9d296984-9d4f-4edf-95ef-91926d9db7be",
+      "verdict": "BLOCKED",
+      "reason": "EXECUTABLE_CONTENT",
+      "scanner_version": null,
+      "threat_name": null,
+      "routes": [],
+      "task_count": 1,
+      "passed": true
+    },
+    {
+      "scenario": "eicar",
+      "case_id": "25d8b106-5666-4a60-b647-df56b806cfe4",
+      "verdict": "BLOCKED",
+      "reason": "MALWARE_DETECTED",
+      "scanner_version": "ClamAV 1.4.6/28137/Mon Sep 28 06:24:12 2026",
+      "threat_name": "Eicar-Test-Signature",
+      "routes": [],
+      "task_count": 1,
+      "passed": true
+    },
+    {
+      "scenario": "unsupported",
+      "case_id": "546eed4f-015b-4ac3-8511-e60d457c1048",
+      "verdict": "QUARANTINED",
+      "reason": "UNSUPPORTED_TYPE",
+      "scanner_version": "ClamAV 1.4.6/28137/Mon Sep 28 06:24:12 2026",
+      "threat_name": null,
+      "routes": [],
+      "task_count": 1,
+      "passed": true
+    },
+    {
+      "scenario": "archive",
+      "case_id": "7b2f4ab3-6918-4e04-b30a-49250780fa17",
+      "verdict": "QUARANTINED",
+      "reason": "UNSUPPORTED_TYPE",
+      "scanner_version": "ClamAV 1.4.6/28137/Mon Sep 28 06:24:12 2026",
+      "threat_name": null,
+      "routes": [],
+      "task_count": 1,
+      "passed": true
+    },
+    {
+      "scenario": "mixed",
+      "case_id": "009ed8af-c4df-4cef-b206-e9321ac6862c",
+      "passed": true
+    }
+  ],
+  "notifications_delivered": true,
+  "completed_at": "2026-09-28T13:01:49.170460+00:00"
+}

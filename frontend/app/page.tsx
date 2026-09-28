@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { API_BASE, api, BusinessField, CaseData, CaseDetail, fields, jsonBody } from "../lib/api";
 
+import ReviewQueue from "./review-queue";
 import OCRPanel from "./ocr-panel";
 
 const editableStatuses = ["RECEIVED", "READY", "REVIEW_REQUIRED"];
@@ -73,6 +74,7 @@ export default function Home() {
       </tbody></table></div>
       <div className="toolbar"><button disabled={busy || offset === 0} onClick={() => setOffset(Math.max(0, offset - 25))}>Previous</button><span>{total ? offset + 1 : 0}–{Math.min(offset + 25, total)} of {total}</span><button disabled={busy || offset + 25 >= total} onClick={() => setOffset(offset + 25)}>Next</button></div>
     </section>
+    <ReviewQueue onCase={async id=>{await selectCase(id);await refresh();}}/>
     {selected && <>
       {selected.inbound_message && <section className="panel stack"><h2>Email source</h2>
         <p><strong>From:</strong> {selected.inbound_message.sender_name} &lt;{selected.inbound_message.sender_address}&gt;</p>

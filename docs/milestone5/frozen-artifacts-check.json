@@ -1,0 +1,99 @@
+{
+  "m4_manifest_files": 113,
+  "exact": 61,
+  "line_endings_only": 44,
+  "line_ending_paths": [
+    "backend/pyproject.toml",
+    "backend/uv.lock",
+    "configs/stp/benchmark.json",
+    "datasets/stp/ground_truth/dev/dev-01-native_clean.json",
+    "datasets/stp/ground_truth/dev/dev-02-native_table.json",
+    "datasets/stp/ground_truth/dev/dev-03-native_multipage.json",
+    "datasets/stp/ground_truth/dev/dev-04-native_sparse.json",
+    "datasets/stp/ground_truth/dev/dev-05-hybrid_correct_native.json",
+    "datasets/stp/ground_truth/dev/dev-06-hybrid_wrong_native.json",
+    "datasets/stp/ground_truth/dev/dev-07-scan_clean.json",
+    "datasets/stp/ground_truth/dev/dev-08-scan_poor.json",
+    "datasets/stp/ground_truth/dev/dev-09-scan_skew.json",
+    "datasets/stp/ground_truth/dev/dev-10-scan_contrast.json",
+    "datasets/stp/ground_truth/dev/dev-11-scan_compression.json",
+    "datasets/stp/ground_truth/dev/dev-12-scan_table.json",
+    "datasets/stp/ground_truth/dev/dev-13-scan_orientation.json",
+    "datasets/stp/ground_truth/dev/dev-14-scan_small_text.json",
+    "datasets/stp/ground_truth/dev/dev-15-scan_noise.json",
+    "datasets/stp/ground_truth/dev/dev-16-scan_partial.json",
+    "datasets/stp/ground_truth/dev/dev-17-multipage_scan.json",
+    "datasets/stp/ground_truth/dev/dev-18-mixed_native_scan.json",
+    "datasets/stp/ground_truth/dev/dev-19-scan_foreign_currency.json",
+    "datasets/stp/ground_truth/dev/dev-20-scan_long_document_number.json",
+    "datasets/stp/ground_truth/holdout/holdout-01-native_clean.json",
+    "datasets/stp/ground_truth/holdout/holdout-02-native_table.json",
+    "datasets/stp/ground_truth/holdout/holdout-03-native_multipage.json",
+    "datasets/stp/ground_truth/holdout/holdout-04-native_sparse.json",
+    "datasets/stp/ground_truth/holdout/holdout-05-hybrid_correct_native.json",
+    "datasets/stp/ground_truth/holdout/holdout-06-hybrid_wrong_native.json",
+    "datasets/stp/ground_truth/holdout/holdout-07-scan_clean.json",
+    "datasets/stp/ground_truth/holdout/holdout-08-scan_poor.json",
+    "datasets/stp/ground_truth/holdout/holdout-09-scan_skew.json",
+    "datasets/stp/ground_truth/holdout/holdout-10-scan_contrast.json",
+    "datasets/stp/ground_truth/holdout/holdout-11-scan_compression.json",
+    "datasets/stp/ground_truth/holdout/holdout-12-scan_table.json",
+    "datasets/stp/ground_truth/holdout/holdout-13-scan_orientation.json",
+    "datasets/stp/ground_truth/holdout/holdout-14-scan_small_text.json",
+    "datasets/stp/ground_truth/holdout/holdout-15-scan_noise.json",
+    "datasets/stp/ground_truth/holdout/holdout-16-scan_partial.json",
+    "datasets/stp/ground_truth/holdout/holdout-17-multipage_scan.json",
+    "datasets/stp/ground_truth/holdout/holdout-18-mixed_native_scan.json",
+    "datasets/stp/ground_truth/holdout/holdout-19-scan_foreign_currency.json",
+    "datasets/stp/ground_truth/holdout/holdout-20-scan_long_document_number.json",
+    "datasets/stp/manifests/dataset.json"
+  ],
+  "non_eol_mismatches": [
+    "backend/app/document_routing/policy/router.py",
+    "backend/app/document_routing/preflight/native_pdf.py",
+    "backend/app/document_routing/processor.py",
+    "backend/app/document_routing/reporting.py",
+    "backend/app/document_routing/scoring/native_fields.py",
+    "configs/stp/policy.json",
+    "scripts/benchmark_stp.py",
+    "scripts/generate_stp_dataset.py"
+  ],
+  "m3_m4_git_changes_since_7eec8c8": [],
+  "holdout_executed_in_m5": false,
+  "note": "Inherited freeze inconsistency: 8 non-EOL mismatches already exist in 7eec8c8. 44 additional mismatches are checkout EOL only. M5 changes none of these artifacts, does not rewrite freeze and does not rerun HOLDOUT.",
+  "preexisting_non_eol_mismatch_proof": {
+    "backend/app/document_routing/policy/router.py": {
+      "baseline_git_blob_sha256": "5e0c8fd6dbc7a99e60b910f3b43d5b863f7f38de18c094c4fca265bc5b563e84",
+      "current_equals_baseline_after_eol_normalization": true
+    },
+    "backend/app/document_routing/preflight/native_pdf.py": {
+      "baseline_git_blob_sha256": "c695d3dd25d89af6d90fbcc6b2e180a819a691b454fcb30bad44662da22b3355",
+      "current_equals_baseline_after_eol_normalization": true
+    },
+    "backend/app/document_routing/processor.py": {
+      "baseline_git_blob_sha256": "d6cfd8f4906c30aee9a1e5ec9b7174b605d50e1d5c04913e399d020b1aca4942",
+      "current_equals_baseline_after_eol_normalization": true
+    },
+    "backend/app/document_routing/reporting.py": {
+      "baseline_git_blob_sha256": "86be65147b7c9ed588b3e486a59716f2abc8a5dadc1b6c8dd78fffa4821d4260",
+      "current_equals_baseline_after_eol_normalization": true
+    },
+    "backend/app/document_routing/scoring/native_fields.py": {
+      "baseline_git_blob_sha256": "adfde1ede327ff3b25a16f9887c186310361c5bd18795e77d27c0bc5d39e4250",
+      "current_equals_baseline_after_eol_normalization": true
+    },
+    "configs/stp/policy.json": {
+      "baseline_git_blob_sha256": "794767d609db4a8175a766c5bc26e3ef8d5bf20724a7a8af8ec27136b84ec415",
+      "current_equals_baseline_after_eol_normalization": true
+    },
+    "scripts/benchmark_stp.py": {
+      "baseline_git_blob_sha256": "527fe7e5077b2044f8dd4656bbe09aec6cb5d81b8209f0d21cbf87264dd7a950",
+      "current_equals_baseline_after_eol_normalization": true
+    },
+    "scripts/generate_stp_dataset.py": {
+      "baseline_git_blob_sha256": "dcefe72296aa159ccafbc782dc2c4afcb0b478c8cba73f135f7afc77b74f5d65",
+      "current_equals_baseline_after_eol_normalization": true
+    }
+  },
+  "m5_preserves_m4_commit": true
+}
