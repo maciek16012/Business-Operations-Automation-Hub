@@ -1,0 +1,1120 @@
+{
+  "report_version": "m4-stp-v1",
+  "route": "PRIMARY_OCR",
+  "providers": [
+    {
+      "provider": "paddle",
+      "provider_version": "3.7.0",
+      "document_id": "dev-20-scan_long_document_number",
+      "raw_text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/STP/2026/1019/LONG-DOCUMENT-NUMBER\nNIP: 8567346215\nData wystawienia: 2026-04-14\nSprzedawca: Żółć i Żródło Przykład Sp. z o.o.\nNabywca: Klient Testowy Sp. z o.o.\nOpis: Usługa automatyzacji procesów biznesowych\nNetto: 3603,00\nVAT: 828,69\nBrutto: 4431,69\nWaluta: PLN\nTermin płatności: 14 dni\nSposób płatności: przelew\nUwagi: dokument przygotowany wyłącznie do testów Milestone 4 STP.",
+      "pages": [
+        {
+          "page": 1,
+          "width": 1400,
+          "height": 1800,
+          "text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/STP/2026/1019/LONG-DOCUMENT-NUMBER\nNIP: 8567346215\nData wystawienia: 2026-04-14\nSprzedawca: Żółć i Żródło Przykład Sp. z o.o.\nNabywca: Klient Testowy Sp. z o.o.\nOpis: Usługa automatyzacji procesów biznesowych\nNetto: 3603,00\nVAT: 828,69\nBrutto: 4431,69\nWaluta: PLN\nTermin płatności: 14 dni\nSposób płatności: przelew\nUwagi: dokument przygotowany wyłącznie do testów Milestone 4 STP.",
+          "lines": [
+            {
+              "text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU",
+              "confidence": 0.9928160905838013,
+              "coordinates": [
+                [
+                  65,
+                  92
+                ],
+                [
+                  687,
+                  92
+                ],
+                [
+                  687,
+                  118
+                ],
+                [
+                  65,
+                  118
+                ]
+              ]
+            },
+            {
+              "text": "Faktura: FV/STP/2026/1019/LONG-DOCUMENT-NUMBER",
+              "confidence": 0.9998393654823303,
+              "coordinates": [
+                [
+                  63,
+                  197
+                ],
+                [
+                  808,
+                  197
+                ],
+                [
+                  808,
+                  223
+                ],
+                [
+                  63,
+                  223
+                ]
+              ]
+            },
+            {
+              "text": "NIP: 8567346215",
+              "confidence": 0.983220100402832,
+              "coordinates": [
+                [
+                  61,
+                  298
+                ],
+                [
+                  291,
+                  298
+                ],
+                [
+                  291,
+                  330
+                ],
+                [
+                  61,
+                  330
+                ]
+              ]
+            },
+            {
+              "text": "Data wystawienia: 2026-04-14",
+              "confidence": 0.9991307258605957,
+              "coordinates": [
+                [
+                  63,
+                  405
+                ],
+                [
+                  449,
+                  405
+                ],
+                [
+                  449,
+                  437
+                ],
+                [
+                  63,
+                  437
+                ]
+              ]
+            },
+            {
+              "text": "Sprzedawca: Żółć i Żródło Przykład Sp. z o.o.",
+              "confidence": 0.9894155859947205,
+              "coordinates": [
+                [
+                  61,
+                  506
+                ],
+                [
+                  637,
+                  508
+                ],
+                [
+                  637,
+                  546
+                ],
+                [
+                  61,
+                  544
+                ]
+              ]
+            },
+            {
+              "text": "Nabywca: Klient Testowy Sp. z o.o.",
+              "confidence": 0.9992786645889282,
+              "coordinates": [
+                [
+                  61,
+                  613
+                ],
+                [
+                  508,
+                  615
+                ],
+                [
+                  508,
+                  649
+                ],
+                [
+                  61,
+                  647
+                ]
+              ]
+            },
+            {
+              "text": "Opis: Usługa automatyzacji procesów biznesowych",
+              "confidence": 0.999847412109375,
+              "coordinates": [
+                [
+                  65,
+                  720
+                ],
+                [
+                  704,
+                  720
+                ],
+                [
+                  704,
+                  752
+                ],
+                [
+                  65,
+                  752
+                ]
+              ]
+            },
+            {
+              "text": "Netto: 3603,00",
+              "confidence": 0.9903175234794617,
+              "coordinates": [
+                [
+                  61,
+                  825
+                ],
+                [
+                  253,
+                  825
+                ],
+                [
+                  253,
+                  857
+                ],
+                [
+                  61,
+                  857
+                ]
+              ]
+            },
+            {
+              "text": "VAT: 828,69",
+              "confidence": 0.9930122494697571,
+              "coordinates": [
+                [
+                  60,
+                  924
+                ],
+                [
+                  227,
+                  928
+                ],
+                [
+                  226,
+                  962
+                ],
+                [
+                  59,
+                  958
+                ]
+              ]
+            },
+            {
+              "text": "Brutto: 4431,69",
+              "confidence": 0.9970754981040955,
+              "coordinates": [
+                [
+                  61,
+                  1035
+                ],
+                [
+                  262,
+                  1035
+                ],
+                [
+                  262,
+                  1067
+                ],
+                [
+                  61,
+                  1067
+                ]
+              ]
+            },
+            {
+              "text": "Waluta: PLN",
+              "confidence": 0.9985820651054382,
+              "coordinates": [
+                [
+                  61,
+                  1138
+                ],
+                [
+                  228,
+                  1138
+                ],
+                [
+                  228,
+                  1172
+                ],
+                [
+                  61,
+                  1172
+                ]
+              ]
+            },
+            {
+              "text": "Termin płatności: 14 dni",
+              "confidence": 0.9983118176460266,
+              "coordinates": [
+                [
+                  63,
+                  1245
+                ],
+                [
+                  369,
+                  1245
+                ],
+                [
+                  369,
+                  1277
+                ],
+                [
+                  63,
+                  1277
+                ]
+              ]
+            },
+            {
+              "text": "Sposób płatności: przelew",
+              "confidence": 0.9985780119895935,
+              "coordinates": [
+                [
+                  63,
+                  1350
+                ],
+                [
+                  396,
+                  1350
+                ],
+                [
+                  396,
+                  1382
+                ],
+                [
+                  63,
+                  1382
+                ]
+              ]
+            },
+            {
+              "text": "Uwagi: dokument przygotowany wyłącznie do testów Milestone 4 STP.",
+              "confidence": 0.9998813271522522,
+              "coordinates": [
+                [
+                  63,
+                  1455
+                ],
+                [
+                  949,
+                  1455
+                ],
+                [
+                  949,
+                  1487
+                ],
+                [
+                  63,
+                  1487
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "provider_confidence": 0.9956647455692291,
+      "processing_time_ms": 6909.33,
+      "error": null,
+      "raw_provider_output": [
+        {
+          "res": {
+            "input_path": null,
+            "page_index": null,
+            "model_settings": {
+              "use_doc_preprocessor": false,
+              "use_textline_orientation": false
+            },
+            "dt_polys": [
+              [
+                [
+                  65,
+                  92
+                ],
+                [
+                  687,
+                  92
+                ],
+                [
+                  687,
+                  118
+                ],
+                [
+                  65,
+                  118
+                ]
+              ],
+              [
+                [
+                  63,
+                  197
+                ],
+                [
+                  808,
+                  197
+                ],
+                [
+                  808,
+                  223
+                ],
+                [
+                  63,
+                  223
+                ]
+              ],
+              [
+                [
+                  61,
+                  298
+                ],
+                [
+                  291,
+                  298
+                ],
+                [
+                  291,
+                  330
+                ],
+                [
+                  61,
+                  330
+                ]
+              ],
+              [
+                [
+                  63,
+                  405
+                ],
+                [
+                  449,
+                  405
+                ],
+                [
+                  449,
+                  437
+                ],
+                [
+                  63,
+                  437
+                ]
+              ],
+              [
+                [
+                  61,
+                  506
+                ],
+                [
+                  637,
+                  508
+                ],
+                [
+                  637,
+                  546
+                ],
+                [
+                  61,
+                  544
+                ]
+              ],
+              [
+                [
+                  61,
+                  613
+                ],
+                [
+                  508,
+                  615
+                ],
+                [
+                  508,
+                  649
+                ],
+                [
+                  61,
+                  647
+                ]
+              ],
+              [
+                [
+                  65,
+                  720
+                ],
+                [
+                  704,
+                  720
+                ],
+                [
+                  704,
+                  752
+                ],
+                [
+                  65,
+                  752
+                ]
+              ],
+              [
+                [
+                  61,
+                  825
+                ],
+                [
+                  253,
+                  825
+                ],
+                [
+                  253,
+                  857
+                ],
+                [
+                  61,
+                  857
+                ]
+              ],
+              [
+                [
+                  60,
+                  924
+                ],
+                [
+                  227,
+                  928
+                ],
+                [
+                  226,
+                  962
+                ],
+                [
+                  59,
+                  958
+                ]
+              ],
+              [
+                [
+                  61,
+                  1035
+                ],
+                [
+                  262,
+                  1035
+                ],
+                [
+                  262,
+                  1067
+                ],
+                [
+                  61,
+                  1067
+                ]
+              ],
+              [
+                [
+                  61,
+                  1138
+                ],
+                [
+                  228,
+                  1138
+                ],
+                [
+                  228,
+                  1172
+                ],
+                [
+                  61,
+                  1172
+                ]
+              ],
+              [
+                [
+                  63,
+                  1245
+                ],
+                [
+                  369,
+                  1245
+                ],
+                [
+                  369,
+                  1277
+                ],
+                [
+                  63,
+                  1277
+                ]
+              ],
+              [
+                [
+                  63,
+                  1350
+                ],
+                [
+                  396,
+                  1350
+                ],
+                [
+                  396,
+                  1382
+                ],
+                [
+                  63,
+                  1382
+                ]
+              ],
+              [
+                [
+                  63,
+                  1455
+                ],
+                [
+                  949,
+                  1455
+                ],
+                [
+                  949,
+                  1487
+                ],
+                [
+                  63,
+                  1487
+                ]
+              ]
+            ],
+            "text_det_params": {
+              "limit_side_len": 960,
+              "limit_type": "max",
+              "thresh": 0.3,
+              "max_side_limit": 4000,
+              "box_thresh": 0.6,
+              "unclip_ratio": 1.5
+            },
+            "text_type": "general",
+            "textline_orientation_angles": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "text_rec_score_thresh": 0.0,
+            "return_word_box": false,
+            "rec_texts": [
+              "DOKUMENT SYNTETYCZNY - NIE DO OBROTU",
+              "Faktura: FV/STP/2026/1019/LONG-DOCUMENT-NUMBER",
+              "NIP: 8567346215",
+              "Data wystawienia: 2026-04-14",
+              "Sprzedawca: Żółć i Żródło Przykład Sp. z o.o.",
+              "Nabywca: Klient Testowy Sp. z o.o.",
+              "Opis: Usługa automatyzacji procesów biznesowych",
+              "Netto: 3603,00",
+              "VAT: 828,69",
+              "Brutto: 4431,69",
+              "Waluta: PLN",
+              "Termin płatności: 14 dni",
+              "Sposób płatności: przelew",
+              "Uwagi: dokument przygotowany wyłącznie do testów Milestone 4 STP."
+            ],
+            "rec_scores": [
+              0.9928160905838013,
+              0.9998393654823303,
+              0.983220100402832,
+              0.9991307258605957,
+              0.9894155859947205,
+              0.9992786645889282,
+              0.999847412109375,
+              0.9903175234794617,
+              0.9930122494697571,
+              0.9970754981040955,
+              0.9985820651054382,
+              0.9983118176460266,
+              0.9985780119895935,
+              0.9998813271522522
+            ],
+            "rec_polys": [
+              [
+                [
+                  65,
+                  92
+                ],
+                [
+                  687,
+                  92
+                ],
+                [
+                  687,
+                  118
+                ],
+                [
+                  65,
+                  118
+                ]
+              ],
+              [
+                [
+                  63,
+                  197
+                ],
+                [
+                  808,
+                  197
+                ],
+                [
+                  808,
+                  223
+                ],
+                [
+                  63,
+                  223
+                ]
+              ],
+              [
+                [
+                  61,
+                  298
+                ],
+                [
+                  291,
+                  298
+                ],
+                [
+                  291,
+                  330
+                ],
+                [
+                  61,
+                  330
+                ]
+              ],
+              [
+                [
+                  63,
+                  405
+                ],
+                [
+                  449,
+                  405
+                ],
+                [
+                  449,
+                  437
+                ],
+                [
+                  63,
+                  437
+                ]
+              ],
+              [
+                [
+                  61,
+                  506
+                ],
+                [
+                  637,
+                  508
+                ],
+                [
+                  637,
+                  546
+                ],
+                [
+                  61,
+                  544
+                ]
+              ],
+              [
+                [
+                  61,
+                  613
+                ],
+                [
+                  508,
+                  615
+                ],
+                [
+                  508,
+                  649
+                ],
+                [
+                  61,
+                  647
+                ]
+              ],
+              [
+                [
+                  65,
+                  720
+                ],
+                [
+                  704,
+                  720
+                ],
+                [
+                  704,
+                  752
+                ],
+                [
+                  65,
+                  752
+                ]
+              ],
+              [
+                [
+                  61,
+                  825
+                ],
+                [
+                  253,
+                  825
+                ],
+                [
+                  253,
+                  857
+                ],
+                [
+                  61,
+                  857
+                ]
+              ],
+              [
+                [
+                  60,
+                  924
+                ],
+                [
+                  227,
+                  928
+                ],
+                [
+                  226,
+                  962
+                ],
+                [
+                  59,
+                  958
+                ]
+              ],
+              [
+                [
+                  61,
+                  1035
+                ],
+                [
+                  262,
+                  1035
+                ],
+                [
+                  262,
+                  1067
+                ],
+                [
+                  61,
+                  1067
+                ]
+              ],
+              [
+                [
+                  61,
+                  1138
+                ],
+                [
+                  228,
+                  1138
+                ],
+                [
+                  228,
+                  1172
+                ],
+                [
+                  61,
+                  1172
+                ]
+              ],
+              [
+                [
+                  63,
+                  1245
+                ],
+                [
+                  369,
+                  1245
+                ],
+                [
+                  369,
+                  1277
+                ],
+                [
+                  63,
+                  1277
+                ]
+              ],
+              [
+                [
+                  63,
+                  1350
+                ],
+                [
+                  396,
+                  1350
+                ],
+                [
+                  396,
+                  1382
+                ],
+                [
+                  63,
+                  1382
+                ]
+              ],
+              [
+                [
+                  63,
+                  1455
+                ],
+                [
+                  949,
+                  1455
+                ],
+                [
+                  949,
+                  1487
+                ],
+                [
+                  63,
+                  1487
+                ]
+              ]
+            ],
+            "rec_boxes": [
+              [
+                65,
+                92,
+                687,
+                118
+              ],
+              [
+                63,
+                197,
+                808,
+                223
+              ],
+              [
+                61,
+                298,
+                291,
+                330
+              ],
+              [
+                63,
+                405,
+                449,
+                437
+              ],
+              [
+                61,
+                506,
+                637,
+                546
+              ],
+              [
+                61,
+                613,
+                508,
+                649
+              ],
+              [
+                65,
+                720,
+                704,
+                752
+              ],
+              [
+                61,
+                825,
+                253,
+                857
+              ],
+              [
+                59,
+                924,
+                227,
+                962
+              ],
+              [
+                61,
+                1035,
+                262,
+                1067
+              ],
+              [
+                61,
+                1138,
+                228,
+                1172
+              ],
+              [
+                63,
+                1245,
+                369,
+                1277
+              ],
+              [
+                63,
+                1350,
+                396,
+                1382
+              ],
+              [
+                63,
+                1455,
+                949,
+                1487
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "field": "document_number",
+      "raw_a": "FV/STP/2026/1019/LONG-DOCUMENT-NUMBER",
+      "raw_b": null,
+      "normalized_a": "FV/STP/2026/1019/LONG-DOCUMENT-NUMBER",
+      "normalized_b": null,
+      "comparison": "primary_single_source",
+      "outcome": "PRIMARY_VALIDATED",
+      "selected": "FV/STP/2026/1019/LONG-DOCUMENT-NUMBER",
+      "reason": "Value extracted by primary OCR and passed deterministic normalization"
+    },
+    {
+      "field": "tax_id",
+      "raw_a": "8567346215",
+      "raw_b": null,
+      "normalized_a": "8567346215",
+      "normalized_b": null,
+      "comparison": "primary_single_source",
+      "outcome": "PRIMARY_VALIDATED",
+      "selected": "8567346215",
+      "reason": "Value extracted by primary OCR and passed deterministic normalization"
+    },
+    {
+      "field": "issue_date",
+      "raw_a": "2026-04-14",
+      "raw_b": null,
+      "normalized_a": "2026-04-14",
+      "normalized_b": null,
+      "comparison": "primary_single_source",
+      "outcome": "PRIMARY_VALIDATED",
+      "selected": "2026-04-14",
+      "reason": "Value extracted by primary OCR and passed deterministic normalization"
+    },
+    {
+      "field": "net_total",
+      "raw_a": "3603,00",
+      "raw_b": null,
+      "normalized_a": "3603.00",
+      "normalized_b": null,
+      "comparison": "primary_single_source",
+      "outcome": "PRIMARY_VALIDATED",
+      "selected": "3603.00",
+      "reason": "Value extracted by primary OCR and passed deterministic normalization"
+    },
+    {
+      "field": "vat_total",
+      "raw_a": "828,69",
+      "raw_b": null,
+      "normalized_a": "828.69",
+      "normalized_b": null,
+      "comparison": "primary_single_source",
+      "outcome": "PRIMARY_VALIDATED",
+      "selected": "828.69",
+      "reason": "Value extracted by primary OCR and passed deterministic normalization"
+    },
+    {
+      "field": "gross_total",
+      "raw_a": "4431,69",
+      "raw_b": null,
+      "normalized_a": "4431.69",
+      "normalized_b": null,
+      "comparison": "primary_single_source",
+      "outcome": "PRIMARY_VALIDATED",
+      "selected": "4431.69",
+      "reason": "Value extracted by primary OCR and passed deterministic normalization"
+    },
+    {
+      "field": "currency",
+      "raw_a": "PLN",
+      "raw_b": null,
+      "normalized_a": "PLN",
+      "normalized_b": null,
+      "comparison": "primary_single_source",
+      "outcome": "PRIMARY_VALIDATED",
+      "selected": "PLN",
+      "reason": "Value extracted by primary OCR and passed deterministic normalization"
+    }
+  ],
+  "business_validation": {
+    "primary": {
+      "nip_checksum": true,
+      "money_nonnegative": true,
+      "net_plus_vat_equals_gross": true,
+      "currency_allowed": true,
+      "issue_date_valid": true,
+      "document_number_present": true
+    },
+    "selected": {
+      "nip_checksum": true,
+      "money_nonnegative": true,
+      "net_plus_vat_equals_gross": true,
+      "currency_allowed": true,
+      "issue_date_valid": true,
+      "document_number_present": true
+    }
+  },
+  "selected": {
+    "document_number": "FV/STP/2026/1019/LONG-DOCUMENT-NUMBER",
+    "tax_id": "8567346215",
+    "issue_date": "2026-04-14",
+    "net_total": "3603.00",
+    "vat_total": "828.69",
+    "gross_total": "4431.69",
+    "currency": "PLN"
+  },
+  "outcome": "PRIMARY_STP_CANDIDATE",
+  "review_required": false,
+  "stp": {
+    "candidate": true,
+    "auto_accepted": true,
+    "policy_status": "dev_calibrated_primary_candidate",
+    "missing_critical_fields": []
+  },
+  "routing": {
+    "initial_route": "PRIMARY_OCR",
+    "final_route": "PRIMARY_OCR",
+    "reason": "image document requires OCR; primary OCR runs before selective dual escalation",
+    "primary_provider": "paddle",
+    "secondary_provider_invoked": false,
+    "native_processing_time_ms": 0.0
+  }
+}

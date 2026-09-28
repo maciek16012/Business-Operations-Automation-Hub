@@ -1,0 +1,868 @@
+{
+  "providers": [
+    {
+      "provider": "tesseract",
+      "provider_version": "tesseract 5.5.3",
+      "document_id": "dev-04-native_sparse",
+      "raw_text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/STP/103/2026\nNIP: 8567346215\nData wystawienia: 2026-04-13\nSprzedawca: Żółć i Źródło Przykład Sp. z 0.0.",
+      "pages": [
+        {
+          "page": 1,
+          "width": 1653,
+          "height": 2339,
+          "text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/STP/103/2026\nNIP: 8567346215\nData wystawienia: 2026-04-13\nSprzedawca: Żółć i Źródło Przykład Sp. z 0.0.",
+          "lines": [
+            {
+              "text": "DOKUMENT",
+              "confidence": 0.93000427,
+              "coordinates": [
+                100,
+                117,
+                203,
+                28
+              ],
+              "line": [
+                "1",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "text": "SYNTETYCZNY",
+              "confidence": 0.91332748,
+              "coordinates": [
+                315,
+                117,
+                263,
+                28
+              ],
+              "line": [
+                "1",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "text": "-",
+              "confidence": 0.89277878,
+              "coordinates": [
+                589,
+                133,
+                10,
+                4
+              ],
+              "line": [
+                "1",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "text": "NIE",
+              "confidence": 0.96523636,
+              "coordinates": [
+                613,
+                118,
+                56,
+                26
+              ],
+              "line": [
+                "1",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "text": "DO",
+              "confidence": 0.9631699399999999,
+              "coordinates": [
+                683,
+                117,
+                50,
+                28
+              ],
+              "line": [
+                "1",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "text": "OBROTU",
+              "confidence": 0.9675803399999999,
+              "coordinates": [
+                746,
+                117,
+                150,
+                28
+              ],
+              "line": [
+                "1",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "text": "Faktura:",
+              "confidence": 0.93293335,
+              "coordinates": [
+                100,
+                213,
+                126,
+                26
+              ],
+              "line": [
+                "1",
+                "1",
+                "2"
+              ]
+            },
+            {
+              "text": "FV/STP/103/2026",
+              "confidence": 0.91994034,
+              "coordinates": [
+                242,
+                212,
+                283,
+                28
+              ],
+              "line": [
+                "1",
+                "1",
+                "2"
+              ]
+            },
+            {
+              "text": "NIP:",
+              "confidence": 0.9613722199999999,
+              "coordinates": [
+                100,
+                307,
+                64,
+                26
+              ],
+              "line": [
+                "1",
+                "2",
+                "1"
+              ]
+            },
+            {
+              "text": "8567346215",
+              "confidence": 0.96269363,
+              "coordinates": [
+                179,
+                307,
+                198,
+                27
+              ],
+              "line": [
+                "1",
+                "2",
+                "1"
+              ]
+            },
+            {
+              "text": "Data",
+              "confidence": 0.9625013,
+              "coordinates": [
+                100,
+                402,
+                72,
+                26
+              ],
+              "line": [
+                "1",
+                "3",
+                "1"
+              ]
+            },
+            {
+              "text": "wystawienia:",
+              "confidence": 0.9621350099999999,
+              "coordinates": [
+                184,
+                402,
+                201,
+                34
+              ],
+              "line": [
+                "1",
+                "3",
+                "1"
+              ]
+            },
+            {
+              "text": "2026-04-13",
+              "confidence": 0.9675386,
+              "coordinates": [
+                399,
+                402,
+                182,
+                27
+              ],
+              "line": [
+                "1",
+                "3",
+                "1"
+              ]
+            },
+            {
+              "text": "Sprzedawca:",
+              "confidence": 0.9328986399999999,
+              "coordinates": [
+                99,
+                495,
+                204,
+                34
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            },
+            {
+              "text": "Żółć",
+              "confidence": 0.93231133,
+              "coordinates": [
+                316,
+                490,
+                68,
+                32
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            },
+            {
+              "text": "i",
+              "confidence": 0.9696051,
+              "coordinates": [
+                396,
+                496,
+                4,
+                26
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            },
+            {
+              "text": "Źródło",
+              "confidence": 0.9682687400000001,
+              "coordinates": [
+                413,
+                489,
+                100,
+                33
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            },
+            {
+              "text": "Przykład",
+              "confidence": 0.96985092,
+              "coordinates": [
+                527,
+                496,
+                133,
+                34
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            },
+            {
+              "text": "Sp.",
+              "confidence": 0.96982994,
+              "coordinates": [
+                674,
+                495,
+                50,
+                34
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            },
+            {
+              "text": "z",
+              "confidence": 0.9337277199999999,
+              "coordinates": [
+                738,
+                503,
+                16,
+                19
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            },
+            {
+              "text": "0.0.",
+              "confidence": 0.96249565,
+              "coordinates": [
+                766,
+                503,
+                56,
+                19
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            }
+          ]
+        }
+      ],
+      "provider_confidence": 0.9495333171428572,
+      "processing_time_ms": 1926.56,
+      "error": null,
+      "raw_provider_output": [
+        "level\tpage_num\tblock_num\tpar_num\tline_num\tword_num\tleft\ttop\twidth\theight\tconf\ttext\n1\t1\t0\t0\t0\t0\t0\t0\t1653\t2339\t-1\t\n2\t1\t1\t0\t0\t0\t99\t117\t797\t413\t-1\t\n3\t1\t1\t1\t0\t0\t100\t117\t796\t123\t-1\t\n4\t1\t1\t1\t1\t0\t100\t117\t796\t28\t-1\t\n5\t1\t1\t1\t1\t1\t100\t117\t203\t28\t93.000427\tDOKUMENT\n5\t1\t1\t1\t1\t2\t315\t117\t263\t28\t91.332748\tSYNTETYCZNY\n5\t1\t1\t1\t1\t3\t589\t133\t10\t4\t89.277878\t-\n5\t1\t1\t1\t1\t4\t613\t118\t56\t26\t96.523636\tNIE\n5\t1\t1\t1\t1\t5\t683\t117\t50\t28\t96.316994\tDO\n5\t1\t1\t1\t1\t6\t746\t117\t150\t28\t96.758034\tOBROTU\n4\t1\t1\t1\t2\t0\t100\t212\t425\t28\t-1\t\n5\t1\t1\t1\t2\t1\t100\t213\t126\t26\t93.293335\tFaktura:\n5\t1\t1\t1\t2\t2\t242\t212\t283\t28\t91.994034\tFV/STP/103/2026\n3\t1\t1\t2\t0\t0\t100\t307\t277\t27\t-1\t\n4\t1\t1\t2\t1\t0\t100\t307\t277\t27\t-1\t\n5\t1\t1\t2\t1\t1\t100\t307\t64\t26\t96.137222\tNIP:\n5\t1\t1\t2\t1\t2\t179\t307\t198\t27\t96.269363\t8567346215\n3\t1\t1\t3\t0\t0\t100\t402\t481\t34\t-1\t\n4\t1\t1\t3\t1\t0\t100\t402\t481\t34\t-1\t\n5\t1\t1\t3\t1\t1\t100\t402\t72\t26\t96.250130\tData\n5\t1\t1\t3\t1\t2\t184\t402\t201\t34\t96.213501\twystawienia:\n5\t1\t1\t3\t1\t3\t399\t402\t182\t27\t96.753860\t2026-04-13\n3\t1\t1\t4\t0\t0\t99\t489\t723\t41\t-1\t\n4\t1\t1\t4\t1\t0\t99\t489\t723\t41\t-1\t\n5\t1\t1\t4\t1\t1\t99\t495\t204\t34\t93.289864\tSprzedawca:\n5\t1\t1\t4\t1\t2\t316\t490\t68\t32\t93.231133\tŻółć\n5\t1\t1\t4\t1\t3\t396\t496\t4\t26\t96.960510\ti\n5\t1\t1\t4\t1\t4\t413\t489\t100\t33\t96.826874\tŹródło\n5\t1\t1\t4\t1\t5\t527\t496\t133\t34\t96.985092\tPrzykład\n5\t1\t1\t4\t1\t6\t674\t495\t50\t34\t96.982994\tSp.\n5\t1\t1\t4\t1\t7\t738\t503\t16\t19\t93.372772\tz\n5\t1\t1\t4\t1\t8\t766\t503\t56\t19\t96.249565\t0.0.\n"
+      ]
+    },
+    {
+      "provider": "paddle",
+      "provider_version": "3.7.0",
+      "document_id": "dev-04-native_sparse",
+      "raw_text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/STP/103/2026\nNIP:8567346215\nData wystawienia: 2026-04-13\nSprzedawca: Żółć i Żródło Przykład Sp. z o.o.",
+      "pages": [
+        {
+          "page": 1,
+          "width": 1653,
+          "height": 2339,
+          "text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/STP/103/2026\nNIP:8567346215\nData wystawienia: 2026-04-13\nSprzedawca: Żółć i Żródło Przykład Sp. z o.o.",
+          "lines": [
+            {
+              "text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU",
+              "confidence": 0.9869908094406128,
+              "coordinates": [
+                [
+                  98,
+                  112
+                ],
+                [
+                  895,
+                  112
+                ],
+                [
+                  895,
+                  146
+                ],
+                [
+                  98,
+                  146
+                ]
+              ]
+            },
+            {
+              "text": "Faktura: FV/STP/103/2026",
+              "confidence": 0.9989862442016602,
+              "coordinates": [
+                [
+                  93,
+                  205
+                ],
+                [
+                  529,
+                  205
+                ],
+                [
+                  529,
+                  246
+                ],
+                [
+                  93,
+                  246
+                ]
+              ]
+            },
+            {
+              "text": "NIP:8567346215",
+              "confidence": 0.9998744130134583,
+              "coordinates": [
+                [
+                  93,
+                  297
+                ],
+                [
+                  381,
+                  297
+                ],
+                [
+                  381,
+                  339
+                ],
+                [
+                  93,
+                  339
+                ]
+              ]
+            },
+            {
+              "text": "Data wystawienia: 2026-04-13",
+              "confidence": 0.9993477463722229,
+              "coordinates": [
+                [
+                  93,
+                  392
+                ],
+                [
+                  583,
+                  392
+                ],
+                [
+                  583,
+                  434
+                ],
+                [
+                  93,
+                  434
+                ]
+              ]
+            },
+            {
+              "text": "Sprzedawca: Żółć i Żródło Przykład Sp. z o.o.",
+              "confidence": 0.9880551099777222,
+              "coordinates": [
+                [
+                  91,
+                  482
+                ],
+                [
+                  827,
+                  485
+                ],
+                [
+                  826,
+                  534
+                ],
+                [
+                  91,
+                  531
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "provider_confidence": 0.9946508646011353,
+      "processing_time_ms": 9433.09,
+      "error": null,
+      "raw_provider_output": [
+        {
+          "res": {
+            "input_path": null,
+            "page_index": null,
+            "model_settings": {
+              "use_doc_preprocessor": false,
+              "use_textline_orientation": false
+            },
+            "dt_polys": [
+              [
+                [
+                  98,
+                  112
+                ],
+                [
+                  895,
+                  112
+                ],
+                [
+                  895,
+                  146
+                ],
+                [
+                  98,
+                  146
+                ]
+              ],
+              [
+                [
+                  93,
+                  205
+                ],
+                [
+                  529,
+                  205
+                ],
+                [
+                  529,
+                  246
+                ],
+                [
+                  93,
+                  246
+                ]
+              ],
+              [
+                [
+                  93,
+                  297
+                ],
+                [
+                  381,
+                  297
+                ],
+                [
+                  381,
+                  339
+                ],
+                [
+                  93,
+                  339
+                ]
+              ],
+              [
+                [
+                  93,
+                  392
+                ],
+                [
+                  583,
+                  392
+                ],
+                [
+                  583,
+                  434
+                ],
+                [
+                  93,
+                  434
+                ]
+              ],
+              [
+                [
+                  91,
+                  482
+                ],
+                [
+                  827,
+                  485
+                ],
+                [
+                  826,
+                  534
+                ],
+                [
+                  91,
+                  531
+                ]
+              ]
+            ],
+            "text_det_params": {
+              "limit_side_len": 960,
+              "limit_type": "max",
+              "thresh": 0.3,
+              "max_side_limit": 4000,
+              "box_thresh": 0.6,
+              "unclip_ratio": 1.5
+            },
+            "text_type": "general",
+            "textline_orientation_angles": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "text_rec_score_thresh": 0.0,
+            "return_word_box": false,
+            "rec_texts": [
+              "DOKUMENT SYNTETYCZNY - NIE DO OBROTU",
+              "Faktura: FV/STP/103/2026",
+              "NIP:8567346215",
+              "Data wystawienia: 2026-04-13",
+              "Sprzedawca: Żółć i Żródło Przykład Sp. z o.o."
+            ],
+            "rec_scores": [
+              0.9869908094406128,
+              0.9989862442016602,
+              0.9998744130134583,
+              0.9993477463722229,
+              0.9880551099777222
+            ],
+            "rec_polys": [
+              [
+                [
+                  98,
+                  112
+                ],
+                [
+                  895,
+                  112
+                ],
+                [
+                  895,
+                  146
+                ],
+                [
+                  98,
+                  146
+                ]
+              ],
+              [
+                [
+                  93,
+                  205
+                ],
+                [
+                  529,
+                  205
+                ],
+                [
+                  529,
+                  246
+                ],
+                [
+                  93,
+                  246
+                ]
+              ],
+              [
+                [
+                  93,
+                  297
+                ],
+                [
+                  381,
+                  297
+                ],
+                [
+                  381,
+                  339
+                ],
+                [
+                  93,
+                  339
+                ]
+              ],
+              [
+                [
+                  93,
+                  392
+                ],
+                [
+                  583,
+                  392
+                ],
+                [
+                  583,
+                  434
+                ],
+                [
+                  93,
+                  434
+                ]
+              ],
+              [
+                [
+                  91,
+                  482
+                ],
+                [
+                  827,
+                  485
+                ],
+                [
+                  826,
+                  534
+                ],
+                [
+                  91,
+                  531
+                ]
+              ]
+            ],
+            "rec_boxes": [
+              [
+                98,
+                112,
+                895,
+                146
+              ],
+              [
+                93,
+                205,
+                529,
+                246
+              ],
+              [
+                93,
+                297,
+                381,
+                339
+              ],
+              [
+                93,
+                392,
+                583,
+                434
+              ],
+              [
+                91,
+                482,
+                827,
+                534
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "field": "document_number",
+      "raw_a": "FV/STP/103/2026",
+      "raw_b": "FV/STP/103/2026",
+      "normalized_a": "FV/STP/103/2026",
+      "normalized_b": "FV/STP/103/2026",
+      "comparison": "equal",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "selected": "FV/STP/103/2026",
+      "reason": "Agreement is not ground truth"
+    },
+    {
+      "field": "tax_id",
+      "raw_a": "8567346215",
+      "raw_b": "8567346215",
+      "normalized_a": "8567346215",
+      "normalized_b": "8567346215",
+      "comparison": "equal",
+      "outcome": "CONSENSUS_VALID",
+      "selected": "8567346215",
+      "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)"
+    },
+    {
+      "field": "issue_date",
+      "raw_a": "2026-04-13",
+      "raw_b": "2026-04-13",
+      "normalized_a": "2026-04-13",
+      "normalized_b": "2026-04-13",
+      "comparison": "equal",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "selected": "2026-04-13",
+      "reason": "Agreement is not ground truth"
+    },
+    {
+      "field": "net_total",
+      "raw_a": null,
+      "raw_b": null,
+      "normalized_a": null,
+      "normalized_b": null,
+      "comparison": "different",
+      "outcome": "CONFLICT_REVIEW",
+      "selected": null,
+      "reason": "Disagreement or missing value requires human review"
+    },
+    {
+      "field": "vat_total",
+      "raw_a": null,
+      "raw_b": null,
+      "normalized_a": null,
+      "normalized_b": null,
+      "comparison": "different",
+      "outcome": "CONFLICT_REVIEW",
+      "selected": null,
+      "reason": "Disagreement or missing value requires human review"
+    },
+    {
+      "field": "gross_total",
+      "raw_a": null,
+      "raw_b": null,
+      "normalized_a": null,
+      "normalized_b": null,
+      "comparison": "different",
+      "outcome": "CONFLICT_REVIEW",
+      "selected": null,
+      "reason": "Disagreement or missing value requires human review"
+    },
+    {
+      "field": "currency",
+      "raw_a": null,
+      "raw_b": null,
+      "normalized_a": null,
+      "normalized_b": null,
+      "comparison": "different",
+      "outcome": "CONFLICT_REVIEW",
+      "selected": null,
+      "reason": "Disagreement or missing value requires human review"
+    }
+  ],
+  "business_validation": {
+    "a": {
+      "nip_checksum": true,
+      "money_nonnegative": false,
+      "net_plus_vat_equals_gross": false,
+      "currency_allowed": false,
+      "issue_date_valid": true,
+      "document_number_present": true
+    },
+    "b": {
+      "nip_checksum": true,
+      "money_nonnegative": false,
+      "net_plus_vat_equals_gross": false,
+      "currency_allowed": false,
+      "issue_date_valid": true,
+      "document_number_present": true
+    },
+    "selected": {
+      "nip_checksum": true,
+      "money_nonnegative": false,
+      "net_plus_vat_equals_gross": false,
+      "currency_allowed": false,
+      "issue_date_valid": true,
+      "document_number_present": true
+    }
+  },
+  "selected": {
+    "document_number": "FV/STP/103/2026",
+    "tax_id": "8567346215",
+    "issue_date": "2026-04-13",
+    "net_total": null,
+    "vat_total": null,
+    "gross_total": null,
+    "currency": null
+  },
+  "outcome": "CONFLICT_REVIEW",
+  "review_required": true,
+  "route": "DUAL_OCR",
+  "report_version": "m4-stp-v1",
+  "routing": {
+    "initial_route": "NATIVE_TEXT",
+    "final_route": "DUAL_OCR",
+    "escalation_reason": "native field evidence failed deterministic STP checks",
+    "native_processing_time_ms": 1.5666999970562756,
+    "native_missing_critical_fields": [
+      "net_total",
+      "vat_total",
+      "gross_total",
+      "currency"
+    ],
+    "native_business_validation": {
+      "nip_checksum": true,
+      "money_nonnegative": false,
+      "net_plus_vat_equals_gross": false,
+      "currency_allowed": false,
+      "issue_date_valid": true,
+      "document_number_present": true
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "document_id": "holdout-09-scan_skew",
+  "source_file": "datasets/stp/input/holdout/holdout-09-scan_skew.png",
+  "split": "holdout",
+  "document_type": "invoice",
+  "document_class": "ocr_required",
+  "language": "pl",
+  "conditions": [
+    "scan_skew"
+  ],
+  "challenge_tags": [
+    "scan_skew"
+  ],
+  "fields": {
+    "document_number": "FV/STP/208/2026",
+    "tax_id": "5260250274",
+    "issue_date": "2026-01-18",
+    "net_total": "15796,00",
+    "vat_total": "3633,08",
+    "gross_total": "19429,08",
+    "currency": "PLN"
+  },
+  "full_text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/STP/208/2026\nNIP: 5260250274\nData wystawienia: 2026-01-18\nSprzedawca: Żółć i Źródło Przykład Sp. z o.o.\nNabywca: Klient Testowy Sp. z o.o.\nOpis: Usługa automatyzacji procesów biznesowych\nNetto: 15796,00\nVAT: 3633,08\nBrutto: 19429,08\nWaluta: PLN\nTermin płatności: 14 dni\nSposób płatności: przelew\nUwagi: dokument przygotowany wyłącznie do testów Milestone 4 STP."
+}

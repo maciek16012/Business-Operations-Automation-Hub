@@ -1,0 +1,2443 @@
+{
+  "providers": [
+    {
+      "provider": "tesseract",
+      "provider_version": "tesseract 5.5.3",
+      "document_id": "dev-18-mixed_native_scan",
+      "raw_text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/STP/117/2026\nNIP: 8567346215\nData wystawienia: 2026-02-12\nSprzedawca: Żółć i Źródło Przykład Sp. z 0.0.\nNabywca: Klient Testowy Sp. z o.o.\nOpis: Usługa automatyzacji procesów biznesowych\nNetto: 3329,00\nVAT: 765,67\nBrutto: 4094,67\nWaluta: PLN\nTermin płatności: 14 dni\nSposób płatności: przelew\nUwagi: dokument przygotowany wyłącznie do testów Milestone 4 STP.\nZAŁĄCZNIK SKANOWANY\nDruga strona celowo nie posiada embedded text.\nRouting powinien rozpoznać dokument mieszany.",
+      "pages": [
+        {
+          "page": 1,
+          "width": 1653,
+          "height": 2339,
+          "text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/STP/117/2026\nNIP: 8567346215\nData wystawienia: 2026-02-12\nSprzedawca: Żółć i Źródło Przykład Sp. z 0.0.\nNabywca: Klient Testowy Sp. z o.o.\nOpis: Usługa automatyzacji procesów biznesowych\nNetto: 3329,00\nVAT: 765,67\nBrutto: 4094,67\nWaluta: PLN\nTermin płatności: 14 dni\nSposób płatności: przelew\nUwagi: dokument przygotowany wyłącznie do testów Milestone 4 STP.",
+          "lines": [
+            {
+              "text": "DOKUMENT",
+              "confidence": 0.93000427,
+              "coordinates": [
+                100,
+                117,
+                203,
+                28
+              ],
+              "line": [
+                "1",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "text": "SYNTETYCZNY",
+              "confidence": 0.91332748,
+              "coordinates": [
+                315,
+                117,
+                263,
+                28
+              ],
+              "line": [
+                "1",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "text": "-",
+              "confidence": 0.89277878,
+              "coordinates": [
+                589,
+                133,
+                10,
+                4
+              ],
+              "line": [
+                "1",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "text": "NIE",
+              "confidence": 0.96523636,
+              "coordinates": [
+                613,
+                118,
+                56,
+                26
+              ],
+              "line": [
+                "1",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "text": "DO",
+              "confidence": 0.9631699399999999,
+              "coordinates": [
+                683,
+                117,
+                50,
+                28
+              ],
+              "line": [
+                "1",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "text": "OBROTU",
+              "confidence": 0.9675803399999999,
+              "coordinates": [
+                746,
+                117,
+                150,
+                28
+              ],
+              "line": [
+                "1",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "text": "Faktura:",
+              "confidence": 0.93296036,
+              "coordinates": [
+                100,
+                213,
+                126,
+                26
+              ],
+              "line": [
+                "1",
+                "1",
+                "2"
+              ]
+            },
+            {
+              "text": "FV/STP/117/2026",
+              "confidence": 0.88275162,
+              "coordinates": [
+                242,
+                212,
+                283,
+                28
+              ],
+              "line": [
+                "1",
+                "1",
+                "2"
+              ]
+            },
+            {
+              "text": "NIP:",
+              "confidence": 0.9613722199999999,
+              "coordinates": [
+                100,
+                307,
+                64,
+                26
+              ],
+              "line": [
+                "1",
+                "2",
+                "1"
+              ]
+            },
+            {
+              "text": "8567346215",
+              "confidence": 0.96269363,
+              "coordinates": [
+                179,
+                307,
+                198,
+                27
+              ],
+              "line": [
+                "1",
+                "2",
+                "1"
+              ]
+            },
+            {
+              "text": "Data",
+              "confidence": 0.96132423,
+              "coordinates": [
+                100,
+                402,
+                72,
+                26
+              ],
+              "line": [
+                "1",
+                "3",
+                "1"
+              ]
+            },
+            {
+              "text": "wystawienia:",
+              "confidence": 0.96132423,
+              "coordinates": [
+                184,
+                402,
+                201,
+                34
+              ],
+              "line": [
+                "1",
+                "3",
+                "1"
+              ]
+            },
+            {
+              "text": "2026-02-12",
+              "confidence": 0.96632652,
+              "coordinates": [
+                399,
+                402,
+                182,
+                27
+              ],
+              "line": [
+                "1",
+                "3",
+                "1"
+              ]
+            },
+            {
+              "text": "Sprzedawca:",
+              "confidence": 0.9328986399999999,
+              "coordinates": [
+                99,
+                495,
+                204,
+                34
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            },
+            {
+              "text": "Żółć",
+              "confidence": 0.93231133,
+              "coordinates": [
+                316,
+                490,
+                68,
+                32
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            },
+            {
+              "text": "i",
+              "confidence": 0.9696051,
+              "coordinates": [
+                396,
+                496,
+                4,
+                26
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            },
+            {
+              "text": "Źródło",
+              "confidence": 0.9682687400000001,
+              "coordinates": [
+                413,
+                489,
+                100,
+                33
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            },
+            {
+              "text": "Przykład",
+              "confidence": 0.96985092,
+              "coordinates": [
+                527,
+                496,
+                133,
+                34
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            },
+            {
+              "text": "Sp.",
+              "confidence": 0.96982994,
+              "coordinates": [
+                674,
+                495,
+                50,
+                34
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            },
+            {
+              "text": "z",
+              "confidence": 0.9337277199999999,
+              "coordinates": [
+                738,
+                503,
+                16,
+                19
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            },
+            {
+              "text": "0.0.",
+              "confidence": 0.96249565,
+              "coordinates": [
+                766,
+                503,
+                56,
+                19
+              ],
+              "line": [
+                "1",
+                "4",
+                "1"
+              ]
+            },
+            {
+              "text": "Nabywca:",
+              "confidence": 0.95227463,
+              "coordinates": [
+                100,
+                591,
+                153,
+                34
+              ],
+              "line": [
+                "1",
+                "4",
+                "2"
+              ]
+            },
+            {
+              "text": "Klient",
+              "confidence": 0.96646141,
+              "coordinates": [
+                268,
+                591,
+                88,
+                26
+              ],
+              "line": [
+                "1",
+                "4",
+                "2"
+              ]
+            },
+            {
+              "text": "Testowy",
+              "confidence": 0.96563637,
+              "coordinates": [
+                367,
+                591,
+                133,
+                34
+              ],
+              "line": [
+                "1",
+                "4",
+                "2"
+              ]
+            },
+            {
+              "text": "Sp.",
+              "confidence": 0.96563637,
+              "coordinates": [
+                512,
+                590,
+                49,
+                34
+              ],
+              "line": [
+                "1",
+                "4",
+                "2"
+              ]
+            },
+            {
+              "text": "z",
+              "confidence": 0.92304276,
+              "coordinates": [
+                575,
+                598,
+                17,
+                19
+              ],
+              "line": [
+                "1",
+                "4",
+                "2"
+              ]
+            },
+            {
+              "text": "o.o.",
+              "confidence": 0.8372853100000001,
+              "coordinates": [
+                603,
+                598,
+                57,
+                19
+              ],
+              "line": [
+                "1",
+                "4",
+                "2"
+              ]
+            },
+            {
+              "text": "Opis:",
+              "confidence": 0.9674208799999999,
+              "coordinates": [
+                99,
+                684,
+                79,
+                34
+              ],
+              "line": [
+                "1",
+                "5",
+                "1"
+              ]
+            },
+            {
+              "text": "Usługa",
+              "confidence": 0.97001114,
+              "coordinates": [
+                194,
+                685,
+                108,
+                34
+              ],
+              "line": [
+                "1",
+                "5",
+                "1"
+              ]
+            },
+            {
+              "text": "automatyzacji",
+              "confidence": 0.96799194,
+              "coordinates": [
+                315,
+                685,
+                217,
+                34
+              ],
+              "line": [
+                "1",
+                "5",
+                "1"
+              ]
+            },
+            {
+              "text": "procesów",
+              "confidence": 0.9671962700000001,
+              "coordinates": [
+                547,
+                685,
+                152,
+                33
+              ],
+              "line": [
+                "1",
+                "5",
+                "1"
+              ]
+            },
+            {
+              "text": "biznesowych",
+              "confidence": 0.96556213,
+              "coordinates": [
+                711,
+                685,
+                202,
+                34
+              ],
+              "line": [
+                "1",
+                "5",
+                "1"
+              ]
+            },
+            {
+              "text": "Netto:",
+              "confidence": 0.96237457,
+              "coordinates": [
+                100,
+                780,
+                90,
+                26
+              ],
+              "line": [
+                "1",
+                "5",
+                "2"
+              ]
+            },
+            {
+              "text": "3329,00",
+              "confidence": 0.96694244,
+              "coordinates": [
+                205,
+                780,
+                127,
+                31
+              ],
+              "line": [
+                "1",
+                "5",
+                "2"
+              ]
+            },
+            {
+              "text": "VAT:",
+              "confidence": 0.95670433,
+              "coordinates": [
+                97,
+                874,
+                77,
+                26
+              ],
+              "line": [
+                "1",
+                "6",
+                "1"
+              ]
+            },
+            {
+              "text": "765,67",
+              "confidence": 0.96634003,
+              "coordinates": [
+                189,
+                874,
+                107,
+                31
+              ],
+              "line": [
+                "1",
+                "6",
+                "1"
+              ]
+            },
+            {
+              "text": "Brutto:",
+              "confidence": 0.96804558,
+              "coordinates": [
+                100,
+                968,
+                100,
+                26
+              ],
+              "line": [
+                "1",
+                "7",
+                "1"
+              ]
+            },
+            {
+              "text": "4094,67",
+              "confidence": 0.9695074499999999,
+              "coordinates": [
+                214,
+                968,
+                128,
+                31
+              ],
+              "line": [
+                "1",
+                "7",
+                "1"
+              ]
+            },
+            {
+              "text": "Waluta:",
+              "confidence": 0.9556475799999999,
+              "coordinates": [
+                97,
+                1063,
+                119,
+                26
+              ],
+              "line": [
+                "1",
+                "8",
+                "1"
+              ]
+            },
+            {
+              "text": "PLN",
+              "confidence": 0.95932304,
+              "coordinates": [
+                232,
+                1063,
+                65,
+                26
+              ],
+              "line": [
+                "1",
+                "8",
+                "1"
+              ]
+            },
+            {
+              "text": "Termin",
+              "confidence": 0.9621140300000001,
+              "coordinates": [
+                98,
+                1157,
+                109,
+                26
+              ],
+              "line": [
+                "1",
+                "9",
+                "1"
+              ]
+            },
+            {
+              "text": "płatności:",
+              "confidence": 0.96292885,
+              "coordinates": [
+                222,
+                1157,
+                147,
+                33
+              ],
+              "line": [
+                "1",
+                "9",
+                "1"
+              ]
+            },
+            {
+              "text": "14",
+              "confidence": 0.9575962800000001,
+              "coordinates": [
+                386,
+                1157,
+                34,
+                26
+              ],
+              "line": [
+                "1",
+                "9",
+                "1"
+              ]
+            },
+            {
+              "text": "dni",
+              "confidence": 0.9575962800000001,
+              "coordinates": [
+                433,
+                1157,
+                45,
+                26
+              ],
+              "line": [
+                "1",
+                "9",
+                "1"
+              ]
+            },
+            {
+              "text": "Sposób",
+              "confidence": 0.96686424,
+              "coordinates": [
+                99,
+                1251,
+                119,
+                34
+              ],
+              "line": [
+                "1",
+                "10",
+                "1"
+              ]
+            },
+            {
+              "text": "płatności:",
+              "confidence": 0.96389961,
+              "coordinates": [
+                232,
+                1252,
+                147,
+                33
+              ],
+              "line": [
+                "1",
+                "10",
+                "1"
+              ]
+            },
+            {
+              "text": "przelew",
+              "confidence": 0.9673152899999999,
+              "coordinates": [
+                394,
+                1252,
+                122,
+                33
+              ],
+              "line": [
+                "1",
+                "10",
+                "1"
+              ]
+            },
+            {
+              "text": "Uwagi:",
+              "confidence": 0.96100853,
+              "coordinates": [
+                100,
+                1346,
+                104,
+                34
+              ],
+              "line": [
+                "1",
+                "11",
+                "1"
+              ]
+            },
+            {
+              "text": "dokument",
+              "confidence": 0.9675161,
+              "coordinates": [
+                218,
+                1346,
+                158,
+                26
+              ],
+              "line": [
+                "1",
+                "11",
+                "1"
+              ]
+            },
+            {
+              "text": "przygotowany",
+              "confidence": 0.9627861799999999,
+              "coordinates": [
+                388,
+                1347,
+                220,
+                33
+              ],
+              "line": [
+                "1",
+                "11",
+                "1"
+              ]
+            },
+            {
+              "text": "wyłącznie",
+              "confidence": 0.95769279,
+              "coordinates": [
+                619,
+                1346,
+                155,
+                34
+              ],
+              "line": [
+                "1",
+                "11",
+                "1"
+              ]
+            },
+            {
+              "text": "do",
+              "confidence": 0.96662582,
+              "coordinates": [
+                786,
+                1346,
+                38,
+                26
+              ],
+              "line": [
+                "1",
+                "11",
+                "1"
+              ]
+            },
+            {
+              "text": "testów",
+              "confidence": 0.9694023900000001,
+              "coordinates": [
+                836,
+                1346,
+                103,
+                26
+              ],
+              "line": [
+                "1",
+                "11",
+                "1"
+              ]
+            },
+            {
+              "text": "Milestone",
+              "confidence": 0.96154335,
+              "coordinates": [
+                952,
+                1346,
+                151,
+                26
+              ],
+              "line": [
+                "1",
+                "11",
+                "1"
+              ]
+            },
+            {
+              "text": "4",
+              "confidence": 0.96533806,
+              "coordinates": [
+                1115,
+                1346,
+                18,
+                26
+              ],
+              "line": [
+                "1",
+                "11",
+                "1"
+              ]
+            },
+            {
+              "text": "STP.",
+              "confidence": 0.9653407300000001,
+              "coordinates": [
+                1146,
+                1345,
+                75,
+                27
+              ],
+              "line": [
+                "1",
+                "11",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "page": 2,
+          "width": 1653,
+          "height": 2339,
+          "text": "ZAŁĄCZNIK SKANOWANY\nDruga strona celowo nie posiada embedded text.\nRouting powinien rozpoznać dokument mieszany.",
+          "lines": [
+            {
+              "text": "ZAŁĄCZNIK",
+              "confidence": 0.9327320100000001,
+              "coordinates": [
+                77,
+                125,
+                182,
+                34
+              ],
+              "line": [
+                "1",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "text": "SKANOWANY",
+              "confidence": 0.9206881699999999,
+              "coordinates": [
+                271,
+                125,
+                213,
+                26
+              ],
+              "line": [
+                "1",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "text": "Druga",
+              "confidence": 0.9619704400000001,
+              "coordinates": [
+                79,
+                261,
+                87,
+                34
+              ],
+              "line": [
+                "1",
+                "1",
+                "2"
+              ]
+            },
+            {
+              "text": "strona",
+              "confidence": 0.9632505,
+              "coordinates": [
+                178,
+                262,
+                90,
+                25
+              ],
+              "line": [
+                "1",
+                "1",
+                "2"
+              ]
+            },
+            {
+              "text": "celowo",
+              "confidence": 0.96737022,
+              "coordinates": [
+                281,
+                261,
+                101,
+                26
+              ],
+              "line": [
+                "1",
+                "1",
+                "2"
+              ]
+            },
+            {
+              "text": "nie",
+              "confidence": 0.96737022,
+              "coordinates": [
+                395,
+                261,
+                41,
+                26
+              ],
+              "line": [
+                "1",
+                "1",
+                "2"
+              ]
+            },
+            {
+              "text": "posiada",
+              "confidence": 0.96781235,
+              "coordinates": [
+                450,
+                261,
+                113,
+                34
+              ],
+              "line": [
+                "1",
+                "1",
+                "2"
+              ]
+            },
+            {
+              "text": "embedded",
+              "confidence": 0.9634609199999999,
+              "coordinates": [
+                576,
+                261,
+                156,
+                26
+              ],
+              "line": [
+                "1",
+                "1",
+                "2"
+              ]
+            },
+            {
+              "text": "text.",
+              "confidence": 0.96368942,
+              "coordinates": [
+                744,
+                262,
+                61,
+                25
+              ],
+              "line": [
+                "1",
+                "1",
+                "2"
+              ]
+            },
+            {
+              "text": "Routing",
+              "confidence": 0.96864265,
+              "coordinates": [
+                79,
+                398,
+                111,
+                34
+              ],
+              "line": [
+                "1",
+                "1",
+                "3"
+              ]
+            },
+            {
+              "text": "powinien",
+              "confidence": 0.9659474899999999,
+              "coordinates": [
+                204,
+                398,
+                128,
+                34
+              ],
+              "line": [
+                "1",
+                "1",
+                "3"
+              ]
+            },
+            {
+              "text": "rozpoznać",
+              "confidence": 0.96687645,
+              "coordinates": [
+                346,
+                398,
+                152,
+                34
+              ],
+              "line": [
+                "1",
+                "1",
+                "3"
+              ]
+            },
+            {
+              "text": "dokument",
+              "confidence": 0.96601288,
+              "coordinates": [
+                509,
+                398,
+                146,
+                26
+              ],
+              "line": [
+                "1",
+                "1",
+                "3"
+              ]
+            },
+            {
+              "text": "mieszany.",
+              "confidence": 0.9623731999999999,
+              "coordinates": [
+                667,
+                398,
+                145,
+                34
+              ],
+              "line": [
+                "1",
+                "1",
+                "3"
+              ]
+            }
+          ]
+        }
+      ],
+      "provider_confidence": 0.9558143957142856,
+      "processing_time_ms": 1114.9,
+      "error": null,
+      "raw_provider_output": [
+        "level\tpage_num\tblock_num\tpar_num\tline_num\tword_num\tleft\ttop\twidth\theight\tconf\ttext\n1\t1\t0\t0\t0\t0\t0\t0\t1653\t2339\t-1\t\n2\t1\t1\t0\t0\t0\t97\t117\t1124\t1263\t-1\t\n3\t1\t1\t1\t0\t0\t100\t117\t796\t123\t-1\t\n4\t1\t1\t1\t1\t0\t100\t117\t796\t28\t-1\t\n5\t1\t1\t1\t1\t1\t100\t117\t203\t28\t93.000427\tDOKUMENT\n5\t1\t1\t1\t1\t2\t315\t117\t263\t28\t91.332748\tSYNTETYCZNY\n5\t1\t1\t1\t1\t3\t589\t133\t10\t4\t89.277878\t-\n5\t1\t1\t1\t1\t4\t613\t118\t56\t26\t96.523636\tNIE\n5\t1\t1\t1\t1\t5\t683\t117\t50\t28\t96.316994\tDO\n5\t1\t1\t1\t1\t6\t746\t117\t150\t28\t96.758034\tOBROTU\n4\t1\t1\t1\t2\t0\t100\t212\t425\t28\t-1\t\n5\t1\t1\t1\t2\t1\t100\t213\t126\t26\t93.296036\tFaktura:\n5\t1\t1\t1\t2\t2\t242\t212\t283\t28\t88.275162\tFV/STP/117/2026\n3\t1\t1\t2\t0\t0\t100\t307\t277\t27\t-1\t\n4\t1\t1\t2\t1\t0\t100\t307\t277\t27\t-1\t\n5\t1\t1\t2\t1\t1\t100\t307\t64\t26\t96.137222\tNIP:\n5\t1\t1\t2\t1\t2\t179\t307\t198\t27\t96.269363\t8567346215\n3\t1\t1\t3\t0\t0\t100\t402\t481\t34\t-1\t\n4\t1\t1\t3\t1\t0\t100\t402\t481\t34\t-1\t\n5\t1\t1\t3\t1\t1\t100\t402\t72\t26\t96.132423\tData\n5\t1\t1\t3\t1\t2\t184\t402\t201\t34\t96.132423\twystawienia:\n5\t1\t1\t3\t1\t3\t399\t402\t182\t27\t96.632652\t2026-02-12\n3\t1\t1\t4\t0\t0\t99\t489\t723\t136\t-1\t\n4\t1\t1\t4\t1\t0\t99\t489\t723\t41\t-1\t\n5\t1\t1\t4\t1\t1\t99\t495\t204\t34\t93.289864\tSprzedawca:\n5\t1\t1\t4\t1\t2\t316\t490\t68\t32\t93.231133\tŻółć\n5\t1\t1\t4\t1\t3\t396\t496\t4\t26\t96.960510\ti\n5\t1\t1\t4\t1\t4\t413\t489\t100\t33\t96.826874\tŹródło\n5\t1\t1\t4\t1\t5\t527\t496\t133\t34\t96.985092\tPrzykład\n5\t1\t1\t4\t1\t6\t674\t495\t50\t34\t96.982994\tSp.\n5\t1\t1\t4\t1\t7\t738\t503\t16\t19\t93.372772\tz\n5\t1\t1\t4\t1\t8\t766\t503\t56\t19\t96.249565\t0.0.\n4\t1\t1\t4\t2\t0\t100\t590\t560\t35\t-1\t\n5\t1\t1\t4\t2\t1\t100\t591\t153\t34\t95.227463\tNabywca:\n5\t1\t1\t4\t2\t2\t268\t591\t88\t26\t96.646141\tKlient\n5\t1\t1\t4\t2\t3\t367\t591\t133\t34\t96.563637\tTestowy\n5\t1\t1\t4\t2\t4\t512\t590\t49\t34\t96.563637\tSp.\n5\t1\t1\t4\t2\t5\t575\t598\t17\t19\t92.304276\tz\n5\t1\t1\t4\t2\t6\t603\t598\t57\t19\t83.728531\to.o.\n3\t1\t1\t5\t0\t0\t99\t684\t814\t127\t-1\t\n4\t1\t1\t5\t1\t0\t99\t684\t814\t35\t-1\t\n5\t1\t1\t5\t1\t1\t99\t684\t79\t34\t96.742088\tOpis:\n5\t1\t1\t5\t1\t2\t194\t685\t108\t34\t97.001114\tUsługa\n5\t1\t1\t5\t1\t3\t315\t685\t217\t34\t96.799194\tautomatyzacji\n5\t1\t1\t5\t1\t4\t547\t685\t152\t33\t96.719627\tprocesów\n5\t1\t1\t5\t1\t5\t711\t685\t202\t34\t96.556213\tbiznesowych\n4\t1\t1\t5\t2\t0\t100\t780\t232\t31\t-1\t\n5\t1\t1\t5\t2\t1\t100\t780\t90\t26\t96.237457\tNetto:\n5\t1\t1\t5\t2\t2\t205\t780\t127\t31\t96.694244\t3329,00\n3\t1\t1\t6\t0\t0\t97\t874\t199\t31\t-1\t\n4\t1\t1\t6\t1\t0\t97\t874\t199\t31\t-1\t\n5\t1\t1\t6\t1\t1\t97\t874\t77\t26\t95.670433\tVAT:\n5\t1\t1\t6\t1\t2\t189\t874\t107\t31\t96.634003\t765,67\n3\t1\t1\t7\t0\t0\t100\t968\t242\t31\t-1\t\n4\t1\t1\t7\t1\t0\t100\t968\t242\t31\t-1\t\n5\t1\t1\t7\t1\t1\t100\t968\t100\t26\t96.804558\tBrutto:\n5\t1\t1\t7\t1\t2\t214\t968\t128\t31\t96.950745\t4094,67\n3\t1\t1\t8\t0\t0\t97\t1063\t200\t26\t-1\t\n4\t1\t1\t8\t1\t0\t97\t1063\t200\t26\t-1\t\n5\t1\t1\t8\t1\t1\t97\t1063\t119\t26\t95.564758\tWaluta:\n5\t1\t1\t8\t1\t2\t232\t1063\t65\t26\t95.932304\tPLN\n3\t1\t1\t9\t0\t0\t98\t1157\t380\t33\t-1\t\n4\t1\t1\t9\t1\t0\t98\t1157\t380\t33\t-1\t\n5\t1\t1\t9\t1\t1\t98\t1157\t109\t26\t96.211403\tTermin\n5\t1\t1\t9\t1\t2\t222\t1157\t147\t33\t96.292885\tpłatności:\n5\t1\t1\t9\t1\t3\t386\t1157\t34\t26\t95.759628\t14\n5\t1\t1\t9\t1\t4\t433\t1157\t45\t26\t95.759628\tdni\n3\t1\t1\t10\t0\t0\t99\t1251\t417\t34\t-1\t\n4\t1\t1\t10\t1\t0\t99\t1251\t417\t34\t-1\t\n5\t1\t1\t10\t1\t1\t99\t1251\t119\t34\t96.686424\tSposób\n5\t1\t1\t10\t1\t2\t232\t1252\t147\t33\t96.389961\tpłatności:\n5\t1\t1\t10\t1\t3\t394\t1252\t122\t33\t96.731529\tprzelew\n3\t1\t1\t11\t0\t0\t100\t1345\t1121\t35\t-1\t\n4\t1\t1\t11\t1\t0\t100\t1345\t1121\t35\t-1\t\n5\t1\t1\t11\t1\t1\t100\t1346\t104\t34\t96.100853\tUwagi:\n5\t1\t1\t11\t1\t2\t218\t1346\t158\t26\t96.751610\tdokument\n5\t1\t1\t11\t1\t3\t388\t1347\t220\t33\t96.278618\tprzygotowany\n5\t1\t1\t11\t1\t4\t619\t1346\t155\t34\t95.769279\twyłącznie\n5\t1\t1\t11\t1\t5\t786\t1346\t38\t26\t96.662582\tdo\n5\t1\t1\t11\t1\t6\t836\t1346\t103\t26\t96.940239\ttestów\n5\t1\t1\t11\t1\t7\t952\t1346\t151\t26\t96.154335\tMilestone\n5\t1\t1\t11\t1\t8\t1115\t1346\t18\t26\t96.533806\t4\n5\t1\t1\t11\t1\t9\t1146\t1345\t75\t27\t96.534073\tSTP.\n",
+        "level\tpage_num\tblock_num\tpar_num\tline_num\tword_num\tleft\ttop\twidth\theight\tconf\ttext\n1\t1\t0\t0\t0\t0\t0\t0\t1653\t2339\t-1\t\n2\t1\t1\t0\t0\t0\t77\t125\t735\t307\t-1\t\n3\t1\t1\t1\t0\t0\t77\t125\t735\t307\t-1\t\n4\t1\t1\t1\t1\t0\t77\t125\t407\t34\t-1\t\n5\t1\t1\t1\t1\t1\t77\t125\t182\t34\t93.273201\tZAŁĄCZNIK\n5\t1\t1\t1\t1\t2\t271\t125\t213\t26\t92.068817\tSKANOWANY\n4\t1\t1\t1\t2\t0\t79\t261\t726\t34\t-1\t\n5\t1\t1\t1\t2\t1\t79\t261\t87\t34\t96.197044\tDruga\n5\t1\t1\t1\t2\t2\t178\t262\t90\t25\t96.325050\tstrona\n5\t1\t1\t1\t2\t3\t281\t261\t101\t26\t96.737022\tcelowo\n5\t1\t1\t1\t2\t4\t395\t261\t41\t26\t96.737022\tnie\n5\t1\t1\t1\t2\t5\t450\t261\t113\t34\t96.781235\tposiada\n5\t1\t1\t1\t2\t6\t576\t261\t156\t26\t96.346092\tembedded\n5\t1\t1\t1\t2\t7\t744\t262\t61\t25\t96.368942\ttext.\n4\t1\t1\t1\t3\t0\t79\t398\t733\t34\t-1\t\n5\t1\t1\t1\t3\t1\t79\t398\t111\t34\t96.864265\tRouting\n5\t1\t1\t1\t3\t2\t204\t398\t128\t34\t96.594749\tpowinien\n5\t1\t1\t1\t3\t3\t346\t398\t152\t34\t96.687645\trozpoznać\n5\t1\t1\t1\t3\t4\t509\t398\t146\t26\t96.601288\tdokument\n5\t1\t1\t1\t3\t5\t667\t398\t145\t34\t96.237320\tmieszany.\n"
+      ]
+    },
+    {
+      "provider": "paddle",
+      "provider_version": "3.7.0",
+      "document_id": "dev-18-mixed_native_scan",
+      "raw_text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/STP/117/2026\nNIP: 8567346215\nData wystawienia: 2026-02-12\nSprzedawca: Żółć i Żródło Przykład Sp. z o.o.\nNabywca: Klient Testowy Sp. z o.o.\nOpis: Usługa automatyzacji procesów biznesowych\nNetto: 3329,00\nVAT: 765,67\nBrutto: 4094,67\nWaluta: PLN\nTermin płatności: 14 dni\nSposób płatności: przelew\nUwagi: dokument przygotowany wyłącznie do testów Milestone 4 STP.\nZAŁACZNIK SKANOWANY\nDruga strona celowo nie posiada embedded text.\nRouting powinien rozpoznać dokument mieszany.",
+      "pages": [
+        {
+          "page": 1,
+          "width": 1653,
+          "height": 2339,
+          "text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/STP/117/2026\nNIP: 8567346215\nData wystawienia: 2026-02-12\nSprzedawca: Żółć i Żródło Przykład Sp. z o.o.\nNabywca: Klient Testowy Sp. z o.o.\nOpis: Usługa automatyzacji procesów biznesowych\nNetto: 3329,00\nVAT: 765,67\nBrutto: 4094,67\nWaluta: PLN\nTermin płatności: 14 dni\nSposób płatności: przelew\nUwagi: dokument przygotowany wyłącznie do testów Milestone 4 STP.",
+          "lines": [
+            {
+              "text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU",
+              "confidence": 0.9859854578971863,
+              "coordinates": [
+                [
+                  98,
+                  112
+                ],
+                [
+                  895,
+                  112
+                ],
+                [
+                  895,
+                  146
+                ],
+                [
+                  98,
+                  146
+                ]
+              ]
+            },
+            {
+              "text": "Faktura: FV/STP/117/2026",
+              "confidence": 0.9811479449272156,
+              "coordinates": [
+                [
+                  93,
+                  205
+                ],
+                [
+                  529,
+                  205
+                ],
+                [
+                  529,
+                  246
+                ],
+                [
+                  93,
+                  246
+                ]
+              ]
+            },
+            {
+              "text": "NIP: 8567346215",
+              "confidence": 0.9886460900306702,
+              "coordinates": [
+                [
+                  93,
+                  297
+                ],
+                [
+                  384,
+                  297
+                ],
+                [
+                  384,
+                  339
+                ],
+                [
+                  93,
+                  339
+                ]
+              ]
+            },
+            {
+              "text": "Data wystawienia: 2026-02-12",
+              "confidence": 0.999642014503479,
+              "coordinates": [
+                [
+                  93,
+                  395
+                ],
+                [
+                  583,
+                  395
+                ],
+                [
+                  583,
+                  436
+                ],
+                [
+                  93,
+                  436
+                ]
+              ]
+            },
+            {
+              "text": "Sprzedawca: Żółć i Żródło Przykład Sp. z o.o.",
+              "confidence": 0.9846566915512085,
+              "coordinates": [
+                [
+                  96,
+                  487
+                ],
+                [
+                  824,
+                  487
+                ],
+                [
+                  824,
+                  529
+                ],
+                [
+                  96,
+                  529
+                ]
+              ]
+            },
+            {
+              "text": "Nabywca: Klient Testowy Sp. z o.o.",
+              "confidence": 0.9996086359024048,
+              "coordinates": [
+                [
+                  93,
+                  582
+                ],
+                [
+                  662,
+                  582
+                ],
+                [
+                  662,
+                  624
+                ],
+                [
+                  93,
+                  624
+                ]
+              ]
+            },
+            {
+              "text": "Opis: Usługa automatyzacji procesów biznesowych",
+              "confidence": 0.9999284744262695,
+              "coordinates": [
+                [
+                  96,
+                  675
+                ],
+                [
+                  913,
+                  675
+                ],
+                [
+                  913,
+                  716
+                ],
+                [
+                  96,
+                  716
+                ]
+              ]
+            },
+            {
+              "text": "Netto: 3329,00",
+              "confidence": 0.9953157305717468,
+              "coordinates": [
+                [
+                  89,
+                  767
+                ],
+                [
+                  337,
+                  773
+                ],
+                [
+                  336,
+                  817
+                ],
+                [
+                  88,
+                  811
+                ]
+              ]
+            },
+            {
+              "text": "VAT: 765,67",
+              "confidence": 0.9939137101173401,
+              "coordinates": [
+                [
+                  89,
+                  860
+                ],
+                [
+                  303,
+                  860
+                ],
+                [
+                  303,
+                  911
+                ],
+                [
+                  89,
+                  911
+                ]
+              ]
+            },
+            {
+              "text": "Brutto: 4094,67",
+              "confidence": 0.996549665927887,
+              "coordinates": [
+                [
+                  89,
+                  955
+                ],
+                [
+                  347,
+                  955
+                ],
+                [
+                  347,
+                  1004
+                ],
+                [
+                  89,
+                  1004
+                ]
+              ]
+            },
+            {
+              "text": "Waluta: PLN",
+              "confidence": 0.9845798015594482,
+              "coordinates": [
+                [
+                  91,
+                  1053
+                ],
+                [
+                  305,
+                  1053
+                ],
+                [
+                  305,
+                  1096
+                ],
+                [
+                  91,
+                  1096
+                ]
+              ]
+            },
+            {
+              "text": "Termin płatności: 14 dni",
+              "confidence": 0.9900382161140442,
+              "coordinates": [
+                [
+                  96,
+                  1152
+                ],
+                [
+                  482,
+                  1152
+                ],
+                [
+                  482,
+                  1187
+                ],
+                [
+                  96,
+                  1187
+                ]
+              ]
+            },
+            {
+              "text": "Sposób płatności: przelew",
+              "confidence": 0.999721348285675,
+              "coordinates": [
+                [
+                  93,
+                  1245
+                ],
+                [
+                  519,
+                  1245
+                ],
+                [
+                  519,
+                  1286
+                ],
+                [
+                  93,
+                  1286
+                ]
+              ]
+            },
+            {
+              "text": "Uwagi: dokument przygotowany wyłącznie do testów Milestone 4 STP.",
+              "confidence": 0.9996755719184875,
+              "coordinates": [
+                [
+                  93,
+                  1338
+                ],
+                [
+                  1222,
+                  1333
+                ],
+                [
+                  1223,
+                  1377
+                ],
+                [
+                  94,
+                  1382
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "page": 2,
+          "width": 1653,
+          "height": 2339,
+          "text": "ZAŁACZNIK SKANOWANY\nDruga strona celowo nie posiada embedded text.\nRouting powinien rozpoznać dokument mieszany.",
+          "lines": [
+            {
+              "text": "ZAŁACZNIK SKANOWANY",
+              "confidence": 0.9904541373252869,
+              "coordinates": [
+                [
+                  71,
+                  112
+                ],
+                [
+                  487,
+                  110
+                ],
+                [
+                  487,
+                  158
+                ],
+                [
+                  72,
+                  161
+                ]
+              ]
+            },
+            {
+              "text": "Druga strona celowo nie posiada embedded text.",
+              "confidence": 0.9999492764472961,
+              "coordinates": [
+                [
+                  76,
+                  253
+                ],
+                [
+                  804,
+                  253
+                ],
+                [
+                  804,
+                  295
+                ],
+                [
+                  76,
+                  295
+                ]
+              ]
+            },
+            {
+              "text": "Routing powinien rozpoznać dokument mieszany.",
+              "confidence": 0.9999833106994629,
+              "coordinates": [
+                [
+                  69,
+                  385
+                ],
+                [
+                  817,
+                  387
+                ],
+                [
+                  817,
+                  436
+                ],
+                [
+                  69,
+                  434
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "provider_confidence": 0.9935174163650063,
+      "processing_time_ms": 8085.43,
+      "error": null,
+      "raw_provider_output": [
+        {
+          "res": {
+            "input_path": null,
+            "page_index": null,
+            "model_settings": {
+              "use_doc_preprocessor": false,
+              "use_textline_orientation": false
+            },
+            "dt_polys": [
+              [
+                [
+                  98,
+                  112
+                ],
+                [
+                  895,
+                  112
+                ],
+                [
+                  895,
+                  146
+                ],
+                [
+                  98,
+                  146
+                ]
+              ],
+              [
+                [
+                  93,
+                  205
+                ],
+                [
+                  529,
+                  205
+                ],
+                [
+                  529,
+                  246
+                ],
+                [
+                  93,
+                  246
+                ]
+              ],
+              [
+                [
+                  93,
+                  297
+                ],
+                [
+                  384,
+                  297
+                ],
+                [
+                  384,
+                  339
+                ],
+                [
+                  93,
+                  339
+                ]
+              ],
+              [
+                [
+                  93,
+                  395
+                ],
+                [
+                  583,
+                  395
+                ],
+                [
+                  583,
+                  436
+                ],
+                [
+                  93,
+                  436
+                ]
+              ],
+              [
+                [
+                  96,
+                  487
+                ],
+                [
+                  824,
+                  487
+                ],
+                [
+                  824,
+                  529
+                ],
+                [
+                  96,
+                  529
+                ]
+              ],
+              [
+                [
+                  93,
+                  582
+                ],
+                [
+                  662,
+                  582
+                ],
+                [
+                  662,
+                  624
+                ],
+                [
+                  93,
+                  624
+                ]
+              ],
+              [
+                [
+                  96,
+                  675
+                ],
+                [
+                  913,
+                  675
+                ],
+                [
+                  913,
+                  716
+                ],
+                [
+                  96,
+                  716
+                ]
+              ],
+              [
+                [
+                  89,
+                  767
+                ],
+                [
+                  337,
+                  773
+                ],
+                [
+                  336,
+                  817
+                ],
+                [
+                  88,
+                  811
+                ]
+              ],
+              [
+                [
+                  89,
+                  860
+                ],
+                [
+                  303,
+                  860
+                ],
+                [
+                  303,
+                  911
+                ],
+                [
+                  89,
+                  911
+                ]
+              ],
+              [
+                [
+                  89,
+                  955
+                ],
+                [
+                  347,
+                  955
+                ],
+                [
+                  347,
+                  1004
+                ],
+                [
+                  89,
+                  1004
+                ]
+              ],
+              [
+                [
+                  91,
+                  1053
+                ],
+                [
+                  305,
+                  1053
+                ],
+                [
+                  305,
+                  1096
+                ],
+                [
+                  91,
+                  1096
+                ]
+              ],
+              [
+                [
+                  96,
+                  1152
+                ],
+                [
+                  482,
+                  1152
+                ],
+                [
+                  482,
+                  1187
+                ],
+                [
+                  96,
+                  1187
+                ]
+              ],
+              [
+                [
+                  93,
+                  1245
+                ],
+                [
+                  519,
+                  1245
+                ],
+                [
+                  519,
+                  1286
+                ],
+                [
+                  93,
+                  1286
+                ]
+              ],
+              [
+                [
+                  93,
+                  1338
+                ],
+                [
+                  1222,
+                  1333
+                ],
+                [
+                  1223,
+                  1377
+                ],
+                [
+                  94,
+                  1382
+                ]
+              ]
+            ],
+            "text_det_params": {
+              "limit_side_len": 960,
+              "limit_type": "max",
+              "thresh": 0.3,
+              "max_side_limit": 4000,
+              "box_thresh": 0.6,
+              "unclip_ratio": 1.5
+            },
+            "text_type": "general",
+            "textline_orientation_angles": [
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "text_rec_score_thresh": 0.0,
+            "return_word_box": false,
+            "rec_texts": [
+              "DOKUMENT SYNTETYCZNY - NIE DO OBROTU",
+              "Faktura: FV/STP/117/2026",
+              "NIP: 8567346215",
+              "Data wystawienia: 2026-02-12",
+              "Sprzedawca: Żółć i Żródło Przykład Sp. z o.o.",
+              "Nabywca: Klient Testowy Sp. z o.o.",
+              "Opis: Usługa automatyzacji procesów biznesowych",
+              "Netto: 3329,00",
+              "VAT: 765,67",
+              "Brutto: 4094,67",
+              "Waluta: PLN",
+              "Termin płatności: 14 dni",
+              "Sposób płatności: przelew",
+              "Uwagi: dokument przygotowany wyłącznie do testów Milestone 4 STP."
+            ],
+            "rec_scores": [
+              0.9859854578971863,
+              0.9811479449272156,
+              0.9886460900306702,
+              0.999642014503479,
+              0.9846566915512085,
+              0.9996086359024048,
+              0.9999284744262695,
+              0.9953157305717468,
+              0.9939137101173401,
+              0.996549665927887,
+              0.9845798015594482,
+              0.9900382161140442,
+              0.999721348285675,
+              0.9996755719184875
+            ],
+            "rec_polys": [
+              [
+                [
+                  98,
+                  112
+                ],
+                [
+                  895,
+                  112
+                ],
+                [
+                  895,
+                  146
+                ],
+                [
+                  98,
+                  146
+                ]
+              ],
+              [
+                [
+                  93,
+                  205
+                ],
+                [
+                  529,
+                  205
+                ],
+                [
+                  529,
+                  246
+                ],
+                [
+                  93,
+                  246
+                ]
+              ],
+              [
+                [
+                  93,
+                  297
+                ],
+                [
+                  384,
+                  297
+                ],
+                [
+                  384,
+                  339
+                ],
+                [
+                  93,
+                  339
+                ]
+              ],
+              [
+                [
+                  93,
+                  395
+                ],
+                [
+                  583,
+                  395
+                ],
+                [
+                  583,
+                  436
+                ],
+                [
+                  93,
+                  436
+                ]
+              ],
+              [
+                [
+                  96,
+                  487
+                ],
+                [
+                  824,
+                  487
+                ],
+                [
+                  824,
+                  529
+                ],
+                [
+                  96,
+                  529
+                ]
+              ],
+              [
+                [
+                  93,
+                  582
+                ],
+                [
+                  662,
+                  582
+                ],
+                [
+                  662,
+                  624
+                ],
+                [
+                  93,
+                  624
+                ]
+              ],
+              [
+                [
+                  96,
+                  675
+                ],
+                [
+                  913,
+                  675
+                ],
+                [
+                  913,
+                  716
+                ],
+                [
+                  96,
+                  716
+                ]
+              ],
+              [
+                [
+                  89,
+                  767
+                ],
+                [
+                  337,
+                  773
+                ],
+                [
+                  336,
+                  817
+                ],
+                [
+                  88,
+                  811
+                ]
+              ],
+              [
+                [
+                  89,
+                  860
+                ],
+                [
+                  303,
+                  860
+                ],
+                [
+                  303,
+                  911
+                ],
+                [
+                  89,
+                  911
+                ]
+              ],
+              [
+                [
+                  89,
+                  955
+                ],
+                [
+                  347,
+                  955
+                ],
+                [
+                  347,
+                  1004
+                ],
+                [
+                  89,
+                  1004
+                ]
+              ],
+              [
+                [
+                  91,
+                  1053
+                ],
+                [
+                  305,
+                  1053
+                ],
+                [
+                  305,
+                  1096
+                ],
+                [
+                  91,
+                  1096
+                ]
+              ],
+              [
+                [
+                  96,
+                  1152
+                ],
+                [
+                  482,
+                  1152
+                ],
+                [
+                  482,
+                  1187
+                ],
+                [
+                  96,
+                  1187
+                ]
+              ],
+              [
+                [
+                  93,
+                  1245
+                ],
+                [
+                  519,
+                  1245
+                ],
+                [
+                  519,
+                  1286
+                ],
+                [
+                  93,
+                  1286
+                ]
+              ],
+              [
+                [
+                  93,
+                  1338
+                ],
+                [
+                  1222,
+                  1333
+                ],
+                [
+                  1223,
+                  1377
+                ],
+                [
+                  94,
+                  1382
+                ]
+              ]
+            ],
+            "rec_boxes": [
+              [
+                98,
+                112,
+                895,
+                146
+              ],
+              [
+                93,
+                205,
+                529,
+                246
+              ],
+              [
+                93,
+                297,
+                384,
+                339
+              ],
+              [
+                93,
+                395,
+                583,
+                436
+              ],
+              [
+                96,
+                487,
+                824,
+                529
+              ],
+              [
+                93,
+                582,
+                662,
+                624
+              ],
+              [
+                96,
+                675,
+                913,
+                716
+              ],
+              [
+                88,
+                767,
+                337,
+                817
+              ],
+              [
+                89,
+                860,
+                303,
+                911
+              ],
+              [
+                89,
+                955,
+                347,
+                1004
+              ],
+              [
+                91,
+                1053,
+                305,
+                1096
+              ],
+              [
+                96,
+                1152,
+                482,
+                1187
+              ],
+              [
+                93,
+                1245,
+                519,
+                1286
+              ],
+              [
+                93,
+                1333,
+                1223,
+                1382
+              ]
+            ]
+          }
+        },
+        {
+          "res": {
+            "input_path": null,
+            "page_index": null,
+            "model_settings": {
+              "use_doc_preprocessor": false,
+              "use_textline_orientation": false
+            },
+            "dt_polys": [
+              [
+                [
+                  71,
+                  112
+                ],
+                [
+                  487,
+                  110
+                ],
+                [
+                  487,
+                  158
+                ],
+                [
+                  72,
+                  161
+                ]
+              ],
+              [
+                [
+                  76,
+                  253
+                ],
+                [
+                  804,
+                  253
+                ],
+                [
+                  804,
+                  295
+                ],
+                [
+                  76,
+                  295
+                ]
+              ],
+              [
+                [
+                  69,
+                  385
+                ],
+                [
+                  817,
+                  387
+                ],
+                [
+                  817,
+                  436
+                ],
+                [
+                  69,
+                  434
+                ]
+              ]
+            ],
+            "text_det_params": {
+              "limit_side_len": 960,
+              "limit_type": "max",
+              "thresh": 0.3,
+              "max_side_limit": 4000,
+              "box_thresh": 0.6,
+              "unclip_ratio": 1.5
+            },
+            "text_type": "general",
+            "textline_orientation_angles": [
+              -1,
+              -1,
+              -1
+            ],
+            "text_rec_score_thresh": 0.0,
+            "return_word_box": false,
+            "rec_texts": [
+              "ZAŁACZNIK SKANOWANY",
+              "Druga strona celowo nie posiada embedded text.",
+              "Routing powinien rozpoznać dokument mieszany."
+            ],
+            "rec_scores": [
+              0.9904541373252869,
+              0.9999492764472961,
+              0.9999833106994629
+            ],
+            "rec_polys": [
+              [
+                [
+                  71,
+                  112
+                ],
+                [
+                  487,
+                  110
+                ],
+                [
+                  487,
+                  158
+                ],
+                [
+                  72,
+                  161
+                ]
+              ],
+              [
+                [
+                  76,
+                  253
+                ],
+                [
+                  804,
+                  253
+                ],
+                [
+                  804,
+                  295
+                ],
+                [
+                  76,
+                  295
+                ]
+              ],
+              [
+                [
+                  69,
+                  385
+                ],
+                [
+                  817,
+                  387
+                ],
+                [
+                  817,
+                  436
+                ],
+                [
+                  69,
+                  434
+                ]
+              ]
+            ],
+            "rec_boxes": [
+              [
+                71,
+                110,
+                487,
+                161
+              ],
+              [
+                76,
+                253,
+                804,
+                295
+              ],
+              [
+                69,
+                385,
+                817,
+                436
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "field": "document_number",
+      "raw_a": "FV/STP/117/2026",
+      "raw_b": "FV/STP/117/2026",
+      "normalized_a": "FV/STP/117/2026",
+      "normalized_b": "FV/STP/117/2026",
+      "comparison": "equal",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "selected": "FV/STP/117/2026",
+      "reason": "Agreement is not ground truth"
+    },
+    {
+      "field": "tax_id",
+      "raw_a": "8567346215",
+      "raw_b": "8567346215",
+      "normalized_a": "8567346215",
+      "normalized_b": "8567346215",
+      "comparison": "equal",
+      "outcome": "CONSENSUS_VALID",
+      "selected": "8567346215",
+      "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)"
+    },
+    {
+      "field": "issue_date",
+      "raw_a": "2026-02-12",
+      "raw_b": "2026-02-12",
+      "normalized_a": "2026-02-12",
+      "normalized_b": "2026-02-12",
+      "comparison": "equal",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "selected": "2026-02-12",
+      "reason": "Agreement is not ground truth"
+    },
+    {
+      "field": "net_total",
+      "raw_a": "3329,00",
+      "raw_b": "3329,00",
+      "normalized_a": "3329.00",
+      "normalized_b": "3329.00",
+      "comparison": "equal",
+      "outcome": "CONSENSUS_VALID",
+      "selected": "3329.00",
+      "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)"
+    },
+    {
+      "field": "vat_total",
+      "raw_a": "765,67",
+      "raw_b": "765,67",
+      "normalized_a": "765.67",
+      "normalized_b": "765.67",
+      "comparison": "equal",
+      "outcome": "CONSENSUS_VALID",
+      "selected": "765.67",
+      "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)"
+    },
+    {
+      "field": "gross_total",
+      "raw_a": "4094,67",
+      "raw_b": "4094,67",
+      "normalized_a": "4094.67",
+      "normalized_b": "4094.67",
+      "comparison": "equal",
+      "outcome": "CONSENSUS_VALID",
+      "selected": "4094.67",
+      "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)"
+    },
+    {
+      "field": "currency",
+      "raw_a": "PLN",
+      "raw_b": "PLN",
+      "normalized_a": "PLN",
+      "normalized_b": "PLN",
+      "comparison": "equal",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "selected": "PLN",
+      "reason": "Agreement is not ground truth"
+    }
+  ],
+  "business_validation": {
+    "a": {
+      "nip_checksum": true,
+      "money_nonnegative": true,
+      "net_plus_vat_equals_gross": true,
+      "currency_allowed": true,
+      "issue_date_valid": true,
+      "document_number_present": true
+    },
+    "b": {
+      "nip_checksum": true,
+      "money_nonnegative": true,
+      "net_plus_vat_equals_gross": true,
+      "currency_allowed": true,
+      "issue_date_valid": true,
+      "document_number_present": true
+    },
+    "selected": {
+      "nip_checksum": true,
+      "money_nonnegative": true,
+      "net_plus_vat_equals_gross": true,
+      "currency_allowed": true,
+      "issue_date_valid": true,
+      "document_number_present": true
+    }
+  },
+  "selected": {
+    "document_number": "FV/STP/117/2026",
+    "tax_id": "8567346215",
+    "issue_date": "2026-02-12",
+    "net_total": "3329.00",
+    "vat_total": "765.67",
+    "gross_total": "4094.67",
+    "currency": "PLN"
+  },
+  "outcome": "CONSENSUS_UNVERIFIED",
+  "review_required": true,
+  "route": "DUAL_OCR",
+  "report_version": "m4-stp-v1",
+  "routing": {
+    "initial_route": "DUAL_OCR",
+    "final_route": "DUAL_OCR",
+    "reason": "PDF native text is absent or below the configured quality gate",
+    "native_processing_time_ms": 34.88120000110939
+  }
+}

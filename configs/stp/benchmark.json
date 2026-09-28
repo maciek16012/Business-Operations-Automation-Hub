@@ -1,0 +1,66 @@
+﻿{
+    "benchmark_version":  "1.0",
+    "profiles":  {
+                     "tesseract":  "orientation",
+                     "paddle":  "orientation"
+                 },
+    "routing":  {
+                    "target_stp_rate":  0.90,
+                    "hard_safety_constraint":  "zero incorrect critical fields auto-accepted",
+                    "primary_ocr_provider":  "paddle",
+                    "native_text":  {
+                                        "min_chars_per_page":  100.0,
+                                        "min_alnum_ratio":  0.30,
+                                        "min_printable_ratio":  0.95,
+                                        "min_text_page_ratio":  0.80,
+                                        "max_image_area_ratio":  0.8
+                                    }
+                },
+    "critical_fields":  [
+                            "document_number",
+                            "tax_id",
+                            "issue_date",
+                            "net_total",
+                            "vat_total",
+                            "gross_total",
+                            "currency"
+                        ],
+    "routes":  [
+                   "NATIVE_TEXT",
+                   "PRIMARY_OCR",
+                   "DUAL_OCR",
+                   "HUMAN_REVIEW"
+               ],
+    "outcomes":  [
+                     "AUTO_ACCEPT",
+                     "REVIEW_REQUIRED",
+                     "PROCESSING_FAILED"
+                 ],
+    "metrics":  [
+                    "stp_rate",
+                    "manual_review_rate",
+                    "critical_field_false_accept_rate",
+                    "document_false_accept_rate",
+                    "native_text_route_rate",
+                    "primary_ocr_route_rate",
+                    "dual_ocr_route_rate",
+                    "processing_failure_rate",
+                    "mean_processing_time_ms",
+                    "p95_processing_time_ms",
+                    "mean_ocr_invocations_per_document"
+                ],
+    "dataset":  {
+                    "development_split":  "dev",
+                    "holdout_split":  "holdout",
+                    "tune_on_holdout":  false,
+                    "milestone3_holdout_must_not_be_reused_for_tuning":  true,
+                    "freeze_before_holdout":  true,
+                    "holdout_single_final_run":  true
+                },
+    "notes":  {
+                  "ocr_profiles_source":  "Milestone 3 DEV-selected orientation profiles",
+                  "agreement_is_not_ground_truth":  true,
+                  "native_text_requires_field_validation":  true,
+                  "primary_ocr_auto_accept_requires_dev_calibration":  true
+              }
+}

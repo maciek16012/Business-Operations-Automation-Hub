@@ -1,0 +1,456 @@
+[
+  {
+    "id": "dev-01-native_clean",
+    "split": "dev",
+    "style": "native_clean",
+    "document_class": "native_text",
+    "source_file": "datasets/stp/input/dev/dev-01-native_clean.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-01-native_clean.json",
+    "sha256": "55990d5b27b265b55c10df5e2aecf65445c0054dc17d163d53577d5a9c3d305e",
+    "challenge_tags": []
+  },
+  {
+    "id": "dev-02-native_table",
+    "split": "dev",
+    "style": "native_table",
+    "document_class": "native_text",
+    "source_file": "datasets/stp/input/dev/dev-02-native_table.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-02-native_table.json",
+    "sha256": "6e6a6948689d93b93220e3ae6f60048c923ec1a9968e44aa4d01db7ef608bba6",
+    "challenge_tags": []
+  },
+  {
+    "id": "dev-03-native_multipage",
+    "split": "dev",
+    "style": "native_multipage",
+    "document_class": "native_text",
+    "source_file": "datasets/stp/input/dev/dev-03-native_multipage.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-03-native_multipage.json",
+    "sha256": "bb8a955361bd95963a7272487b99a3f28e08b01608b9aa57be174b696adcb031",
+    "challenge_tags": []
+  },
+  {
+    "id": "dev-04-native_sparse",
+    "split": "dev",
+    "style": "native_sparse",
+    "document_class": "native_uncertain",
+    "source_file": "datasets/stp/input/dev/dev-04-native_sparse.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-04-native_sparse.json",
+    "sha256": "88b26b98023b37316b5779dbb885b44c5cdef639391e129192d47b68495389d0",
+    "challenge_tags": [
+      "sparse_embedded_text"
+    ]
+  },
+  {
+    "id": "dev-05-hybrid_correct_native",
+    "split": "dev",
+    "style": "hybrid_correct_native",
+    "document_class": "hybrid",
+    "source_file": "datasets/stp/input/dev/dev-05-hybrid_correct_native.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-05-hybrid_correct_native.json",
+    "sha256": "811db6d0125700e1cd3b091935ee60c753d3fd750cab95eeb77165266fe373cc",
+    "challenge_tags": [
+      "hybrid_pdf"
+    ]
+  },
+  {
+    "id": "dev-06-hybrid_wrong_native",
+    "split": "dev",
+    "style": "hybrid_wrong_native",
+    "document_class": "hybrid",
+    "source_file": "datasets/stp/input/dev/dev-06-hybrid_wrong_native.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-06-hybrid_wrong_native.json",
+    "sha256": "871cc470ec6d40706e10a2afa631b4fc02d925e820369dd89ef1cc3124f298be",
+    "challenge_tags": [
+      "hybrid_pdf",
+      "misleading_embedded_text",
+      "internally_valid_wrong_native_fields"
+    ]
+  },
+  {
+    "id": "dev-07-scan_clean",
+    "split": "dev",
+    "style": "scan_clean",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/dev/dev-07-scan_clean.png",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-07-scan_clean.json",
+    "sha256": "a6e2fadf7697cad2f8a7e746d70b3cfac55144363cc5e6aceeb3930346afbfa3",
+    "challenge_tags": []
+  },
+  {
+    "id": "dev-08-scan_poor",
+    "split": "dev",
+    "style": "scan_poor",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/dev/dev-08-scan_poor.png",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-08-scan_poor.json",
+    "sha256": "12c1e1a0bc3282a97ea365f636aca6eed066bcc3faa970fd817e20daa14c1d7a",
+    "challenge_tags": [
+      "scan_poor"
+    ]
+  },
+  {
+    "id": "dev-09-scan_skew",
+    "split": "dev",
+    "style": "scan_skew",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/dev/dev-09-scan_skew.png",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-09-scan_skew.json",
+    "sha256": "f2630569786389ee842b09eb2fe79cbc242c15f2e01fdc2431184ef36c89628a",
+    "challenge_tags": [
+      "scan_skew"
+    ]
+  },
+  {
+    "id": "dev-10-scan_contrast",
+    "split": "dev",
+    "style": "scan_contrast",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/dev/dev-10-scan_contrast.png",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-10-scan_contrast.json",
+    "sha256": "f64e31b973d18cdaf7d13951d309265fa86e2765b4099285ab54c80b314b07ae",
+    "challenge_tags": [
+      "scan_contrast"
+    ]
+  },
+  {
+    "id": "dev-11-scan_compression",
+    "split": "dev",
+    "style": "scan_compression",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/dev/dev-11-scan_compression.jpg",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-11-scan_compression.json",
+    "sha256": "3c119a6b81c4f48a02b8df0fe08802082c633508aceba875ddaaf3719a60ca72",
+    "challenge_tags": [
+      "scan_compression"
+    ]
+  },
+  {
+    "id": "dev-12-scan_table",
+    "split": "dev",
+    "style": "scan_table",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/dev/dev-12-scan_table.png",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-12-scan_table.json",
+    "sha256": "4fd2b233e0fde8839c5709722e0b661549bc8c1d875251c96c1128532f06b569",
+    "challenge_tags": []
+  },
+  {
+    "id": "dev-13-scan_orientation",
+    "split": "dev",
+    "style": "scan_orientation",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/dev/dev-13-scan_orientation.png",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-13-scan_orientation.json",
+    "sha256": "5b0801b3d6dc218364651382fa75eecb42c81f896088043ff5e6bdf3f812557f",
+    "challenge_tags": [
+      "scan_orientation"
+    ]
+  },
+  {
+    "id": "dev-14-scan_small_text",
+    "split": "dev",
+    "style": "scan_small_text",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/dev/dev-14-scan_small_text.png",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-14-scan_small_text.json",
+    "sha256": "fb6432c1a50ad33c0d94841b1f69718130b065cc73c8245bda9b72f763c9f079",
+    "challenge_tags": []
+  },
+  {
+    "id": "dev-15-scan_noise",
+    "split": "dev",
+    "style": "scan_noise",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/dev/dev-15-scan_noise.png",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-15-scan_noise.json",
+    "sha256": "152c0ce410d7fdf83b9c574eeb88c64d69f3f282019d837b37480099edd9532b",
+    "challenge_tags": [
+      "scan_noise"
+    ]
+  },
+  {
+    "id": "dev-16-scan_partial",
+    "split": "dev",
+    "style": "scan_partial",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/dev/dev-16-scan_partial.png",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-16-scan_partial.json",
+    "sha256": "17e50701fc812cf211ad1d37720328dfbb75919f42b211c5e45f23d9765a50d5",
+    "challenge_tags": [
+      "scan_partial"
+    ]
+  },
+  {
+    "id": "dev-17-multipage_scan",
+    "split": "dev",
+    "style": "multipage_scan",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/dev/dev-17-multipage_scan.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-17-multipage_scan.json",
+    "sha256": "4ddbc8febb91b5528363fad58a235234f55638485ebd8824ce38219f88523ddf",
+    "challenge_tags": [
+      "multipage"
+    ]
+  },
+  {
+    "id": "dev-18-mixed_native_scan",
+    "split": "dev",
+    "style": "mixed_native_scan",
+    "document_class": "hybrid",
+    "source_file": "datasets/stp/input/dev/dev-18-mixed_native_scan.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-18-mixed_native_scan.json",
+    "sha256": "8194051d3838b53072c0c2c16659dcdc35978f68ac3129b66b4f2ba87da331af",
+    "challenge_tags": [
+      "multipage",
+      "mixed_native_and_scan"
+    ]
+  },
+  {
+    "id": "dev-19-scan_foreign_currency",
+    "split": "dev",
+    "style": "scan_foreign_currency",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/dev/dev-19-scan_foreign_currency.png",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-19-scan_foreign_currency.json",
+    "sha256": "10075371615a2d9ebb78d67b2b260b23be6e86d404d29583dca82dbd5c298b16",
+    "challenge_tags": []
+  },
+  {
+    "id": "dev-20-scan_long_document_number",
+    "split": "dev",
+    "style": "scan_long_document_number",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/dev/dev-20-scan_long_document_number.png",
+    "ground_truth_file": "datasets/stp/ground_truth/dev/dev-20-scan_long_document_number.json",
+    "sha256": "7bd45b497cd930c6be24fc8bfbbb87ba5ca9ca17d1484c13af13b5e3dcd53d70",
+    "challenge_tags": []
+  },
+  {
+    "id": "holdout-01-native_clean",
+    "split": "holdout",
+    "style": "native_clean",
+    "document_class": "native_text",
+    "source_file": "datasets/stp/input/holdout/holdout-01-native_clean.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-01-native_clean.json",
+    "sha256": "1a680cd2ceabc945f82fa5752403a52ce602658190e0a7843e3e79bff6d8d229",
+    "challenge_tags": []
+  },
+  {
+    "id": "holdout-02-native_table",
+    "split": "holdout",
+    "style": "native_table",
+    "document_class": "native_text",
+    "source_file": "datasets/stp/input/holdout/holdout-02-native_table.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-02-native_table.json",
+    "sha256": "0ac1e7816cd240e2e0c4a19a0bccb0c5bf8f539fbbfc71cc899875df67b29fa1",
+    "challenge_tags": []
+  },
+  {
+    "id": "holdout-03-native_multipage",
+    "split": "holdout",
+    "style": "native_multipage",
+    "document_class": "native_text",
+    "source_file": "datasets/stp/input/holdout/holdout-03-native_multipage.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-03-native_multipage.json",
+    "sha256": "a223d3e0b7e669ed73be135526014a19de87b67b534afbbd2655eade31f46536",
+    "challenge_tags": []
+  },
+  {
+    "id": "holdout-04-native_sparse",
+    "split": "holdout",
+    "style": "native_sparse",
+    "document_class": "native_uncertain",
+    "source_file": "datasets/stp/input/holdout/holdout-04-native_sparse.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-04-native_sparse.json",
+    "sha256": "a62f82fa5d38005771e20f15767d87fe757aa61cafed4b923776d7832302d1d8",
+    "challenge_tags": [
+      "sparse_embedded_text"
+    ]
+  },
+  {
+    "id": "holdout-05-hybrid_correct_native",
+    "split": "holdout",
+    "style": "hybrid_correct_native",
+    "document_class": "hybrid",
+    "source_file": "datasets/stp/input/holdout/holdout-05-hybrid_correct_native.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-05-hybrid_correct_native.json",
+    "sha256": "ec0311068e3e11531651f1aed5674d3e3b632d08e4f886c1513b0973953318da",
+    "challenge_tags": [
+      "hybrid_pdf"
+    ]
+  },
+  {
+    "id": "holdout-06-hybrid_wrong_native",
+    "split": "holdout",
+    "style": "hybrid_wrong_native",
+    "document_class": "hybrid",
+    "source_file": "datasets/stp/input/holdout/holdout-06-hybrid_wrong_native.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-06-hybrid_wrong_native.json",
+    "sha256": "0b2dc9a2ef63b5d64dcefc8c888ba2e64c2d371e1175a319f61c9f77482b1c14",
+    "challenge_tags": [
+      "hybrid_pdf",
+      "misleading_embedded_text",
+      "internally_valid_wrong_native_fields"
+    ]
+  },
+  {
+    "id": "holdout-07-scan_clean",
+    "split": "holdout",
+    "style": "scan_clean",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/holdout/holdout-07-scan_clean.png",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-07-scan_clean.json",
+    "sha256": "9aaad6a8e99da34f1492b126f5e698c66fa757e22b59c7eb0c56c02227804bd5",
+    "challenge_tags": []
+  },
+  {
+    "id": "holdout-08-scan_poor",
+    "split": "holdout",
+    "style": "scan_poor",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/holdout/holdout-08-scan_poor.png",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-08-scan_poor.json",
+    "sha256": "32de937bd8aba16e2058997349669ff9aad7062b00e8cf774480315dbdfb4802",
+    "challenge_tags": [
+      "scan_poor"
+    ]
+  },
+  {
+    "id": "holdout-09-scan_skew",
+    "split": "holdout",
+    "style": "scan_skew",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/holdout/holdout-09-scan_skew.png",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-09-scan_skew.json",
+    "sha256": "3d0d4e6264eadb2fc084a9230b53bb600043ec914612a9eca635fcf571648178",
+    "challenge_tags": [
+      "scan_skew"
+    ]
+  },
+  {
+    "id": "holdout-10-scan_contrast",
+    "split": "holdout",
+    "style": "scan_contrast",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/holdout/holdout-10-scan_contrast.png",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-10-scan_contrast.json",
+    "sha256": "8aebb6dcd6464b2dcd137624a330a7d4ed60be4857a0942ac778dd723185ad13",
+    "challenge_tags": [
+      "scan_contrast"
+    ]
+  },
+  {
+    "id": "holdout-11-scan_compression",
+    "split": "holdout",
+    "style": "scan_compression",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/holdout/holdout-11-scan_compression.jpg",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-11-scan_compression.json",
+    "sha256": "00d2b78c5d48059e4b65bf642743a6e6039fccc217ae46674ffb3a94323e3dca",
+    "challenge_tags": [
+      "scan_compression"
+    ]
+  },
+  {
+    "id": "holdout-12-scan_table",
+    "split": "holdout",
+    "style": "scan_table",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/holdout/holdout-12-scan_table.png",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-12-scan_table.json",
+    "sha256": "4bee45dc419f562c9ed08cf18c331207ac1bca93b73896d3e37e0003e3fe6294",
+    "challenge_tags": []
+  },
+  {
+    "id": "holdout-13-scan_orientation",
+    "split": "holdout",
+    "style": "scan_orientation",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/holdout/holdout-13-scan_orientation.png",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-13-scan_orientation.json",
+    "sha256": "9d2e6c2097e5d87151537ba2876d7383bd60f8524f15e533a667d13c85a29f5b",
+    "challenge_tags": [
+      "scan_orientation"
+    ]
+  },
+  {
+    "id": "holdout-14-scan_small_text",
+    "split": "holdout",
+    "style": "scan_small_text",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/holdout/holdout-14-scan_small_text.png",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-14-scan_small_text.json",
+    "sha256": "d70762c53bfe2c91af3f6843a8fb5fcad0c281aaae471944a4eeee5704aaba05",
+    "challenge_tags": []
+  },
+  {
+    "id": "holdout-15-scan_noise",
+    "split": "holdout",
+    "style": "scan_noise",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/holdout/holdout-15-scan_noise.png",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-15-scan_noise.json",
+    "sha256": "d02ea88762e4ed9aa050de2eeddd572fd6f76f8602b53ead711a6746b838eb72",
+    "challenge_tags": [
+      "scan_noise"
+    ]
+  },
+  {
+    "id": "holdout-16-scan_partial",
+    "split": "holdout",
+    "style": "scan_partial",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/holdout/holdout-16-scan_partial.png",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-16-scan_partial.json",
+    "sha256": "5996af8a5c8ff3e4e1d600fd7850c9c2fccc35d710914c27ade456cac5013bfb",
+    "challenge_tags": [
+      "scan_partial"
+    ]
+  },
+  {
+    "id": "holdout-17-multipage_scan",
+    "split": "holdout",
+    "style": "multipage_scan",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/holdout/holdout-17-multipage_scan.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-17-multipage_scan.json",
+    "sha256": "962a571a75923f2c9d52b8c6d8b0849ec1ae1a81020643f0ff102c828b217cdc",
+    "challenge_tags": [
+      "multipage"
+    ]
+  },
+  {
+    "id": "holdout-18-mixed_native_scan",
+    "split": "holdout",
+    "style": "mixed_native_scan",
+    "document_class": "hybrid",
+    "source_file": "datasets/stp/input/holdout/holdout-18-mixed_native_scan.pdf",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-18-mixed_native_scan.json",
+    "sha256": "cf2ab7584e5cff34ab7b9ec8cf463c9b9d89900e7fc0025ee846de4b21973f8b",
+    "challenge_tags": [
+      "multipage",
+      "mixed_native_and_scan"
+    ]
+  },
+  {
+    "id": "holdout-19-scan_foreign_currency",
+    "split": "holdout",
+    "style": "scan_foreign_currency",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/holdout/holdout-19-scan_foreign_currency.png",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-19-scan_foreign_currency.json",
+    "sha256": "84c07e7f413a4e45f33f4fc6b4d0a9dec9a73dc05934571bcbbc809971f9b382",
+    "challenge_tags": []
+  },
+  {
+    "id": "holdout-20-scan_long_document_number",
+    "split": "holdout",
+    "style": "scan_long_document_number",
+    "document_class": "ocr_required",
+    "source_file": "datasets/stp/input/holdout/holdout-20-scan_long_document_number.png",
+    "ground_truth_file": "datasets/stp/ground_truth/holdout/holdout-20-scan_long_document_number.json",
+    "sha256": "dfeccaf183ac60970a7de9797e09afb7d6cd3521e725bde59e18ac619b5e0bf3",
+    "challenge_tags": []
+  }
+]

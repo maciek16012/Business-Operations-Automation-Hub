@@ -17,6 +17,15 @@ class Settings(BaseSettings):
     ocr_paddle_url: str = "http://localhost:8012/ocr"
     ocr_tesseract_profile: str = "baseline"
     ocr_paddle_profile: str = "baseline"
+    stp_enabled: bool = False
+    stp_primary_ocr_provider: Literal["tesseract", "paddle"] = "paddle"
+    stp_native_min_chars_per_page: float = 100.0
+    stp_native_min_alnum_ratio: float = 0.30
+    stp_native_min_printable_ratio: float = 0.95
+    stp_native_min_text_page_ratio: float = 0.80
+    stp_native_max_image_area_ratio: float = 0.80
+    stp_target_rate: float = 0.90
+    stp_require_zero_critical_false_accepts: bool = True
     max_upload_bytes: int = 5 * 1024 * 1024
     model_config = SettingsConfigDict(env_file=".env", extra="ignore", case_sensitive=False)
 

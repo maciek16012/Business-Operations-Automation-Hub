@@ -1,0 +1,36 @@
+{
+  "started_at": "2026-09-28T08:45:44.956912+00:00",
+  "freeze_sha256": "efabd09d4ff94f899323f85f187e5b4bf2d67d228f0b2d7fb1d687fed898ae3b",
+  "freeze_created_at": "2026-09-28T08:41:24.887015+00:00",
+  "completed_at": "2026-09-28T08:47:36.019464+00:00",
+  "result_directory": "datasets/stp/results/stp-holdout-final",
+  "summary": {
+    "documents": 20,
+    "auto_accept_documents": 19,
+    "review_required_documents": 1,
+    "processing_failed_documents": 0,
+    "stp_rate": 0.95,
+    "manual_review_rate": 0.05,
+    "processing_failure_rate": 0.0,
+    "critical_field_false_accept_count": 0,
+    "critical_field_false_accept_rate": 0.0,
+    "document_false_accept_count": 0,
+    "document_false_accept_rate": 0.0,
+    "native_text_route_rate": 0.15,
+    "primary_ocr_route_rate": 0.8,
+    "dual_ocr_route_rate": 0.05,
+    "human_review_route_rate": 0.0,
+    "mean_processing_time_ms": 5550.847990004695,
+    "p95_processing_time_ms": 7730.0485000014305,
+    "mean_ocr_invocations_per_document": 0.9,
+    "hard_safety_constraint_passed": true,
+    "target_stp_rate": 0.9,
+    "target_stp_rate_met": true,
+    "route_counts": {
+      "NATIVE_TEXT": 3,
+      "PRIMARY_OCR": 16,
+      "DUAL_OCR": 1,
+      "HUMAN_REVIEW": 0
+    }
+  }
+}

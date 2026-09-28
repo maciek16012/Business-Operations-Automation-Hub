@@ -262,10 +262,16 @@ class CaseService:
                     "attachment_uploaded",
                     {"attachment_id": str(attachment.id), "sha256": digest},
                 )
+                from app.document_routing.processor import process_document
                 from app.ocr import pipeline
 
                 if pipeline.supported(filename, mime):
-                    report = await pipeline.dual(str(attachment.id), content)
+                    report = await process_document(
+                        document_id=str(attachment.id),
+                        filename=filename,
+                        mime_type=mime,
+                        content=content,
+                    )
                     document = OCRDocument(
                         case_id=case.id, attachment_id=attachment.id, report=report
                     )

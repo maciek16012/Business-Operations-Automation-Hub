@@ -1,0 +1,1144 @@
+{
+  "benchmark_version": "1.0",
+  "split": "holdout",
+  "created_at": "2026-09-28T08:47:36.011998+00:00",
+  "profiles": {
+    "tesseract": "orientation",
+    "paddle": "orientation"
+  },
+  "routing_config": {
+    "target_stp_rate": 0.9,
+    "hard_safety_constraint": "zero incorrect critical fields auto-accepted",
+    "primary_ocr_provider": "paddle",
+    "native_text": {
+      "min_chars_per_page": 100.0,
+      "min_alnum_ratio": 0.3,
+      "min_printable_ratio": 0.95,
+      "min_text_page_ratio": 0.8,
+      "max_image_area_ratio": 0.8
+    }
+  },
+  "summary": {
+    "documents": 20,
+    "auto_accept_documents": 19,
+    "review_required_documents": 1,
+    "processing_failed_documents": 0,
+    "stp_rate": 0.95,
+    "manual_review_rate": 0.05,
+    "processing_failure_rate": 0.0,
+    "critical_field_false_accept_count": 0,
+    "critical_field_false_accept_rate": 0.0,
+    "document_false_accept_count": 0,
+    "document_false_accept_rate": 0.0,
+    "native_text_route_rate": 0.15,
+    "primary_ocr_route_rate": 0.8,
+    "dual_ocr_route_rate": 0.05,
+    "human_review_route_rate": 0.0,
+    "mean_processing_time_ms": 5550.847990004695,
+    "p95_processing_time_ms": 7730.0485000014305,
+    "mean_ocr_invocations_per_document": 0.9,
+    "hard_safety_constraint_passed": true,
+    "target_stp_rate": 0.9,
+    "target_stp_rate_met": true,
+    "route_counts": {
+      "NATIVE_TEXT": 3,
+      "PRIMARY_OCR": 16,
+      "DUAL_OCR": 1,
+      "HUMAN_REVIEW": 0
+    }
+  },
+  "records": [
+    {
+      "document_id": "holdout-01-native_clean",
+      "style": "native_clean",
+      "document_class": "native_text",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/holdout/holdout-01-native_clean.pdf",
+      "route": "NATIVE_TEXT",
+      "outcome": "NATIVE_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": true,
+      "processing_time_ms": 8.867099997587502,
+      "ocr_invocations": 0,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/200/2026",
+          "selected": "FV/STP/200/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-01-10",
+          "selected": "2026-01-10",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "14700.00",
+          "selected": "14700.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3381.00",
+          "selected": "3381.00",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "18081.00",
+          "selected": "18081.00",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-02-native_table",
+      "style": "native_table",
+      "document_class": "native_text",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/holdout/holdout-02-native_table.pdf",
+      "route": "NATIVE_TEXT",
+      "outcome": "NATIVE_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": true,
+      "processing_time_ms": 1.9697999814525247,
+      "ocr_invocations": 0,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/201/2026",
+          "selected": "FV/STP/201/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-02-11",
+          "selected": "2026-02-11",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "14837.00",
+          "selected": "14837.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3412.51",
+          "selected": "3412.51",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "18249.51",
+          "selected": "18249.51",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-03-native_multipage",
+      "style": "native_multipage",
+      "document_class": "native_text",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/holdout/holdout-03-native_multipage.pdf",
+      "route": "NATIVE_TEXT",
+      "outcome": "NATIVE_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": true,
+      "processing_time_ms": 2.062100014882162,
+      "ocr_invocations": 0,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/202/2026",
+          "selected": "FV/STP/202/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-03-12",
+          "selected": "2026-03-12",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "14974.00",
+          "selected": "14974.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3444.02",
+          "selected": "3444.02",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "18418.02",
+          "selected": "18418.02",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-04-native_sparse",
+      "style": "native_sparse",
+      "document_class": "native_uncertain",
+      "challenge_tags": [
+        "sparse_embedded_text"
+      ],
+      "source_file": "datasets/stp/input/holdout/holdout-04-native_sparse.pdf",
+      "route": "DUAL_OCR",
+      "outcome": "CONFLICT_REVIEW",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 6651.00280000479,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [
+        "net_total",
+        "vat_total",
+        "gross_total",
+        "currency"
+      ],
+      "all_critical_fields_correct": false,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/203/2026",
+          "selected": "FV/STP/203/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-04-13",
+          "selected": "2026-04-13",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "15111.00",
+          "selected": null,
+          "correct": false
+        },
+        "vat_total": {
+          "ground_truth": "3475.53",
+          "selected": null,
+          "correct": false
+        },
+        "gross_total": {
+          "ground_truth": "18586.53",
+          "selected": null,
+          "correct": false
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": null,
+          "correct": false
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-05-hybrid_correct_native",
+      "style": "hybrid_correct_native",
+      "document_class": "hybrid",
+      "challenge_tags": [
+        "hybrid_pdf"
+      ],
+      "source_file": "datasets/stp/input/holdout/holdout-05-hybrid_correct_native.pdf",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 6450.154600024689,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/204/2026",
+          "selected": "FV/STP/204/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-05-14",
+          "selected": "2026-05-14",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "15248.00",
+          "selected": "15248.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3507.04",
+          "selected": "3507.04",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "18755.04",
+          "selected": "18755.04",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-06-hybrid_wrong_native",
+      "style": "hybrid_wrong_native",
+      "document_class": "hybrid",
+      "challenge_tags": [
+        "hybrid_pdf",
+        "misleading_embedded_text",
+        "internally_valid_wrong_native_fields"
+      ],
+      "source_file": "datasets/stp/input/holdout/holdout-06-hybrid_wrong_native.pdf",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 6120.756400021492,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/205/2026",
+          "selected": "FV/STP/205/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-06-15",
+          "selected": "2026-06-15",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "15385.00",
+          "selected": "15385.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3538.55",
+          "selected": "3538.55",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "18923.55",
+          "selected": "18923.55",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-07-scan_clean",
+      "style": "scan_clean",
+      "document_class": "ocr_required",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/holdout/holdout-07-scan_clean.png",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 6581.394799984992,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/206/2026",
+          "selected": "FV/STP/206/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-07-16",
+          "selected": "2026-07-16",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "15522.00",
+          "selected": "15522.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3570.06",
+          "selected": "3570.06",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "19092.06",
+          "selected": "19092.06",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-08-scan_poor",
+      "style": "scan_poor",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "scan_poor"
+      ],
+      "source_file": "datasets/stp/input/holdout/holdout-08-scan_poor.png",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 5561.674800002947,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/207/2026",
+          "selected": "FV/STP/207/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-08-17",
+          "selected": "2026-08-17",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "15659.00",
+          "selected": "15659.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3601.57",
+          "selected": "3601.57",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "19260.57",
+          "selected": "19260.57",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-09-scan_skew",
+      "style": "scan_skew",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "scan_skew"
+      ],
+      "source_file": "datasets/stp/input/holdout/holdout-09-scan_skew.png",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 5714.962400001241,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/208/2026",
+          "selected": "FV/STP/208/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-01-18",
+          "selected": "2026-01-18",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "15796.00",
+          "selected": "15796.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3633.08",
+          "selected": "3633.08",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "19429.08",
+          "selected": "19429.08",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-10-scan_contrast",
+      "style": "scan_contrast",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "scan_contrast"
+      ],
+      "source_file": "datasets/stp/input/holdout/holdout-10-scan_contrast.png",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 6929.069300007541,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/209/2026",
+          "selected": "FV/STP/209/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-02-19",
+          "selected": "2026-02-19",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "15933.00",
+          "selected": "15933.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3664.59",
+          "selected": "3664.59",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "19597.59",
+          "selected": "19597.59",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-11-scan_compression",
+      "style": "scan_compression",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "scan_compression"
+      ],
+      "source_file": "datasets/stp/input/holdout/holdout-11-scan_compression.jpg",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 6727.737200009869,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/210/2026",
+          "selected": "FV/STP/210/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-03-20",
+          "selected": "2026-03-20",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "16070.00",
+          "selected": "16070.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3696.10",
+          "selected": "3696.10",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "19766.10",
+          "selected": "19766.10",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-12-scan_table",
+      "style": "scan_table",
+      "document_class": "ocr_required",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/holdout/holdout-12-scan_table.png",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 7007.673100015381,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/211/2026",
+          "selected": "FV/STP/211/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-04-21",
+          "selected": "2026-04-21",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "16207.00",
+          "selected": "16207.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3727.61",
+          "selected": "3727.61",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "19934.61",
+          "selected": "19934.61",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-13-scan_orientation",
+      "style": "scan_orientation",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "scan_orientation"
+      ],
+      "source_file": "datasets/stp/input/holdout/holdout-13-scan_orientation.png",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 6634.3645000015385,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/212/2026",
+          "selected": "FV/STP/212/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-05-22",
+          "selected": "2026-05-22",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "16344.00",
+          "selected": "16344.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3759.12",
+          "selected": "3759.12",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "20103.12",
+          "selected": "20103.12",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-14-scan_small_text",
+      "style": "scan_small_text",
+      "document_class": "ocr_required",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/holdout/holdout-14-scan_small_text.png",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 5670.735299994703,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/213/2026",
+          "selected": "FV/STP/213/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-06-23",
+          "selected": "2026-06-23",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "16481.00",
+          "selected": "16481.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3790.63",
+          "selected": "3790.63",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "20271.63",
+          "selected": "20271.63",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-15-scan_noise",
+      "style": "scan_noise",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "scan_noise"
+      ],
+      "source_file": "datasets/stp/input/holdout/holdout-15-scan_noise.png",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 5463.795300020138,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/214/2026",
+          "selected": "FV/STP/214/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-07-24",
+          "selected": "2026-07-24",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "16618.00",
+          "selected": "16618.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3822.14",
+          "selected": "3822.14",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "20440.14",
+          "selected": "20440.14",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-16-scan_partial",
+      "style": "scan_partial",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "scan_partial"
+      ],
+      "source_file": "datasets/stp/input/holdout/holdout-16-scan_partial.png",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 5627.369399997406,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/215/2026",
+          "selected": "FV/STP/215/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-08-10",
+          "selected": "2026-08-10",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "16755.00",
+          "selected": "16755.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3853.65",
+          "selected": "3853.65",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "20608.65",
+          "selected": "20608.65",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-17-multipage_scan",
+      "style": "multipage_scan",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "multipage"
+      ],
+      "source_file": "datasets/stp/input/holdout/holdout-17-multipage_scan.pdf",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 7730.0485000014305,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/216/2026",
+          "selected": "FV/STP/216/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-01-11",
+          "selected": "2026-01-11",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "16892.00",
+          "selected": "16892.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3885.16",
+          "selected": "3885.16",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "20777.16",
+          "selected": "20777.16",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-18-mixed_native_scan",
+      "style": "mixed_native_scan",
+      "document_class": "hybrid",
+      "challenge_tags": [
+        "multipage",
+        "mixed_native_and_scan"
+      ],
+      "source_file": "datasets/stp/input/holdout/holdout-18-mixed_native_scan.pdf",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 8448.480299994117,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/217/2026",
+          "selected": "FV/STP/217/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-02-12",
+          "selected": "2026-02-12",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "17029.00",
+          "selected": "17029.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3916.67",
+          "selected": "3916.67",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "20945.67",
+          "selected": "20945.67",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-19-scan_foreign_currency",
+      "style": "scan_foreign_currency",
+      "document_class": "ocr_required",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/holdout/holdout-19-scan_foreign_currency.png",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 6454.218099999707,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/218/2026",
+          "selected": "FV/STP/218/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-03-13",
+          "selected": "2026-03-13",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "17166.00",
+          "selected": "17166.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3948.18",
+          "selected": "3948.18",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "21114.18",
+          "selected": "21114.18",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "EUR",
+          "selected": "EUR",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "holdout-20-scan_long_document_number",
+      "style": "scan_long_document_number",
+      "document_class": "ocr_required",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/holdout/holdout-20-scan_long_document_number.png",
+      "route": "PRIMARY_OCR",
+      "outcome": "PRIMARY_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": false,
+      "processing_time_ms": 7230.624000017997,
+      "ocr_invocations": 1,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/2026/1119/LONG-DOCUMENT-NUMBER",
+          "selected": "FV/STP/2026/1119/LONG-DOCUMENT-NUMBER",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-04-14",
+          "selected": "2026-04-14",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "17303.00",
+          "selected": "17303.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "3979.69",
+          "selected": "3979.69",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "21282.69",
+          "selected": "21282.69",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    }
+  ]
+}

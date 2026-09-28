@@ -1,0 +1,1156 @@
+{
+  "benchmark_version": "1.0",
+  "split": "dev",
+  "created_at": "2026-09-28T07:13:20.302410+00:00",
+  "profiles": {
+    "tesseract": "orientation",
+    "paddle": "orientation"
+  },
+  "routing_config": {
+    "target_stp_rate": 0.9,
+    "hard_safety_constraint": "zero incorrect critical fields auto-accepted",
+    "primary_ocr_provider": "paddle",
+    "native_text": {
+      "min_chars_per_page": 100.0,
+      "min_alnum_ratio": 0.3,
+      "min_printable_ratio": 0.95,
+      "min_text_page_ratio": 0.8
+    }
+  },
+  "summary": {
+    "documents": 20,
+    "auto_accept_documents": 5,
+    "review_required_documents": 15,
+    "processing_failed_documents": 0,
+    "stp_rate": 0.25,
+    "manual_review_rate": 0.75,
+    "processing_failure_rate": 0.0,
+    "critical_field_false_accept_count": 5,
+    "critical_field_false_accept_rate": 0.14285714285714285,
+    "document_false_accept_count": 1,
+    "document_false_accept_rate": 0.2,
+    "native_text_route_rate": 0.25,
+    "primary_ocr_route_rate": 0.0,
+    "dual_ocr_route_rate": 0.75,
+    "human_review_route_rate": 0.0,
+    "mean_processing_time_ms": 5156.2133000014,
+    "p95_processing_time_ms": 8260.71500001126,
+    "mean_ocr_invocations_per_document": 1.5,
+    "hard_safety_constraint_passed": false,
+    "target_stp_rate": 0.9,
+    "target_stp_rate_met": false,
+    "route_counts": {
+      "NATIVE_TEXT": 5,
+      "PRIMARY_OCR": 0,
+      "DUAL_OCR": 15,
+      "HUMAN_REVIEW": 0
+    }
+  },
+  "records": [
+    {
+      "document_id": "dev-01-native_clean",
+      "style": "native_clean",
+      "document_class": "native_text",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/dev/dev-01-native_clean.pdf",
+      "route": "NATIVE_TEXT",
+      "outcome": "NATIVE_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": true,
+      "processing_time_ms": 27.90889999596402,
+      "ocr_invocations": 0,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/100/2026",
+          "selected": "FV/STP/100/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-01-10",
+          "selected": "2026-01-10",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "1000.00",
+          "selected": "1000.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "230.00",
+          "selected": "230.00",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "1230.00",
+          "selected": "1230.00",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-02-native_table",
+      "style": "native_table",
+      "document_class": "native_text",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/dev/dev-02-native_table.pdf",
+      "route": "NATIVE_TEXT",
+      "outcome": "NATIVE_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": true,
+      "processing_time_ms": 2.082099992549047,
+      "ocr_invocations": 0,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/101/2026",
+          "selected": "FV/STP/101/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-02-11",
+          "selected": "2026-02-11",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "1137.00",
+          "selected": "1137.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "261.51",
+          "selected": "261.51",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "1398.51",
+          "selected": "1398.51",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-03-native_multipage",
+      "style": "native_multipage",
+      "document_class": "native_text",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/dev/dev-03-native_multipage.pdf",
+      "route": "NATIVE_TEXT",
+      "outcome": "NATIVE_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": true,
+      "processing_time_ms": 2.099000004818663,
+      "ocr_invocations": 0,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/102/2026",
+          "selected": "FV/STP/102/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-03-12",
+          "selected": "2026-03-12",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "1274.00",
+          "selected": "1274.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "293.02",
+          "selected": "293.02",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "1567.02",
+          "selected": "1567.02",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-04-native_sparse",
+      "style": "native_sparse",
+      "document_class": "native_uncertain",
+      "challenge_tags": [
+        "sparse_embedded_text"
+      ],
+      "source_file": "datasets/stp/input/dev/dev-04-native_sparse.pdf",
+      "route": "DUAL_OCR",
+      "outcome": "CONFLICT_REVIEW",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 9931.93719998817,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [
+        "net_total",
+        "vat_total",
+        "gross_total",
+        "currency"
+      ],
+      "all_critical_fields_correct": false,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/103/2026",
+          "selected": "FV/STP/103/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-04-13",
+          "selected": "2026-04-13",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "1411.00",
+          "selected": null,
+          "correct": false
+        },
+        "vat_total": {
+          "ground_truth": "324.53",
+          "selected": null,
+          "correct": false
+        },
+        "gross_total": {
+          "ground_truth": "1735.53",
+          "selected": null,
+          "correct": false
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": null,
+          "correct": false
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-05-hybrid_correct_native",
+      "style": "hybrid_correct_native",
+      "document_class": "hybrid",
+      "challenge_tags": [
+        "hybrid_pdf"
+      ],
+      "source_file": "datasets/stp/input/dev/dev-05-hybrid_correct_native.pdf",
+      "route": "NATIVE_TEXT",
+      "outcome": "NATIVE_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": true,
+      "processing_time_ms": 3.1304000003729016,
+      "ocr_invocations": 0,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/104/2026",
+          "selected": "FV/STP/104/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-05-14",
+          "selected": "2026-05-14",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "1548.00",
+          "selected": "1548.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "356.04",
+          "selected": "356.04",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "1904.04",
+          "selected": "1904.04",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-06-hybrid_wrong_native",
+      "style": "hybrid_wrong_native",
+      "document_class": "hybrid",
+      "challenge_tags": [
+        "hybrid_pdf",
+        "misleading_embedded_text",
+        "internally_valid_wrong_native_fields"
+      ],
+      "source_file": "datasets/stp/input/dev/dev-06-hybrid_wrong_native.pdf",
+      "route": "NATIVE_TEXT",
+      "outcome": "NATIVE_STP_CANDIDATE",
+      "decision": "AUTO_ACCEPT",
+      "review_required": true,
+      "processing_time_ms": 2.1237999899312854,
+      "ocr_invocations": 0,
+      "incorrect_critical_fields": [
+        "document_number",
+        "tax_id",
+        "net_total",
+        "vat_total",
+        "gross_total"
+      ],
+      "all_critical_fields_correct": false,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/105/2026",
+          "selected": "FAKE/9005/2026",
+          "correct": false
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "5260250274",
+          "correct": false
+        },
+        "issue_date": {
+          "ground_truth": "2026-06-15",
+          "selected": "2026-06-15",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "1685.00",
+          "selected": "8277.00",
+          "correct": false
+        },
+        "vat_total": {
+          "ground_truth": "387.55",
+          "selected": "1903.71",
+          "correct": false
+        },
+        "gross_total": {
+          "ground_truth": "2072.55",
+          "selected": "10180.71",
+          "correct": false
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-07-scan_clean",
+      "style": "scan_clean",
+      "document_class": "ocr_required",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/dev/dev-07-scan_clean.png",
+      "route": "DUAL_OCR",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 7493.66160001955,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/106/2026",
+          "selected": "FV/STP/106/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-07-16",
+          "selected": "2026-07-16",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "1822.00",
+          "selected": "1822.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "419.06",
+          "selected": "419.06",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "2241.06",
+          "selected": "2241.06",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-08-scan_poor",
+      "style": "scan_poor",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "scan_poor"
+      ],
+      "source_file": "datasets/stp/input/dev/dev-08-scan_poor.png",
+      "route": "DUAL_OCR",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 5985.421899997164,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/107/2026",
+          "selected": "FV/STP/107/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-08-17",
+          "selected": "2026-08-17",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "1959.00",
+          "selected": "1959.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "450.57",
+          "selected": "450.57",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "2409.57",
+          "selected": "2409.57",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-09-scan_skew",
+      "style": "scan_skew",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "scan_skew"
+      ],
+      "source_file": "datasets/stp/input/dev/dev-09-scan_skew.png",
+      "route": "DUAL_OCR",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 6165.531199978432,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/108/2026",
+          "selected": "FV/STP/108/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-01-18",
+          "selected": "2026-01-18",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "2096.00",
+          "selected": "2096.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "482.08",
+          "selected": "482.08",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "2578.08",
+          "selected": "2578.08",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-10-scan_contrast",
+      "style": "scan_contrast",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "scan_contrast"
+      ],
+      "source_file": "datasets/stp/input/dev/dev-10-scan_contrast.png",
+      "route": "DUAL_OCR",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 6657.487099990249,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/109/2026",
+          "selected": "FV/STP/109/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-02-19",
+          "selected": "2026-02-19",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "2233.00",
+          "selected": "2233.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "513.59",
+          "selected": "513.59",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "2746.59",
+          "selected": "2746.59",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-11-scan_compression",
+      "style": "scan_compression",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "scan_compression"
+      ],
+      "source_file": "datasets/stp/input/dev/dev-11-scan_compression.jpg",
+      "route": "DUAL_OCR",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 6575.535499985563,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/110/2026",
+          "selected": "FV/STP/110/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-03-20",
+          "selected": "2026-03-20",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "2370.00",
+          "selected": "2370.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "545.10",
+          "selected": "545.10",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "2915.10",
+          "selected": "2915.10",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-12-scan_table",
+      "style": "scan_table",
+      "document_class": "ocr_required",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/dev/dev-12-scan_table.png",
+      "route": "DUAL_OCR",
+      "outcome": "CONFLICT_REVIEW",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 6458.422199997585,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [
+        "net_total",
+        "vat_total",
+        "gross_total",
+        "currency"
+      ],
+      "all_critical_fields_correct": false,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/111/2026",
+          "selected": "FV/STP/111/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-04-21",
+          "selected": "2026-04-21",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "2507.00",
+          "selected": null,
+          "correct": false
+        },
+        "vat_total": {
+          "ground_truth": "576.61",
+          "selected": null,
+          "correct": false
+        },
+        "gross_total": {
+          "ground_truth": "3083.61",
+          "selected": null,
+          "correct": false
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": null,
+          "correct": false
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-13-scan_orientation",
+      "style": "scan_orientation",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "scan_orientation"
+      ],
+      "source_file": "datasets/stp/input/dev/dev-13-scan_orientation.png",
+      "route": "DUAL_OCR",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 6370.391900010873,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/112/2026",
+          "selected": "FV/STP/112/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-05-22",
+          "selected": "2026-05-22",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "2644.00",
+          "selected": "2644.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "608.12",
+          "selected": "608.12",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "3252.12",
+          "selected": "3252.12",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-14-scan_small_text",
+      "style": "scan_small_text",
+      "document_class": "ocr_required",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/dev/dev-14-scan_small_text.png",
+      "route": "DUAL_OCR",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 5946.266999992076,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/113/2026",
+          "selected": "FV/STP/113/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-06-23",
+          "selected": "2026-06-23",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "2781.00",
+          "selected": "2781.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "639.63",
+          "selected": "639.63",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "3420.63",
+          "selected": "3420.63",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-15-scan_noise",
+      "style": "scan_noise",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "scan_noise"
+      ],
+      "source_file": "datasets/stp/input/dev/dev-15-scan_noise.png",
+      "route": "DUAL_OCR",
+      "outcome": "CONFLICT_REVIEW",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 5722.8264000150375,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [
+        "vat_total"
+      ],
+      "all_critical_fields_correct": false,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/114/2026",
+          "selected": "FV/STP/114/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-07-24",
+          "selected": "2026-07-24",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "2918.00",
+          "selected": "2918.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "671.14",
+          "selected": null,
+          "correct": false
+        },
+        "gross_total": {
+          "ground_truth": "3589.14",
+          "selected": "3589.14",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-16-scan_partial",
+      "style": "scan_partial",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "scan_partial"
+      ],
+      "source_file": "datasets/stp/input/dev/dev-16-scan_partial.png",
+      "route": "DUAL_OCR",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 5747.524500009604,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/115/2026",
+          "selected": "FV/STP/115/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-08-10",
+          "selected": "2026-08-10",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "3055.00",
+          "selected": "3055.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "702.65",
+          "selected": "702.65",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "3757.65",
+          "selected": "3757.65",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-17-multipage_scan",
+      "style": "multipage_scan",
+      "document_class": "ocr_required",
+      "challenge_tags": [
+        "multipage"
+      ],
+      "source_file": "datasets/stp/input/dev/dev-17-multipage_scan.pdf",
+      "route": "DUAL_OCR",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 7803.7021000054665,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/116/2026",
+          "selected": "FV/STP/116/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-01-11",
+          "selected": "2026-01-11",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "3192.00",
+          "selected": "3192.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "734.16",
+          "selected": "734.16",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "3926.16",
+          "selected": "3926.16",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-18-mixed_native_scan",
+      "style": "mixed_native_scan",
+      "document_class": "hybrid",
+      "challenge_tags": [
+        "multipage",
+        "mixed_native_and_scan"
+      ],
+      "source_file": "datasets/stp/input/dev/dev-18-mixed_native_scan.pdf",
+      "route": "DUAL_OCR",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 8260.71500001126,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/117/2026",
+          "selected": "FV/STP/117/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-02-12",
+          "selected": "2026-02-12",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "3329.00",
+          "selected": "3329.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "765.67",
+          "selected": "765.67",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "4094.67",
+          "selected": "4094.67",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-19-scan_foreign_currency",
+      "style": "scan_foreign_currency",
+      "document_class": "ocr_required",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/dev/dev-19-scan_foreign_currency.png",
+      "route": "DUAL_OCR",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 6565.151500020875,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/118/2026",
+          "selected": "FV/STP/118/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "5260250274",
+          "selected": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-03-13",
+          "selected": "2026-03-13",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "3466.00",
+          "selected": "3466.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "797.18",
+          "selected": "797.18",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "4263.18",
+          "selected": "4263.18",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "EUR",
+          "selected": "EUR",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    },
+    {
+      "document_id": "dev-20-scan_long_document_number",
+      "style": "scan_long_document_number",
+      "document_class": "ocr_required",
+      "challenge_tags": [],
+      "source_file": "datasets/stp/input/dev/dev-20-scan_long_document_number.png",
+      "route": "DUAL_OCR",
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "decision": "REVIEW_REQUIRED",
+      "review_required": true,
+      "processing_time_ms": 7402.346700022463,
+      "ocr_invocations": 2,
+      "incorrect_critical_fields": [],
+      "all_critical_fields_correct": true,
+      "fields": {
+        "document_number": {
+          "ground_truth": "FV/STP/2026/1019/LONG-DOCUMENT-NUMBER",
+          "selected": "FV/STP/2026/1019/LONG-DOCUMENT-NUMBER",
+          "correct": true
+        },
+        "tax_id": {
+          "ground_truth": "8567346215",
+          "selected": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "ground_truth": "2026-04-14",
+          "selected": "2026-04-14",
+          "correct": true
+        },
+        "net_total": {
+          "ground_truth": "3603.00",
+          "selected": "3603.00",
+          "correct": true
+        },
+        "vat_total": {
+          "ground_truth": "828.69",
+          "selected": "828.69",
+          "correct": true
+        },
+        "gross_total": {
+          "ground_truth": "4431.69",
+          "selected": "4431.69",
+          "correct": true
+        },
+        "currency": {
+          "ground_truth": "PLN",
+          "selected": "PLN",
+          "correct": true
+        }
+      },
+      "processing_exception": null
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "report_version": "m4-stp-v1",
+  "route": "NATIVE_TEXT",
+  "providers": [
+    {
+      "provider": "native_pdf",
+      "provider_version": "pymupdf",
+      "document_id": "holdout-01-native_clean",
+      "raw_text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/STP/200/2026\nNIP: 5260250274\nData wystawienia: 2026-01-10\nSprzedawca: Żółć i Źródło Przykład Sp. z o.o.\nNabywca: Klient Testowy Sp. z o.o.\nOpis: Usługa automatyzacji procesów biznesowych\nNetto: 14700,00\nVAT: 3381,00\nBrutto: 18081,00\nWaluta: PLN\nTermin płatności: 14 dni\nSposób płatności: przelew\nUwagi: dokument przygotowany wyłącznie do testów Milestone 4 STP.",
+      "pages": [],
+      "provider_confidence": null,
+      "processing_time_ms": 6.208300008438528,
+      "error": null,
+      "raw_provider_output": {
+        "preflight": {
+          "page_count": 1,
+          "char_count": 410,
+          "alnum_count": 326,
+          "printable_ratio": 1.0,
+          "alnum_ratio": 0.7951219512195122,
+          "chars_per_page": 410.0,
+          "pages_with_text": 1,
+          "text_page_ratio": 1.0,
+          "max_image_area_ratio": 0.0,
+          "page_max_image_area_ratios": [
+            0.0
+          ],
+          "quality_score": 1.0,
+          "quality_reasons": [
+            "native text quality gate passed"
+          ]
+        }
+      }
+    }
+  ],
+  "fields": [
+    {
+      "field": "document_number",
+      "raw_a": "FV/STP/200/2026",
+      "raw_b": null,
+      "normalized_a": "FV/STP/200/2026",
+      "normalized_b": null,
+      "comparison": "native_single_source",
+      "outcome": "NATIVE_VALIDATED",
+      "selected": "FV/STP/200/2026",
+      "reason": "Value extracted from embedded PDF text and normalized with the deterministic document pipeline"
+    },
+    {
+      "field": "tax_id",
+      "raw_a": "5260250274",
+      "raw_b": null,
+      "normalized_a": "5260250274",
+      "normalized_b": null,
+      "comparison": "native_single_source",
+      "outcome": "NATIVE_VALIDATED",
+      "selected": "5260250274",
+      "reason": "Value extracted from embedded PDF text and normalized with the deterministic document pipeline"
+    },
+    {
+      "field": "issue_date",
+      "raw_a": "2026-01-10",
+      "raw_b": null,
+      "normalized_a": "2026-01-10",
+      "normalized_b": null,
+      "comparison": "native_single_source",
+      "outcome": "NATIVE_VALIDATED",
+      "selected": "2026-01-10",
+      "reason": "Value extracted from embedded PDF text and normalized with the deterministic document pipeline"
+    },
+    {
+      "field": "net_total",
+      "raw_a": "14700,00",
+      "raw_b": null,
+      "normalized_a": "14700.00",
+      "normalized_b": null,
+      "comparison": "native_single_source",
+      "outcome": "NATIVE_VALIDATED",
+      "selected": "14700.00",
+      "reason": "Value extracted from embedded PDF text and normalized with the deterministic document pipeline"
+    },
+    {
+      "field": "vat_total",
+      "raw_a": "3381,00",
+      "raw_b": null,
+      "normalized_a": "3381.00",
+      "normalized_b": null,
+      "comparison": "native_single_source",
+      "outcome": "NATIVE_VALIDATED",
+      "selected": "3381.00",
+      "reason": "Value extracted from embedded PDF text and normalized with the deterministic document pipeline"
+    },
+    {
+      "field": "gross_total",
+      "raw_a": "18081,00",
+      "raw_b": null,
+      "normalized_a": "18081.00",
+      "normalized_b": null,
+      "comparison": "native_single_source",
+      "outcome": "NATIVE_VALIDATED",
+      "selected": "18081.00",
+      "reason": "Value extracted from embedded PDF text and normalized with the deterministic document pipeline"
+    },
+    {
+      "field": "currency",
+      "raw_a": "PLN",
+      "raw_b": null,
+      "normalized_a": "PLN",
+      "normalized_b": null,
+      "comparison": "native_single_source",
+      "outcome": "NATIVE_VALIDATED",
+      "selected": "PLN",
+      "reason": "Value extracted from embedded PDF text and normalized with the deterministic document pipeline"
+    }
+  ],
+  "business_validation": {
+    "native": {
+      "nip_checksum": true,
+      "money_nonnegative": true,
+      "net_plus_vat_equals_gross": true,
+      "currency_allowed": true,
+      "issue_date_valid": true,
+      "document_number_present": true
+    },
+    "selected": {
+      "nip_checksum": true,
+      "money_nonnegative": true,
+      "net_plus_vat_equals_gross": true,
+      "currency_allowed": true,
+      "issue_date_valid": true,
+      "document_number_present": true
+    }
+  },
+  "selected": {
+    "document_number": "FV/STP/200/2026",
+    "tax_id": "5260250274",
+    "issue_date": "2026-01-10",
+    "net_total": "14700.00",
+    "vat_total": "3381.00",
+    "gross_total": "18081.00",
+    "currency": "PLN"
+  },
+  "outcome": "NATIVE_STP_CANDIDATE",
+  "review_required": true,
+  "stp": {
+    "candidate": true,
+    "auto_accepted": false,
+    "policy_status": "awaiting_dev_calibration",
+    "missing_critical_fields": []
+  }
+}

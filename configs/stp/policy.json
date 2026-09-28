@@ -1,0 +1,62 @@
+﻿{
+  "version": "1.0",
+  "goal": {
+    "target_stp_rate": 0.90,
+    "primary_objective": "maximize safe straight-through processing",
+    "hard_safety_constraint": "zero incorrect critical fields auto-accepted on evaluation holdout"
+  },
+  "routing_paths": [
+    "NATIVE_TEXT",
+    "PRIMARY_OCR",
+    "DUAL_OCR",
+    "HUMAN_REVIEW"
+  ],
+  "critical_fields": [
+    "document_number",
+    "tax_id",
+    "issue_date",
+    "net_total",
+    "vat_total",
+    "gross_total",
+    "currency"
+  ],
+  "preflight": {
+    "prefer_native_text": true,
+    "native_text_requires_quality_gate": true,
+    "do_not_run_ocr_when_native_text_is_trusted": true,
+    "allow_primary_ocr_only_for_low_risk_documents": true,
+    "escalate_uncertain_documents_to_dual_ocr": true
+  },
+  "auto_accept": {
+    "requires_all_critical_fields_present": true,
+    "requires_business_validation": true,
+    "requires_no_unresolved_conflicts": true,
+    "requires_no_blocking_validation_issues": true,
+    "agreement_alone_is_not_truth": true
+  },
+  "business_checks": {
+    "nip_checksum": true,
+    "net_plus_vat_equals_gross": true,
+    "supported_currency": true,
+    "valid_nonfuture_issue_date": true,
+    "nonnegative_money": true
+  },
+  "evaluation_metrics": [
+    "stp_rate",
+    "manual_review_rate",
+    "critical_field_false_accept_rate",
+    "document_false_accept_rate",
+    "native_text_route_rate",
+    "primary_ocr_route_rate",
+    "dual_ocr_route_rate",
+    "mean_processing_time_ms",
+    "p95_processing_time_ms",
+    "mean_ocr_invocations_per_document"
+  ],
+  "dataset": {
+    "development_split": "dev",
+    "holdout_split": "holdout",
+    "tune_on_holdout": false,
+    "milestone3_holdout_must_not_be_reused_for_tuning": true
+  }
+}

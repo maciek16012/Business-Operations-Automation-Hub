@@ -12,10 +12,10 @@ dependencies = [
   "pydantic>=2.11,<3",
   "pydantic-settings>=2.10,<3",
   "python-multipart>=0.0.20,<0.1",
-
   "openpyxl>=3.1,<4",
   "email-validator>=2.2,<3",
   "httpx>=0.28,<0.29",
+  "pymupdf==1.28.2",
 ]
 
 [project.optional-dependencies]
@@ -46,3 +46,9 @@ python_version = "3.12"
 check_untyped_defs = true
 warn_unused_ignores = true
 warn_redundant_casts = true
+
+[dependency-groups]
+dev = [
+    "pillow>=12.3.0",
+    "reportlab>=5.0.1",
+]
