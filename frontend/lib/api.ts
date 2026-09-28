@@ -7,7 +7,7 @@ export type Extracted = { id: string; attachment_id: string; field_name: string;
 export type Issue = { id: string; code: string; severity: string; field_name: string; message: string; resolved: boolean };
 export type Audit = { id: string; event_type: string; actor_type: string; created_at: string; details: Record<string, unknown> };
 export type InboundMessage = { id: string; source_type: string; external_message_id: string | null; sender_address: string; sender_name: string | null; subject: string; received_at: string; text_body: string; html_body: string | null; identity_method: string; processing_status: string; recipients: {address:string;name:string|null}[] };
-export type CaseDetail = CaseData & { inbound_message: InboundMessage | null; attachments: Attachment[]; extracted_fields: Extracted[]; validation_issues: Issue[]; audit_events: Audit[]; exports: {id: string; export_type: string; storage_key: string | null}[] };
+export type CaseDetail = CaseData & { ocr_documents: OCRDocument[]; inbound_message: InboundMessage | null; attachments: Attachment[]; extracted_fields: Extracted[]; validation_issues: Issue[]; audit_events: Audit[]; exports: {id: string; export_type: string; storage_key: string | null}[] };
 
 export async function api<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(`${API_BASE}${path}`, { cache: "no-store", ...init });
@@ -19,3 +19,5 @@ export async function api<T>(path: string, init?: RequestInit): Promise<T> {
 }
 
 export const jsonBody = (value: unknown): RequestInit => ({headers: {"Content-Type": "application/json"}, body: JSON.stringify(value)});
+
+export type OCRDocument = {id:string;attachment_id:string;reviewed:boolean;review_reason:string|null;reviewed_values:Record<string,string>|null;report:{outcome:string;business_validation:Record<string,unknown>;providers:{provider:string;provider_version:string;raw_text:string;processing_time_ms:number;error:string|null}[];fields:{field:string;raw_a:string|null;raw_b:string|null;normalized_a:string|null;normalized_b:string|null;selected:string|null;comparison:string;outcome:string;reason:string}[]}};

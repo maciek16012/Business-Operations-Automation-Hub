@@ -1,0 +1,2104 @@
+{
+  "document_decisions": {
+    "AUTO_ACCEPT": 0,
+    "REVIEW_REQUIRED": 8,
+    "BOTH_FAILED": 0,
+    "incorrect_critical_fields_auto_accepted": 0
+  },
+  "split": "holdout",
+  "profiles": {
+    "tesseract": "orientation",
+    "paddle": "orientation"
+  },
+  "summary": {
+    "tesseract": {
+      "documents": 8,
+      "cer": 0.0354251012145749,
+      "wer": 0.052083333333333336,
+      "exact_field_accuracy": 0.9285714285714286,
+      "normalized_field_accuracy": 0.9285714285714286,
+      "critical_field_accuracy": 0.9285714285714286,
+      "provider_failure_rate": 0.0,
+      "latency_mean_ms": 504.65500000000003,
+      "latency_p95_ms": 876.19,
+      "per_critical_field": {
+        "document_number": 1.0,
+        "tax_id": 1.0,
+        "issue_date": 1.0,
+        "net_total": 0.875,
+        "vat_total": 0.875,
+        "gross_total": 0.875,
+        "currency": 0.875
+      }
+    },
+    "paddle": {
+      "documents": 8,
+      "cer": 0.005566801619433198,
+      "wer": 0.04513888888888889,
+      "exact_field_accuracy": 1.0,
+      "normalized_field_accuracy": 1.0,
+      "critical_field_accuracy": 1.0,
+      "provider_failure_rate": 0.0,
+      "latency_mean_ms": 4550.93375,
+      "latency_p95_ms": 8991.32,
+      "per_critical_field": {
+        "document_number": 1.0,
+        "tax_id": 1.0,
+        "issue_date": 1.0,
+        "net_total": 1.0,
+        "vat_total": 1.0,
+        "gross_total": 1.0,
+        "currency": 1.0
+      }
+    }
+  },
+  "consensus": {
+    "agreement": 52,
+    "disagreement": 4,
+    "both_correct": 52,
+    "one_correct_conflict": 4,
+    "both_wrong_agreement": 0,
+    "both_wrong_disagreement": 0,
+    "field_pairs": 56,
+    "pairwise_agreement": 0.9285714285714286,
+    "pairwise_disagreement": 0.07142857142857142,
+    "false_consensus_rate_all_pairs": 0.0,
+    "false_consensus_rate_agreements": 0.0
+  },
+  "records": [
+    {
+      "document_id": "holdout-01-digital",
+      "provider": "tesseract",
+      "provider_version": "tesseract 5.5.3",
+      "latency_ms": 876.19,
+      "error": null,
+      "char_errors": 2,
+      "characters": 247,
+      "word_errors": 1,
+      "words": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "fields": {
+        "document_number": {
+          "raw": "FV/140/2026",
+          "normalized": "FV/140/2026",
+          "ground_truth": "FV/140/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "5260250274",
+          "normalized": "5260250274",
+          "ground_truth": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-01-10",
+          "normalized": "2026-01-10",
+          "ground_truth": "2026-01-10",
+          "correct": true
+        },
+        "net_total": {
+          "raw": "6480,00",
+          "normalized": "6480.00",
+          "ground_truth": "6480,00",
+          "correct": true
+        },
+        "vat_total": {
+          "raw": "1490,40",
+          "normalized": "1490.40",
+          "ground_truth": "1490,40",
+          "correct": true
+        },
+        "gross_total": {
+          "raw": "7970,40",
+          "normalized": "7970.40",
+          "ground_truth": "7970,40",
+          "correct": true
+        },
+        "currency": {
+          "raw": "PLN",
+          "normalized": "PLN",
+          "ground_truth": "PLN",
+          "correct": true
+        }
+      }
+    },
+    {
+      "document_id": "holdout-01-digital",
+      "provider": "paddle",
+      "provider_version": "3.7.0",
+      "latency_ms": 8991.32,
+      "error": null,
+      "char_errors": 1,
+      "characters": 247,
+      "word_errors": 1,
+      "words": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "fields": {
+        "document_number": {
+          "raw": "FV/140/2026",
+          "normalized": "FV/140/2026",
+          "ground_truth": "FV/140/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "5260250274",
+          "normalized": "5260250274",
+          "ground_truth": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-01-10",
+          "normalized": "2026-01-10",
+          "ground_truth": "2026-01-10",
+          "correct": true
+        },
+        "net_total": {
+          "raw": "6480,00",
+          "normalized": "6480.00",
+          "ground_truth": "6480,00",
+          "correct": true
+        },
+        "vat_total": {
+          "raw": "1490,40",
+          "normalized": "1490.40",
+          "ground_truth": "1490,40",
+          "correct": true
+        },
+        "gross_total": {
+          "raw": "7970,40",
+          "normalized": "7970.40",
+          "ground_truth": "7970,40",
+          "correct": true
+        },
+        "currency": {
+          "raw": "PLN",
+          "normalized": "PLN",
+          "ground_truth": "PLN",
+          "correct": true
+        }
+      }
+    },
+    {
+      "document_id": "holdout-02-scan",
+      "provider": "tesseract",
+      "provider_version": "tesseract 5.5.3",
+      "latency_ms": 430.15,
+      "error": null,
+      "char_errors": 2,
+      "characters": 247,
+      "word_errors": 1,
+      "words": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "fields": {
+        "document_number": {
+          "raw": "FV/141/2026",
+          "normalized": "FV/141/2026",
+          "ground_truth": "FV/141/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "8567346215",
+          "normalized": "8567346215",
+          "ground_truth": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-02-11",
+          "normalized": "2026-02-11",
+          "ground_truth": "2026-02-11",
+          "correct": true
+        },
+        "net_total": {
+          "raw": "6617,00",
+          "normalized": "6617.00",
+          "ground_truth": "6617,00",
+          "correct": true
+        },
+        "vat_total": {
+          "raw": "1521,91",
+          "normalized": "1521.91",
+          "ground_truth": "1521,91",
+          "correct": true
+        },
+        "gross_total": {
+          "raw": "8138,91",
+          "normalized": "8138.91",
+          "ground_truth": "8138,91",
+          "correct": true
+        },
+        "currency": {
+          "raw": "PLN",
+          "normalized": "PLN",
+          "ground_truth": "PLN",
+          "correct": true
+        }
+      }
+    },
+    {
+      "document_id": "holdout-02-scan",
+      "provider": "paddle",
+      "provider_version": "3.7.0",
+      "latency_ms": 3988.29,
+      "error": null,
+      "char_errors": 1,
+      "characters": 247,
+      "word_errors": 1,
+      "words": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "fields": {
+        "document_number": {
+          "raw": "FV/141/2026",
+          "normalized": "FV/141/2026",
+          "ground_truth": "FV/141/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "8567346215",
+          "normalized": "8567346215",
+          "ground_truth": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-02-11",
+          "normalized": "2026-02-11",
+          "ground_truth": "2026-02-11",
+          "correct": true
+        },
+        "net_total": {
+          "raw": "6617,00",
+          "normalized": "6617.00",
+          "ground_truth": "6617,00",
+          "correct": true
+        },
+        "vat_total": {
+          "raw": "1521,91",
+          "normalized": "1521.91",
+          "ground_truth": "1521,91",
+          "correct": true
+        },
+        "gross_total": {
+          "raw": "8138,91",
+          "normalized": "8138.91",
+          "ground_truth": "8138,91",
+          "correct": true
+        },
+        "currency": {
+          "raw": "PLN",
+          "normalized": "PLN",
+          "ground_truth": "PLN",
+          "correct": true
+        }
+      }
+    },
+    {
+      "document_id": "holdout-03-poor",
+      "provider": "tesseract",
+      "provider_version": "tesseract 5.5.3",
+      "latency_ms": 465.53,
+      "error": null,
+      "char_errors": 2,
+      "characters": 247,
+      "word_errors": 1,
+      "words": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "fields": {
+        "document_number": {
+          "raw": "FV/142/2026",
+          "normalized": "FV/142/2026",
+          "ground_truth": "FV/142/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "5260250274",
+          "normalized": "5260250274",
+          "ground_truth": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-03-12",
+          "normalized": "2026-03-12",
+          "ground_truth": "2026-03-12",
+          "correct": true
+        },
+        "net_total": {
+          "raw": "6754,00",
+          "normalized": "6754.00",
+          "ground_truth": "6754,00",
+          "correct": true
+        },
+        "vat_total": {
+          "raw": "1553,42",
+          "normalized": "1553.42",
+          "ground_truth": "1553,42",
+          "correct": true
+        },
+        "gross_total": {
+          "raw": "8307,42",
+          "normalized": "8307.42",
+          "ground_truth": "8307,42",
+          "correct": true
+        },
+        "currency": {
+          "raw": "PLN",
+          "normalized": "PLN",
+          "ground_truth": "PLN",
+          "correct": true
+        }
+      }
+    },
+    {
+      "document_id": "holdout-03-poor",
+      "provider": "paddle",
+      "provider_version": "3.7.0",
+      "latency_ms": 3454.12,
+      "error": null,
+      "char_errors": 1,
+      "characters": 247,
+      "word_errors": 1,
+      "words": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "fields": {
+        "document_number": {
+          "raw": "FV/142/2026",
+          "normalized": "FV/142/2026",
+          "ground_truth": "FV/142/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "5260250274",
+          "normalized": "5260250274",
+          "ground_truth": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-03-12",
+          "normalized": "2026-03-12",
+          "ground_truth": "2026-03-12",
+          "correct": true
+        },
+        "net_total": {
+          "raw": "6754,00",
+          "normalized": "6754.00",
+          "ground_truth": "6754,00",
+          "correct": true
+        },
+        "vat_total": {
+          "raw": "1553,42",
+          "normalized": "1553.42",
+          "ground_truth": "1553,42",
+          "correct": true
+        },
+        "gross_total": {
+          "raw": "8307,42",
+          "normalized": "8307.42",
+          "ground_truth": "8307,42",
+          "correct": true
+        },
+        "currency": {
+          "raw": "PLN",
+          "normalized": "PLN",
+          "ground_truth": "PLN",
+          "correct": true
+        }
+      }
+    },
+    {
+      "document_id": "holdout-04-skew",
+      "provider": "tesseract",
+      "provider_version": "tesseract 5.5.3",
+      "latency_ms": 422.16,
+      "error": null,
+      "char_errors": 0,
+      "characters": 247,
+      "word_errors": 0,
+      "words": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "fields": {
+        "document_number": {
+          "raw": "FV/143/2026",
+          "normalized": "FV/143/2026",
+          "ground_truth": "FV/143/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "8567346215",
+          "normalized": "8567346215",
+          "ground_truth": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-04-13",
+          "normalized": "2026-04-13",
+          "ground_truth": "2026-04-13",
+          "correct": true
+        },
+        "net_total": {
+          "raw": "6891,00",
+          "normalized": "6891.00",
+          "ground_truth": "6891,00",
+          "correct": true
+        },
+        "vat_total": {
+          "raw": "1584,93",
+          "normalized": "1584.93",
+          "ground_truth": "1584,93",
+          "correct": true
+        },
+        "gross_total": {
+          "raw": "8475,93",
+          "normalized": "8475.93",
+          "ground_truth": "8475,93",
+          "correct": true
+        },
+        "currency": {
+          "raw": "PLN",
+          "normalized": "PLN",
+          "ground_truth": "PLN",
+          "correct": true
+        }
+      }
+    },
+    {
+      "document_id": "holdout-04-skew",
+      "provider": "paddle",
+      "provider_version": "3.7.0",
+      "latency_ms": 3586.41,
+      "error": null,
+      "char_errors": 2,
+      "characters": 247,
+      "word_errors": 2,
+      "words": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "fields": {
+        "document_number": {
+          "raw": "FV/143/2026",
+          "normalized": "FV/143/2026",
+          "ground_truth": "FV/143/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "8567346215",
+          "normalized": "8567346215",
+          "ground_truth": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-04-13",
+          "normalized": "2026-04-13",
+          "ground_truth": "2026-04-13",
+          "correct": true
+        },
+        "net_total": {
+          "raw": "6891,00",
+          "normalized": "6891.00",
+          "ground_truth": "6891,00",
+          "correct": true
+        },
+        "vat_total": {
+          "raw": "1584,93",
+          "normalized": "1584.93",
+          "ground_truth": "1584,93",
+          "correct": true
+        },
+        "gross_total": {
+          "raw": "8475,93",
+          "normalized": "8475.93",
+          "ground_truth": "8475,93",
+          "correct": true
+        },
+        "currency": {
+          "raw": "PLN",
+          "normalized": "PLN",
+          "ground_truth": "PLN",
+          "correct": true
+        }
+      }
+    },
+    {
+      "document_id": "holdout-05-contrast",
+      "provider": "tesseract",
+      "provider_version": "tesseract 5.5.3",
+      "latency_ms": 454.48,
+      "error": null,
+      "char_errors": 2,
+      "characters": 247,
+      "word_errors": 1,
+      "words": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "fields": {
+        "document_number": {
+          "raw": "FV/144/2026",
+          "normalized": "FV/144/2026",
+          "ground_truth": "FV/144/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "5260250274",
+          "normalized": "5260250274",
+          "ground_truth": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-05-14",
+          "normalized": "2026-05-14",
+          "ground_truth": "2026-05-14",
+          "correct": true
+        },
+        "net_total": {
+          "raw": "7028,00",
+          "normalized": "7028.00",
+          "ground_truth": "7028,00",
+          "correct": true
+        },
+        "vat_total": {
+          "raw": "1616,44",
+          "normalized": "1616.44",
+          "ground_truth": "1616,44",
+          "correct": true
+        },
+        "gross_total": {
+          "raw": "8644,44",
+          "normalized": "8644.44",
+          "ground_truth": "8644,44",
+          "correct": true
+        },
+        "currency": {
+          "raw": "PLN",
+          "normalized": "PLN",
+          "ground_truth": "PLN",
+          "correct": true
+        }
+      }
+    },
+    {
+      "document_id": "holdout-05-contrast",
+      "provider": "paddle",
+      "provider_version": "3.7.0",
+      "latency_ms": 4221.7,
+      "error": null,
+      "char_errors": 1,
+      "characters": 247,
+      "word_errors": 1,
+      "words": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "fields": {
+        "document_number": {
+          "raw": "FV/144/2026",
+          "normalized": "FV/144/2026",
+          "ground_truth": "FV/144/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "5260250274",
+          "normalized": "5260250274",
+          "ground_truth": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-05-14",
+          "normalized": "2026-05-14",
+          "ground_truth": "2026-05-14",
+          "correct": true
+        },
+        "net_total": {
+          "raw": "7028,00",
+          "normalized": "7028.00",
+          "ground_truth": "7028,00",
+          "correct": true
+        },
+        "vat_total": {
+          "raw": "1616,44",
+          "normalized": "1616.44",
+          "ground_truth": "1616,44",
+          "correct": true
+        },
+        "gross_total": {
+          "raw": "8644,44",
+          "normalized": "8644.44",
+          "ground_truth": "8644,44",
+          "correct": true
+        },
+        "currency": {
+          "raw": "PLN",
+          "normalized": "PLN",
+          "ground_truth": "PLN",
+          "correct": true
+        }
+      }
+    },
+    {
+      "document_id": "holdout-06-compression",
+      "provider": "tesseract",
+      "provider_version": "tesseract 5.5.3",
+      "latency_ms": 476.86,
+      "error": null,
+      "char_errors": 2,
+      "characters": 247,
+      "word_errors": 1,
+      "words": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "fields": {
+        "document_number": {
+          "raw": "FV/145/2026",
+          "normalized": "FV/145/2026",
+          "ground_truth": "FV/145/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "8567346215",
+          "normalized": "8567346215",
+          "ground_truth": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-06-15",
+          "normalized": "2026-06-15",
+          "ground_truth": "2026-06-15",
+          "correct": true
+        },
+        "net_total": {
+          "raw": "7165,00",
+          "normalized": "7165.00",
+          "ground_truth": "7165,00",
+          "correct": true
+        },
+        "vat_total": {
+          "raw": "1647,95",
+          "normalized": "1647.95",
+          "ground_truth": "1647,95",
+          "correct": true
+        },
+        "gross_total": {
+          "raw": "8812,95",
+          "normalized": "8812.95",
+          "ground_truth": "8812,95",
+          "correct": true
+        },
+        "currency": {
+          "raw": "PLN",
+          "normalized": "PLN",
+          "ground_truth": "PLN",
+          "correct": true
+        }
+      }
+    },
+    {
+      "document_id": "holdout-06-compression",
+      "provider": "paddle",
+      "provider_version": "3.7.0",
+      "latency_ms": 4179.9,
+      "error": null,
+      "char_errors": 3,
+      "characters": 247,
+      "word_errors": 5,
+      "words": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "fields": {
+        "document_number": {
+          "raw": "FV/145/2026",
+          "normalized": "FV/145/2026",
+          "ground_truth": "FV/145/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "8567346215",
+          "normalized": "8567346215",
+          "ground_truth": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-06-15",
+          "normalized": "2026-06-15",
+          "ground_truth": "2026-06-15",
+          "correct": true
+        },
+        "net_total": {
+          "raw": "7165,00",
+          "normalized": "7165.00",
+          "ground_truth": "7165,00",
+          "correct": true
+        },
+        "vat_total": {
+          "raw": "1647,95",
+          "normalized": "1647.95",
+          "ground_truth": "1647,95",
+          "correct": true
+        },
+        "gross_total": {
+          "raw": "8812,95",
+          "normalized": "8812.95",
+          "ground_truth": "8812,95",
+          "correct": true
+        },
+        "currency": {
+          "raw": "PLN",
+          "normalized": "PLN",
+          "ground_truth": "PLN",
+          "correct": true
+        }
+      }
+    },
+    {
+      "document_id": "holdout-07-table",
+      "provider": "tesseract",
+      "provider_version": "tesseract 5.5.3",
+      "latency_ms": 441.4,
+      "error": null,
+      "char_errors": 58,
+      "characters": 247,
+      "word_errors": 9,
+      "words": 36,
+      "exact_correct": 3,
+      "normalized_correct": 3,
+      "fields": {
+        "document_number": {
+          "raw": "FV/146/2026",
+          "normalized": "FV/146/2026",
+          "ground_truth": "FV/146/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "5260250274",
+          "normalized": "5260250274",
+          "ground_truth": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-07-16",
+          "normalized": "2026-07-16",
+          "ground_truth": "2026-07-16",
+          "correct": true
+        },
+        "net_total": {
+          "raw": null,
+          "normalized": null,
+          "ground_truth": "7302,00",
+          "correct": false
+        },
+        "vat_total": {
+          "raw": null,
+          "normalized": null,
+          "ground_truth": "1679,46",
+          "correct": false
+        },
+        "gross_total": {
+          "raw": null,
+          "normalized": null,
+          "ground_truth": "8981,46",
+          "correct": false
+        },
+        "currency": {
+          "raw": null,
+          "normalized": null,
+          "ground_truth": "PLN",
+          "correct": false
+        }
+      }
+    },
+    {
+      "document_id": "holdout-07-table",
+      "provider": "paddle",
+      "provider_version": "3.7.0",
+      "latency_ms": 3685.37,
+      "error": null,
+      "char_errors": 1,
+      "characters": 247,
+      "word_errors": 1,
+      "words": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "fields": {
+        "document_number": {
+          "raw": "FV/146/2026",
+          "normalized": "FV/146/2026",
+          "ground_truth": "FV/146/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "5260250274",
+          "normalized": "5260250274",
+          "ground_truth": "5260250274",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-07-16",
+          "normalized": "2026-07-16",
+          "ground_truth": "2026-07-16",
+          "correct": true
+        },
+        "net_total": {
+          "raw": "7302,00",
+          "normalized": "7302.00",
+          "ground_truth": "7302,00",
+          "correct": true
+        },
+        "vat_total": {
+          "raw": "1679,46",
+          "normalized": "1679.46",
+          "ground_truth": "1679,46",
+          "correct": true
+        },
+        "gross_total": {
+          "raw": "8981,46",
+          "normalized": "8981.46",
+          "ground_truth": "8981,46",
+          "correct": true
+        },
+        "currency": {
+          "raw": "PLN",
+          "normalized": "PLN",
+          "ground_truth": "PLN",
+          "correct": true
+        }
+      }
+    },
+    {
+      "document_id": "holdout-08-orientation",
+      "provider": "tesseract",
+      "provider_version": "tesseract 5.5.3",
+      "latency_ms": 470.47,
+      "error": null,
+      "char_errors": 2,
+      "characters": 247,
+      "word_errors": 1,
+      "words": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "fields": {
+        "document_number": {
+          "raw": "FV/147/2026",
+          "normalized": "FV/147/2026",
+          "ground_truth": "FV/147/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "8567346215",
+          "normalized": "8567346215",
+          "ground_truth": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-08-17",
+          "normalized": "2026-08-17",
+          "ground_truth": "2026-08-17",
+          "correct": true
+        },
+        "net_total": {
+          "raw": "7439,00",
+          "normalized": "7439.00",
+          "ground_truth": "7439,00",
+          "correct": true
+        },
+        "vat_total": {
+          "raw": "1710,97",
+          "normalized": "1710.97",
+          "ground_truth": "1710,97",
+          "correct": true
+        },
+        "gross_total": {
+          "raw": "9149,97",
+          "normalized": "9149.97",
+          "ground_truth": "9149,97",
+          "correct": true
+        },
+        "currency": {
+          "raw": "PLN",
+          "normalized": "PLN",
+          "ground_truth": "PLN",
+          "correct": true
+        }
+      }
+    },
+    {
+      "document_id": "holdout-08-orientation",
+      "provider": "paddle",
+      "provider_version": "3.7.0",
+      "latency_ms": 4300.36,
+      "error": null,
+      "char_errors": 1,
+      "characters": 247,
+      "word_errors": 1,
+      "words": 36,
+      "exact_correct": 7,
+      "normalized_correct": 7,
+      "fields": {
+        "document_number": {
+          "raw": "FV/147/2026",
+          "normalized": "FV/147/2026",
+          "ground_truth": "FV/147/2026",
+          "correct": true
+        },
+        "tax_id": {
+          "raw": "8567346215",
+          "normalized": "8567346215",
+          "ground_truth": "8567346215",
+          "correct": true
+        },
+        "issue_date": {
+          "raw": "2026-08-17",
+          "normalized": "2026-08-17",
+          "ground_truth": "2026-08-17",
+          "correct": true
+        },
+        "net_total": {
+          "raw": "7439,00",
+          "normalized": "7439.00",
+          "ground_truth": "7439,00",
+          "correct": true
+        },
+        "vat_total": {
+          "raw": "1710,97",
+          "normalized": "1710.97",
+          "ground_truth": "1710,97",
+          "correct": true
+        },
+        "gross_total": {
+          "raw": "9149,97",
+          "normalized": "9149.97",
+          "ground_truth": "9149,97",
+          "correct": true
+        },
+        "currency": {
+          "raw": "PLN",
+          "normalized": "PLN",
+          "ground_truth": "PLN",
+          "correct": true
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "fields": [
+        {
+          "field": "document_number",
+          "raw_a": "FV/140/2026",
+          "raw_b": "FV/140/2026",
+          "normalized_a": "FV/140/2026",
+          "normalized_b": "FV/140/2026",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "FV/140/2026",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "FV/140/2026",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "tax_id",
+          "raw_a": "5260250274",
+          "raw_b": "5260250274",
+          "normalized_a": "5260250274",
+          "normalized_b": "5260250274",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "5260250274",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "5260250274",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "issue_date",
+          "raw_a": "2026-01-10",
+          "raw_b": "2026-01-10",
+          "normalized_a": "2026-01-10",
+          "normalized_b": "2026-01-10",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "2026-01-10",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "2026-01-10",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "net_total",
+          "raw_a": "6480,00",
+          "raw_b": "6480,00",
+          "normalized_a": "6480.00",
+          "normalized_b": "6480.00",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "6480.00",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "6480,00",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "vat_total",
+          "raw_a": "1490,40",
+          "raw_b": "1490,40",
+          "normalized_a": "1490.40",
+          "normalized_b": "1490.40",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "1490.40",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "1490,40",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "gross_total",
+          "raw_a": "7970,40",
+          "raw_b": "7970,40",
+          "normalized_a": "7970.40",
+          "normalized_b": "7970.40",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "7970.40",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "7970,40",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "currency",
+          "raw_a": "PLN",
+          "raw_b": "PLN",
+          "normalized_a": "PLN",
+          "normalized_b": "PLN",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "PLN",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "PLN",
+          "a_correct": true,
+          "b_correct": true
+        }
+      ],
+      "business_validation": {
+        "a": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "b": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "selected": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        }
+      },
+      "selected": {
+        "document_number": "FV/140/2026",
+        "tax_id": "5260250274",
+        "issue_date": "2026-01-10",
+        "net_total": "6480.00",
+        "vat_total": "1490.40",
+        "gross_total": "7970.40",
+        "currency": "PLN"
+      },
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "review_required": true,
+      "document_id": "holdout-01-digital"
+    },
+    {
+      "fields": [
+        {
+          "field": "document_number",
+          "raw_a": "FV/141/2026",
+          "raw_b": "FV/141/2026",
+          "normalized_a": "FV/141/2026",
+          "normalized_b": "FV/141/2026",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "FV/141/2026",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "FV/141/2026",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "tax_id",
+          "raw_a": "8567346215",
+          "raw_b": "8567346215",
+          "normalized_a": "8567346215",
+          "normalized_b": "8567346215",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "8567346215",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "8567346215",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "issue_date",
+          "raw_a": "2026-02-11",
+          "raw_b": "2026-02-11",
+          "normalized_a": "2026-02-11",
+          "normalized_b": "2026-02-11",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "2026-02-11",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "2026-02-11",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "net_total",
+          "raw_a": "6617,00",
+          "raw_b": "6617,00",
+          "normalized_a": "6617.00",
+          "normalized_b": "6617.00",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "6617.00",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "6617,00",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "vat_total",
+          "raw_a": "1521,91",
+          "raw_b": "1521,91",
+          "normalized_a": "1521.91",
+          "normalized_b": "1521.91",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "1521.91",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "1521,91",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "gross_total",
+          "raw_a": "8138,91",
+          "raw_b": "8138,91",
+          "normalized_a": "8138.91",
+          "normalized_b": "8138.91",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "8138.91",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "8138,91",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "currency",
+          "raw_a": "PLN",
+          "raw_b": "PLN",
+          "normalized_a": "PLN",
+          "normalized_b": "PLN",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "PLN",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "PLN",
+          "a_correct": true,
+          "b_correct": true
+        }
+      ],
+      "business_validation": {
+        "a": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "b": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "selected": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        }
+      },
+      "selected": {
+        "document_number": "FV/141/2026",
+        "tax_id": "8567346215",
+        "issue_date": "2026-02-11",
+        "net_total": "6617.00",
+        "vat_total": "1521.91",
+        "gross_total": "8138.91",
+        "currency": "PLN"
+      },
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "review_required": true,
+      "document_id": "holdout-02-scan"
+    },
+    {
+      "fields": [
+        {
+          "field": "document_number",
+          "raw_a": "FV/142/2026",
+          "raw_b": "FV/142/2026",
+          "normalized_a": "FV/142/2026",
+          "normalized_b": "FV/142/2026",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "FV/142/2026",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "FV/142/2026",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "tax_id",
+          "raw_a": "5260250274",
+          "raw_b": "5260250274",
+          "normalized_a": "5260250274",
+          "normalized_b": "5260250274",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "5260250274",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "5260250274",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "issue_date",
+          "raw_a": "2026-03-12",
+          "raw_b": "2026-03-12",
+          "normalized_a": "2026-03-12",
+          "normalized_b": "2026-03-12",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "2026-03-12",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "2026-03-12",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "net_total",
+          "raw_a": "6754,00",
+          "raw_b": "6754,00",
+          "normalized_a": "6754.00",
+          "normalized_b": "6754.00",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "6754.00",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "6754,00",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "vat_total",
+          "raw_a": "1553,42",
+          "raw_b": "1553,42",
+          "normalized_a": "1553.42",
+          "normalized_b": "1553.42",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "1553.42",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "1553,42",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "gross_total",
+          "raw_a": "8307,42",
+          "raw_b": "8307,42",
+          "normalized_a": "8307.42",
+          "normalized_b": "8307.42",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "8307.42",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "8307,42",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "currency",
+          "raw_a": "PLN",
+          "raw_b": "PLN",
+          "normalized_a": "PLN",
+          "normalized_b": "PLN",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "PLN",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "PLN",
+          "a_correct": true,
+          "b_correct": true
+        }
+      ],
+      "business_validation": {
+        "a": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "b": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "selected": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        }
+      },
+      "selected": {
+        "document_number": "FV/142/2026",
+        "tax_id": "5260250274",
+        "issue_date": "2026-03-12",
+        "net_total": "6754.00",
+        "vat_total": "1553.42",
+        "gross_total": "8307.42",
+        "currency": "PLN"
+      },
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "review_required": true,
+      "document_id": "holdout-03-poor"
+    },
+    {
+      "fields": [
+        {
+          "field": "document_number",
+          "raw_a": "FV/143/2026",
+          "raw_b": "FV/143/2026",
+          "normalized_a": "FV/143/2026",
+          "normalized_b": "FV/143/2026",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "FV/143/2026",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "FV/143/2026",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "tax_id",
+          "raw_a": "8567346215",
+          "raw_b": "8567346215",
+          "normalized_a": "8567346215",
+          "normalized_b": "8567346215",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "8567346215",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "8567346215",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "issue_date",
+          "raw_a": "2026-04-13",
+          "raw_b": "2026-04-13",
+          "normalized_a": "2026-04-13",
+          "normalized_b": "2026-04-13",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "2026-04-13",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "2026-04-13",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "net_total",
+          "raw_a": "6891,00",
+          "raw_b": "6891,00",
+          "normalized_a": "6891.00",
+          "normalized_b": "6891.00",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "6891.00",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "6891,00",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "vat_total",
+          "raw_a": "1584,93",
+          "raw_b": "1584,93",
+          "normalized_a": "1584.93",
+          "normalized_b": "1584.93",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "1584.93",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "1584,93",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "gross_total",
+          "raw_a": "8475,93",
+          "raw_b": "8475,93",
+          "normalized_a": "8475.93",
+          "normalized_b": "8475.93",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "8475.93",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "8475,93",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "currency",
+          "raw_a": "PLN",
+          "raw_b": "PLN",
+          "normalized_a": "PLN",
+          "normalized_b": "PLN",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "PLN",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "PLN",
+          "a_correct": true,
+          "b_correct": true
+        }
+      ],
+      "business_validation": {
+        "a": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "b": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "selected": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        }
+      },
+      "selected": {
+        "document_number": "FV/143/2026",
+        "tax_id": "8567346215",
+        "issue_date": "2026-04-13",
+        "net_total": "6891.00",
+        "vat_total": "1584.93",
+        "gross_total": "8475.93",
+        "currency": "PLN"
+      },
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "review_required": true,
+      "document_id": "holdout-04-skew"
+    },
+    {
+      "fields": [
+        {
+          "field": "document_number",
+          "raw_a": "FV/144/2026",
+          "raw_b": "FV/144/2026",
+          "normalized_a": "FV/144/2026",
+          "normalized_b": "FV/144/2026",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "FV/144/2026",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "FV/144/2026",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "tax_id",
+          "raw_a": "5260250274",
+          "raw_b": "5260250274",
+          "normalized_a": "5260250274",
+          "normalized_b": "5260250274",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "5260250274",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "5260250274",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "issue_date",
+          "raw_a": "2026-05-14",
+          "raw_b": "2026-05-14",
+          "normalized_a": "2026-05-14",
+          "normalized_b": "2026-05-14",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "2026-05-14",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "2026-05-14",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "net_total",
+          "raw_a": "7028,00",
+          "raw_b": "7028,00",
+          "normalized_a": "7028.00",
+          "normalized_b": "7028.00",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "7028.00",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "7028,00",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "vat_total",
+          "raw_a": "1616,44",
+          "raw_b": "1616,44",
+          "normalized_a": "1616.44",
+          "normalized_b": "1616.44",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "1616.44",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "1616,44",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "gross_total",
+          "raw_a": "8644,44",
+          "raw_b": "8644,44",
+          "normalized_a": "8644.44",
+          "normalized_b": "8644.44",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "8644.44",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "8644,44",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "currency",
+          "raw_a": "PLN",
+          "raw_b": "PLN",
+          "normalized_a": "PLN",
+          "normalized_b": "PLN",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "PLN",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "PLN",
+          "a_correct": true,
+          "b_correct": true
+        }
+      ],
+      "business_validation": {
+        "a": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "b": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "selected": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        }
+      },
+      "selected": {
+        "document_number": "FV/144/2026",
+        "tax_id": "5260250274",
+        "issue_date": "2026-05-14",
+        "net_total": "7028.00",
+        "vat_total": "1616.44",
+        "gross_total": "8644.44",
+        "currency": "PLN"
+      },
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "review_required": true,
+      "document_id": "holdout-05-contrast"
+    },
+    {
+      "fields": [
+        {
+          "field": "document_number",
+          "raw_a": "FV/145/2026",
+          "raw_b": "FV/145/2026",
+          "normalized_a": "FV/145/2026",
+          "normalized_b": "FV/145/2026",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "FV/145/2026",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "FV/145/2026",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "tax_id",
+          "raw_a": "8567346215",
+          "raw_b": "8567346215",
+          "normalized_a": "8567346215",
+          "normalized_b": "8567346215",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "8567346215",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "8567346215",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "issue_date",
+          "raw_a": "2026-06-15",
+          "raw_b": "2026-06-15",
+          "normalized_a": "2026-06-15",
+          "normalized_b": "2026-06-15",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "2026-06-15",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "2026-06-15",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "net_total",
+          "raw_a": "7165,00",
+          "raw_b": "7165,00",
+          "normalized_a": "7165.00",
+          "normalized_b": "7165.00",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "7165.00",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "7165,00",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "vat_total",
+          "raw_a": "1647,95",
+          "raw_b": "1647,95",
+          "normalized_a": "1647.95",
+          "normalized_b": "1647.95",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "1647.95",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "1647,95",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "gross_total",
+          "raw_a": "8812,95",
+          "raw_b": "8812,95",
+          "normalized_a": "8812.95",
+          "normalized_b": "8812.95",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "8812.95",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "8812,95",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "currency",
+          "raw_a": "PLN",
+          "raw_b": "PLN",
+          "normalized_a": "PLN",
+          "normalized_b": "PLN",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "PLN",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "PLN",
+          "a_correct": true,
+          "b_correct": true
+        }
+      ],
+      "business_validation": {
+        "a": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "b": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "selected": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        }
+      },
+      "selected": {
+        "document_number": "FV/145/2026",
+        "tax_id": "8567346215",
+        "issue_date": "2026-06-15",
+        "net_total": "7165.00",
+        "vat_total": "1647.95",
+        "gross_total": "8812.95",
+        "currency": "PLN"
+      },
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "review_required": true,
+      "document_id": "holdout-06-compression"
+    },
+    {
+      "fields": [
+        {
+          "field": "document_number",
+          "raw_a": "FV/146/2026",
+          "raw_b": "FV/146/2026",
+          "normalized_a": "FV/146/2026",
+          "normalized_b": "FV/146/2026",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "FV/146/2026",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "FV/146/2026",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "tax_id",
+          "raw_a": "5260250274",
+          "raw_b": "5260250274",
+          "normalized_a": "5260250274",
+          "normalized_b": "5260250274",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "5260250274",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "5260250274",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "issue_date",
+          "raw_a": "2026-07-16",
+          "raw_b": "2026-07-16",
+          "normalized_a": "2026-07-16",
+          "normalized_b": "2026-07-16",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "2026-07-16",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "2026-07-16",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "net_total",
+          "raw_a": null,
+          "raw_b": "7302,00",
+          "normalized_a": null,
+          "normalized_b": "7302.00",
+          "comparison": "different",
+          "outcome": "CONFLICT_REVIEW",
+          "selected": null,
+          "reason": "Disagreement or missing value requires human review",
+          "ground_truth": "7302,00",
+          "a_correct": false,
+          "b_correct": true
+        },
+        {
+          "field": "vat_total",
+          "raw_a": null,
+          "raw_b": "1679,46",
+          "normalized_a": null,
+          "normalized_b": "1679.46",
+          "comparison": "different",
+          "outcome": "CONFLICT_REVIEW",
+          "selected": null,
+          "reason": "Disagreement or missing value requires human review",
+          "ground_truth": "1679,46",
+          "a_correct": false,
+          "b_correct": true
+        },
+        {
+          "field": "gross_total",
+          "raw_a": null,
+          "raw_b": "8981,46",
+          "normalized_a": null,
+          "normalized_b": "8981.46",
+          "comparison": "different",
+          "outcome": "CONFLICT_REVIEW",
+          "selected": null,
+          "reason": "Disagreement or missing value requires human review",
+          "ground_truth": "8981,46",
+          "a_correct": false,
+          "b_correct": true
+        },
+        {
+          "field": "currency",
+          "raw_a": null,
+          "raw_b": "PLN",
+          "normalized_a": null,
+          "normalized_b": "PLN",
+          "comparison": "different",
+          "outcome": "CONFLICT_REVIEW",
+          "selected": null,
+          "reason": "Disagreement or missing value requires human review",
+          "ground_truth": "PLN",
+          "a_correct": false,
+          "b_correct": true
+        }
+      ],
+      "business_validation": {
+        "a": {
+          "nip_checksum": true,
+          "money_nonnegative": false,
+          "net_plus_vat_equals_gross": false,
+          "currency_allowed": false,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "b": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "selected": {
+          "nip_checksum": true,
+          "money_nonnegative": false,
+          "net_plus_vat_equals_gross": false,
+          "currency_allowed": false,
+          "issue_date_valid": true,
+          "document_number_present": true
+        }
+      },
+      "selected": {
+        "document_number": "FV/146/2026",
+        "tax_id": "5260250274",
+        "issue_date": "2026-07-16",
+        "net_total": null,
+        "vat_total": null,
+        "gross_total": null,
+        "currency": null
+      },
+      "outcome": "CONFLICT_REVIEW",
+      "review_required": true,
+      "document_id": "holdout-07-table"
+    },
+    {
+      "fields": [
+        {
+          "field": "document_number",
+          "raw_a": "FV/147/2026",
+          "raw_b": "FV/147/2026",
+          "normalized_a": "FV/147/2026",
+          "normalized_b": "FV/147/2026",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "FV/147/2026",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "FV/147/2026",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "tax_id",
+          "raw_a": "8567346215",
+          "raw_b": "8567346215",
+          "normalized_a": "8567346215",
+          "normalized_b": "8567346215",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "8567346215",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "8567346215",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "issue_date",
+          "raw_a": "2026-08-17",
+          "raw_b": "2026-08-17",
+          "normalized_a": "2026-08-17",
+          "normalized_b": "2026-08-17",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "2026-08-17",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "2026-08-17",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "net_total",
+          "raw_a": "7439,00",
+          "raw_b": "7439,00",
+          "normalized_a": "7439.00",
+          "normalized_b": "7439.00",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "7439.00",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "7439,00",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "vat_total",
+          "raw_a": "1710,97",
+          "raw_b": "1710,97",
+          "normalized_a": "1710.97",
+          "normalized_b": "1710.97",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "1710.97",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "1710,97",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "gross_total",
+          "raw_a": "9149,97",
+          "raw_b": "9149,97",
+          "normalized_a": "9149.97",
+          "normalized_b": "9149.97",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_VALID",
+          "selected": "9149.97",
+          "reason": "Agreement supported by checksum/arithmetic (not proof of source correctness)",
+          "ground_truth": "9149,97",
+          "a_correct": true,
+          "b_correct": true
+        },
+        {
+          "field": "currency",
+          "raw_a": "PLN",
+          "raw_b": "PLN",
+          "normalized_a": "PLN",
+          "normalized_b": "PLN",
+          "comparison": "equal",
+          "outcome": "CONSENSUS_UNVERIFIED",
+          "selected": "PLN",
+          "reason": "Agreement is not ground truth",
+          "ground_truth": "PLN",
+          "a_correct": true,
+          "b_correct": true
+        }
+      ],
+      "business_validation": {
+        "a": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "b": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        },
+        "selected": {
+          "nip_checksum": true,
+          "money_nonnegative": true,
+          "net_plus_vat_equals_gross": true,
+          "currency_allowed": true,
+          "issue_date_valid": true,
+          "document_number_present": true
+        }
+      },
+      "selected": {
+        "document_number": "FV/147/2026",
+        "tax_id": "8567346215",
+        "issue_date": "2026-08-17",
+        "net_total": "7439.00",
+        "vat_total": "1710.97",
+        "gross_total": "9149.97",
+        "currency": "PLN"
+      },
+      "outcome": "CONSENSUS_UNVERIFIED",
+      "review_required": true,
+      "document_id": "holdout-08-orientation"
+    }
+  ]
+}

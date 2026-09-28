@@ -1,0 +1,28 @@
+services:
+  tesseract:
+    build: ./ocr-services/tesseract
+    ports: ["127.0.0.1:8011:8080"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+  paddle:
+    build: ./ocr-services/paddle
+    ports: ["127.0.0.1:8012:8080"]
+    volumes: ["paddle_models:/root/.paddlex"]
+    shm_size: 2gb
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+  backend:
+    environment:
+      OCR_ENABLED: "true"
+      OCR_TESSERACT_PROFILE: orientation
+      OCR_PADDLE_PROFILE: orientation
+      OCR_TESSERACT_URL: http://tesseract:8080/ocr
+      OCR_PADDLE_URL: http://paddle:8080/ocr
+volumes:
+  paddle_models:

@@ -160,3 +160,10 @@ SQLite tests enable foreign keys. PostgreSQL tests create/drop isolated test_<uu
 The provider handles UTF-8 fixture text, not OCR/PDF extraction. Processing is synchronous; actors are placeholders, there is no auth/RBAC or automatic reopening of FAILED cases. A storage-processing failure is preserved on a terminal case and flagged by n8n; replay does not create another case. The DB/filesystem cannot share a transaction, so interrupted commits may leave orphaned objects. Back up DB and files together. n8n UID/retention/replay operational limits are documented explicitly in n8n/README.md.
 
 Milestone 3 will address real PDF/scanned documents, OCR benchmarks/provider selection, structured extraction and an evaluation dataset with accuracy metrics. LLM/OpenAI, RAG, outbound replies, CRM/ERP, PDF offers, RBAC and cloud deployment remain out of scope.
+
+
+## Milestone 3: local dual OCR
+
+Run `docker compose -f docker-compose.yml -f docker-compose.ocr.yml up -d --build` to enable PDF/PNG/JPEG/TIFF ingestion through two independent CPU OCR services. TXT fixtures remain supported. The UI shows both readings, normalization, business checks and a reasoned human-review form. Agreement is not proof of correctness; current policy conservatively requires document review.
+
+See [Milestone 3 report](Milestone-3-raport.md), [OCR services](ocr-services/README.md), and `datasets/ocr/results/holdout-final/report.md`. HOLDOUT has been evaluated once after freezing configuration; do not rerun it or tune on its results.

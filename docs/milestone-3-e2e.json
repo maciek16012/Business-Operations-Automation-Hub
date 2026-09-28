@@ -1,0 +1,30 @@
+{
+  "result": "PASS",
+  "run_id": "3eae7b4f",
+  "upload_case_id": "d6d46058-a6ef-4e02-83f2-415d85f11114",
+  "upload_public_id": "CASE-2026-d6d46058a6ef4e0283f2",
+  "upload_document_id": "4d44b1dd-7eda-4359-b192-8c1c78060212",
+  "upload_outcome": "CONSENSUS_UNVERIFIED",
+  "upload_status": "REVIEW_REQUIRED (left for UI verification)",
+  "email_case_id": "0005e878-f0b0-424a-ad44-407ca991f747",
+  "email_public_id": "CASE-2026-0005e878f0b0424aad44",
+  "email_outcome": "CONFLICT_REVIEW",
+  "email_final_status": "EXPORTED",
+  "email_replay": "duplicate",
+  "email_review": "READY then APPROVED and JSON/XLSX",
+  "providers": [
+    {
+      "provider": "tesseract",
+      "version": "tesseract 5.5.3",
+      "latency_ms": 580.41
+    },
+    {
+      "provider": "paddle",
+      "version": "3.7.0",
+      "latency_ms": 4061.28
+    }
+  ],
+  "ui_review_result": "PASS: REVIEW_REQUIRED -> READY using UI; original report preserved",
+  "upload_status_after_ui": "READY",
+  "ui_review_audit_present": true
+}

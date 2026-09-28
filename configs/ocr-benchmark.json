@@ -1,0 +1,85 @@
+{
+  "benchmark_version": "1.0",
+  "providers": {
+    "engine_a": {
+      "name": "tesseract",
+      "family": "Tesseract 5.x",
+      "required": true,
+      "version": "5.5.3",
+      "language_data": "tessdata_fast/4.1.0/pol+eng",
+      "psm": 6
+    },
+    "engine_b": {
+      "name": "paddleocr",
+      "family": "PaddleOCR 3.x",
+      "required": true,
+      "version": "3.7.0",
+      "paddlepaddle": "3.3.1",
+      "paddlex": "3.7.2",
+      "detection_model": "PP-OCRv5_mobile_det",
+      "recognition_model": "latin_PP-OCRv5_mobile_rec",
+      "device": "cpu",
+      "detection_max_side": 960,
+      "cpu_threads": 2
+    }
+  },
+  "execution": {
+    "independent_runs": true,
+    "preserve_raw_outputs": true,
+    "allow_provider_specific_preprocessing": true,
+    "shared_ground_truth": true
+  },
+  "dataset": {
+    "development_split": "dev",
+    "holdout_split": "holdout",
+    "tune_on_holdout": false
+  },
+  "critical_fields": [
+    "document_number",
+    "tax_id",
+    "issue_date",
+    "net_total",
+    "vat_total",
+    "gross_total",
+    "currency"
+  ],
+  "metrics": [
+    "cer",
+    "wer",
+    "exact_field_accuracy",
+    "normalized_field_accuracy",
+    "critical_field_accuracy",
+    "pairwise_agreement",
+    "both_wrong_agreement_rate",
+    "provider_failure_rate",
+    "mean_latency_ms",
+    "p95_latency_ms"
+  ],
+  "comparison": {
+    "numeric_tolerance": "0.01",
+    "preserve_conflicts": true,
+    "require_business_validation": true
+  },
+  "outcomes": [
+    "CONSENSUS_VALID",
+    "CONSENSUS_UNVERIFIED",
+    "CONFLICT_RESOLVED",
+    "CONFLICT_REVIEW",
+    "BOTH_FAILED"
+  ],
+  "selected_profiles": {
+    "tesseract": "orientation",
+    "paddle": "orientation"
+  },
+  "selection_reason": "DEV: geometric orientation + grayscale/autocontrast improved Tesseract fields 45/56 to 52/56 and Paddle CER 0.09756 to 0.00457. Other standalone profiles did not improve field accuracy. No HOLDOUT inspected.",
+  "evaluation": {
+    "documents_per_split": 8,
+    "critical_field_denominator": 56,
+    "cer_wer": "micro-averaged Levenshtein after whitespace collapse; case and Polish characters retained",
+    "latency": "provider wall clock including preprocessing/rendering and initialization when cold; local CPU; no subtraction",
+    "p95": "nearest rank ceil(0.95*n)",
+    "false_consensus": "nonnull equal normalized values wrong against truth / all field pairs; conditional denominator also reported",
+    "field_accuracy": "missing or invalid prediction counts wrong; all 7 fields critical",
+    "holdout_policy": "one final inference run only after SHA-256 freeze"
+  }
+}

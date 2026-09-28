@@ -1,0 +1,114 @@
+[
+  {
+    "id": "dev-01-digital",
+    "split": "dev",
+    "source_file": "datasets/ocr/input/dev/dev-01-digital.pdf",
+    "sha256": "4bf4a671b1d318cac495640abebbf3795ccd92bc665809f9ba8309a674260ef5",
+    "pages": 1
+  },
+  {
+    "id": "dev-02-scan",
+    "split": "dev",
+    "source_file": "datasets/ocr/input/dev/dev-02-scan.png",
+    "sha256": "6215b5d4ca03ccd40db426908d656cfbd96a923dec9642c0b27efab8004d3d19",
+    "pages": 1
+  },
+  {
+    "id": "dev-03-poor",
+    "split": "dev",
+    "source_file": "datasets/ocr/input/dev/dev-03-poor.png",
+    "sha256": "0315c50b1251e98471ba3a6730f09e7abfe6b63c8e57f2e668111e8452040daa",
+    "pages": 1
+  },
+  {
+    "id": "dev-04-skew",
+    "split": "dev",
+    "source_file": "datasets/ocr/input/dev/dev-04-skew.png",
+    "sha256": "a4f8ce7030956465a0ce63bba15da55d341235590d6cc82dca40203c8fd2fbc0",
+    "pages": 1
+  },
+  {
+    "id": "dev-05-contrast",
+    "split": "dev",
+    "source_file": "datasets/ocr/input/dev/dev-05-contrast.png",
+    "sha256": "4d53c54f8f8e5ca908afa8594516ad23da84e82f8912f5a820230763557446a0",
+    "pages": 1
+  },
+  {
+    "id": "dev-06-compression",
+    "split": "dev",
+    "source_file": "datasets/ocr/input/dev/dev-06-compression.jpg",
+    "sha256": "f56a8dd74181be2e4f93fd49643537453cd9cb941edbcfba244196f70e96a908",
+    "pages": 1
+  },
+  {
+    "id": "dev-07-table",
+    "split": "dev",
+    "source_file": "datasets/ocr/input/dev/dev-07-table.png",
+    "sha256": "1d0502a60f68ac3b776e160a3d2dfaf617667e07e8bd84abe55dc01db311025d",
+    "pages": 1
+  },
+  {
+    "id": "dev-08-orientation",
+    "split": "dev",
+    "source_file": "datasets/ocr/input/dev/dev-08-orientation.png",
+    "sha256": "fc53b909bf7b6080e5af502ec2dc8765808d324d48d6f74ff36fc5d78b0a0bd4",
+    "pages": 1
+  },
+  {
+    "id": "holdout-01-digital",
+    "split": "holdout",
+    "source_file": "datasets/ocr/input/holdout/holdout-01-digital.pdf",
+    "sha256": "f8dceee9c16b1e8e9bfac66e385aae6f7767f7fb55269e9f06be703e11233d4e",
+    "pages": 1
+  },
+  {
+    "id": "holdout-02-scan",
+    "split": "holdout",
+    "source_file": "datasets/ocr/input/holdout/holdout-02-scan.png",
+    "sha256": "a2a3c2f387a52ceed6807ee9f5ad72a5290bf507837427ff31ca061f61d04beb",
+    "pages": 1
+  },
+  {
+    "id": "holdout-03-poor",
+    "split": "holdout",
+    "source_file": "datasets/ocr/input/holdout/holdout-03-poor.png",
+    "sha256": "d7c4e12fda05dcb9eaed9dbdbb785af17f80a19a0aaa09c11bd922fd6fdf87a0",
+    "pages": 1
+  },
+  {
+    "id": "holdout-04-skew",
+    "split": "holdout",
+    "source_file": "datasets/ocr/input/holdout/holdout-04-skew.png",
+    "sha256": "ea42f628b46ce8de2d3ae7b0648f41cbf3b16de4f35e1c6330836980f4f6cb7f",
+    "pages": 1
+  },
+  {
+    "id": "holdout-05-contrast",
+    "split": "holdout",
+    "source_file": "datasets/ocr/input/holdout/holdout-05-contrast.png",
+    "sha256": "32156fd898db2931c715007663a60a4bf3caec798d48d72cf816e1f4fe2727fd",
+    "pages": 1
+  },
+  {
+    "id": "holdout-06-compression",
+    "split": "holdout",
+    "source_file": "datasets/ocr/input/holdout/holdout-06-compression.jpg",
+    "sha256": "47088cf8f7926f30f0e7b710a24bc1cc3451cda0627e4fed34c4d54a6b5eebb5",
+    "pages": 1
+  },
+  {
+    "id": "holdout-07-table",
+    "split": "holdout",
+    "source_file": "datasets/ocr/input/holdout/holdout-07-table.png",
+    "sha256": "8510ee0891addc894ae635c1373927f883fc7349b6fc8ce0d5305dc614b99a9b",
+    "pages": 1
+  },
+  {
+    "id": "holdout-08-orientation",
+    "split": "holdout",
+    "source_file": "datasets/ocr/input/holdout/holdout-08-orientation.png",
+    "sha256": "d6b3abd729d5266540e6f8006a0a75ad789e32c6451cfcdca286e053af829e88",
+    "pages": 1
+  }
+]

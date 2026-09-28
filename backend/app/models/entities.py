@@ -193,3 +193,21 @@ class InboundMessage(Base):
         server_default=func.now(),
         onupdate=func.now(),
     )
+
+
+class OCRDocument(Base):
+    __tablename__ = "ocr_documents"
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    case_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("cases.id", ondelete="CASCADE"), index=True
+    )
+    attachment_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("attachments.id", ondelete="CASCADE"), unique=True
+    )
+    report: Mapped[dict] = mapped_column(JSON)
+    reviewed_values: Mapped[dict | None] = mapped_column(JSON)
+    review_reason: Mapped[str | None] = mapped_column(Text)
+    reviewed: Mapped[bool] = mapped_column(Boolean, default=False)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=lambda: datetime.now(UTC), server_default=func.now()
+    )

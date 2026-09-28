@@ -12,6 +12,11 @@ class Settings(BaseSettings):
     database_url: str = "postgresql+asyncpg://boah:boah_dev_password@postgres:5432/boah"
     storage_backend: Literal["filesystem"] = "filesystem"
     storage_path: str = "/data/documents"
+    ocr_enabled: bool = False
+    ocr_tesseract_url: str = "http://localhost:8011/ocr"
+    ocr_paddle_url: str = "http://localhost:8012/ocr"
+    ocr_tesseract_profile: str = "baseline"
+    ocr_paddle_profile: str = "baseline"
     max_upload_bytes: int = 5 * 1024 * 1024
     model_config = SettingsConfigDict(env_file=".env", extra="ignore", case_sensitive=False)
 

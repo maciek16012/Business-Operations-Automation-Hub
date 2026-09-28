@@ -1,0 +1,442 @@
+{
+  "provider": "tesseract",
+  "provider_version": "tesseract 5.5.3",
+  "document_id": "dev-07-table",
+  "raw_text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/106/2026\nNIP: 5260250274\nData wystawienia: 2026-07-16\nSprzedawca: Żółć i Źródło - Przykład Sp. z 0.0.\nOpis: Usługa modernizacji biura, ilość 1",
+  "pages": [
+    {
+      "page": 1,
+      "width": 1600,
+      "height": 2057,
+      "text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/106/2026\nNIP: 5260250274\nData wystawienia: 2026-07-16\nSprzedawca: Żółć i Źródło - Przykład Sp. z 0.0.\nOpis: Usługa modernizacji biura, ilość 1",
+      "lines": [
+        {
+          "text": "DOKUMENT",
+          "confidence": 0.9302378099999999,
+          "coordinates": [
+            77,
+            121,
+            194,
+            25
+          ],
+          "line": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "text": "SYNTETYCZNY",
+          "confidence": 0.9238006599999999,
+          "coordinates": [
+            281,
+            121,
+            250,
+            25
+          ],
+          "line": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "text": "-",
+          "confidence": 0.93191574,
+          "coordinates": [
+            542,
+            136,
+            9,
+            4
+          ],
+          "line": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "text": "NIE",
+          "confidence": 0.96501282,
+          "coordinates": [
+            563,
+            121,
+            54,
+            25
+          ],
+          "line": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "text": "DO",
+          "confidence": 0.96501282,
+          "coordinates": [
+            630,
+            121,
+            48,
+            25
+          ],
+          "line": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "text": "OBROTU",
+          "confidence": 0.96327278,
+          "coordinates": [
+            689,
+            121,
+            142,
+            25
+          ],
+          "line": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "text": "Faktura:",
+          "confidence": 0.93247238,
+          "coordinates": [
+            77,
+            247,
+            121,
+            25
+          ],
+          "line": [
+            "1",
+            "1",
+            "2"
+          ]
+        },
+        {
+          "text": "FV/106/2026",
+          "confidence": 0.9297661600000001,
+          "coordinates": [
+            212,
+            247,
+            193,
+            25
+          ],
+          "line": [
+            "1",
+            "1",
+            "2"
+          ]
+        },
+        {
+          "text": "NIP:",
+          "confidence": 0.9649219499999999,
+          "coordinates": [
+            77,
+            372,
+            61,
+            26
+          ],
+          "line": [
+            "1",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "text": "5260250274",
+          "confidence": 0.96487686,
+          "coordinates": [
+            151,
+            372,
+            191,
+            26
+          ],
+          "line": [
+            "1",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "text": "Data",
+          "confidence": 0.96994606,
+          "coordinates": [
+            77,
+            498,
+            68,
+            26
+          ],
+          "line": [
+            "1",
+            "3",
+            "1"
+          ]
+        },
+        {
+          "text": "wystawienia:",
+          "confidence": 0.9637055999999999,
+          "coordinates": [
+            157,
+            498,
+            194,
+            32
+          ],
+          "line": [
+            "1",
+            "3",
+            "1"
+          ]
+        },
+        {
+          "text": "2026-07-16",
+          "confidence": 0.96418892,
+          "coordinates": [
+            363,
+            498,
+            176,
+            26
+          ],
+          "line": [
+            "1",
+            "3",
+            "1"
+          ]
+        },
+        {
+          "text": "Sprzedawca:",
+          "confidence": 0.93236633,
+          "coordinates": [
+            76,
+            624,
+            196,
+            32
+          ],
+          "line": [
+            "1",
+            "4",
+            "1"
+          ]
+        },
+        {
+          "text": "Żółć",
+          "confidence": 0.92783867,
+          "coordinates": [
+            284,
+            618,
+            64,
+            31
+          ],
+          "line": [
+            "1",
+            "4",
+            "1"
+          ]
+        },
+        {
+          "text": "i",
+          "confidence": 0.96981499,
+          "coordinates": [
+            360,
+            624,
+            3,
+            25
+          ],
+          "line": [
+            "1",
+            "4",
+            "1"
+          ]
+        },
+        {
+          "text": "Źródło",
+          "confidence": 0.9330441999999999,
+          "coordinates": [
+            375,
+            617,
+            97,
+            32
+          ],
+          "line": [
+            "1",
+            "4",
+            "1"
+          ]
+        },
+        {
+          "text": "-",
+          "confidence": 0.93287682,
+          "coordinates": [
+            483,
+            639,
+            10,
+            3
+          ],
+          "line": [
+            "1",
+            "4",
+            "1"
+          ]
+        },
+        {
+          "text": "Przykład",
+          "confidence": 0.97011742,
+          "coordinates": [
+            505,
+            624,
+            128,
+            32
+          ],
+          "line": [
+            "1",
+            "4",
+            "1"
+          ]
+        },
+        {
+          "text": "Sp.",
+          "confidence": 0.96465157,
+          "coordinates": [
+            646,
+            624,
+            48,
+            32
+          ],
+          "line": [
+            "1",
+            "4",
+            "1"
+          ]
+        },
+        {
+          "text": "z",
+          "confidence": 0.9282557699999999,
+          "coordinates": [
+            706,
+            631,
+            16,
+            18
+          ],
+          "line": [
+            "1",
+            "4",
+            "1"
+          ]
+        },
+        {
+          "text": "0.0.",
+          "confidence": 0.9440246600000001,
+          "coordinates": [
+            732,
+            631,
+            54,
+            18
+          ],
+          "line": [
+            "1",
+            "4",
+            "1"
+          ]
+        },
+        {
+          "text": "Opis:",
+          "confidence": 0.9632150300000001,
+          "coordinates": [
+            76,
+            750,
+            76,
+            32
+          ],
+          "line": [
+            "1",
+            "4",
+            "2"
+          ]
+        },
+        {
+          "text": "Usługa",
+          "confidence": 0.96394875,
+          "coordinates": [
+            166,
+            750,
+            104,
+            32
+          ],
+          "line": [
+            "1",
+            "4",
+            "2"
+          ]
+        },
+        {
+          "text": "modernizacji",
+          "confidence": 0.95711922,
+          "coordinates": [
+            283,
+            750,
+            191,
+            32
+          ],
+          "line": [
+            "1",
+            "4",
+            "2"
+          ]
+        },
+        {
+          "text": "biura,",
+          "confidence": 0.96559586,
+          "coordinates": [
+            488,
+            750,
+            82,
+            29
+          ],
+          "line": [
+            "1",
+            "4",
+            "2"
+          ]
+        },
+        {
+          "text": "ilość",
+          "confidence": 0.96559586,
+          "coordinates": [
+            584,
+            750,
+            67,
+            25
+          ],
+          "line": [
+            "1",
+            "4",
+            "2"
+          ]
+        },
+        {
+          "text": "1",
+          "confidence": 0.9682854500000001,
+          "coordinates": [
+            664,
+            750,
+            9,
+            25
+          ],
+          "line": [
+            "1",
+            "4",
+            "2"
+          ]
+        }
+      ]
+    }
+  ],
+  "provider_confidence": 0.9519957557142857,
+  "processing_time_ms": 556.27,
+  "error": null,
+  "raw_provider_output": [
+    "level\tpage_num\tblock_num\tpar_num\tline_num\tword_num\tleft\ttop\twidth\theight\tconf\ttext\n1\t1\t0\t0\t0\t0\t0\t0\t1600\t2057\t-1\t\n2\t1\t1\t0\t0\t0\t76\t121\t755\t661\t-1\t\n3\t1\t1\t1\t0\t0\t77\t121\t754\t151\t-1\t\n4\t1\t1\t1\t1\t0\t77\t121\t754\t25\t-1\t\n5\t1\t1\t1\t1\t1\t77\t121\t194\t25\t93.023781\tDOKUMENT\n5\t1\t1\t1\t1\t2\t281\t121\t250\t25\t92.380066\tSYNTETYCZNY\n5\t1\t1\t1\t1\t3\t542\t136\t9\t4\t93.191574\t-\n5\t1\t1\t1\t1\t4\t563\t121\t54\t25\t96.501282\tNIE\n5\t1\t1\t1\t1\t5\t630\t121\t48\t25\t96.501282\tDO\n5\t1\t1\t1\t1\t6\t689\t121\t142\t25\t96.327278\tOBROTU\n4\t1\t1\t1\t2\t0\t77\t247\t328\t25\t-1\t\n5\t1\t1\t1\t2\t1\t77\t247\t121\t25\t93.247238\tFaktura:\n5\t1\t1\t1\t2\t2\t212\t247\t193\t25\t92.976616\tFV/106/2026\n3\t1\t1\t2\t0\t0\t77\t372\t265\t26\t-1\t\n4\t1\t1\t2\t1\t0\t77\t372\t265\t26\t-1\t\n5\t1\t1\t2\t1\t1\t77\t372\t61\t26\t96.492195\tNIP:\n5\t1\t1\t2\t1\t2\t151\t372\t191\t26\t96.487686\t5260250274\n3\t1\t1\t3\t0\t0\t77\t498\t462\t32\t-1\t\n4\t1\t1\t3\t1\t0\t77\t498\t462\t32\t-1\t\n5\t1\t1\t3\t1\t1\t77\t498\t68\t26\t96.994606\tData\n5\t1\t1\t3\t1\t2\t157\t498\t194\t32\t96.370560\twystawienia:\n5\t1\t1\t3\t1\t3\t363\t498\t176\t26\t96.418892\t2026-07-16\n3\t1\t1\t4\t0\t0\t76\t617\t710\t165\t-1\t\n4\t1\t1\t4\t1\t0\t76\t617\t710\t39\t-1\t\n5\t1\t1\t4\t1\t1\t76\t624\t196\t32\t93.236633\tSprzedawca:\n5\t1\t1\t4\t1\t2\t284\t618\t64\t31\t92.783867\tŻółć\n5\t1\t1\t4\t1\t3\t360\t624\t3\t25\t96.981499\ti\n5\t1\t1\t4\t1\t4\t375\t617\t97\t32\t93.304420\tŹródło\n5\t1\t1\t4\t1\t5\t483\t639\t10\t3\t93.287682\t-\n5\t1\t1\t4\t1\t6\t505\t624\t128\t32\t97.011742\tPrzykład\n5\t1\t1\t4\t1\t7\t646\t624\t48\t32\t96.465157\tSp.\n5\t1\t1\t4\t1\t8\t706\t631\t16\t18\t92.825577\tz\n5\t1\t1\t4\t1\t9\t732\t631\t54\t18\t94.402466\t0.0.\n4\t1\t1\t4\t2\t0\t76\t750\t597\t32\t-1\t\n5\t1\t1\t4\t2\t1\t76\t750\t76\t32\t96.321503\tOpis:\n5\t1\t1\t4\t2\t2\t166\t750\t104\t32\t96.394875\tUsługa\n5\t1\t1\t4\t2\t3\t283\t750\t191\t32\t95.711922\tmodernizacji\n5\t1\t1\t4\t2\t4\t488\t750\t82\t29\t96.559586\tbiura,\n5\t1\t1\t4\t2\t5\t584\t750\t67\t25\t96.559586\tilość\n5\t1\t1\t4\t2\t6\t664\t750\t9\t25\t96.828545\t1\n"
+  ]
+}

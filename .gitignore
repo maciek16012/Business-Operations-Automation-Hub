@@ -34,3 +34,12 @@ dist/
 build/
 
 *.tsbuildinfo
+
+# Local/aborted OCR development executions and application export runtime
+/datasets/ocr/results/dev-baseline/
+/datasets/ocr/results/dev-mobile-baseline/
+/datasets/ocr/results/dev-grayscale/
+/datasets/ocr/results/e2e/
+/.n8n/
+/n8n_data/
+/paddle_models/

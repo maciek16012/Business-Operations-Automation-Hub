@@ -1,0 +1,64 @@
+*.py text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.txt text eol=lf
+**/Dockerfile text eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary
+
+# Byte-exact benchmark freeze (including Windows-authored source files)
+configs/ocr-freeze.json -text
+configs/ocr-benchmark.json -text
+backend/app/ocr/__init__.py -text
+backend/app/ocr/comparison/__init__.py -text
+backend/app/ocr/metrics/__init__.py -text
+backend/app/ocr/pipeline.py -text
+backend/app/ocr/providers/__init__.py -text
+ocr-services/paddle/server.py -text
+ocr-services/tesseract/server.py -text
+ocr-services/paddle/Dockerfile -text
+ocr-services/tesseract/Dockerfile -text
+scripts/benchmark_ocr.py -text
+datasets/ocr/manifest.json -text
+datasets/ocr/input/dev/.gitkeep -text
+datasets/ocr/input/dev/dev-01-digital.pdf -text
+datasets/ocr/input/dev/dev-02-scan.png -text
+datasets/ocr/input/dev/dev-03-poor.png -text
+datasets/ocr/input/dev/dev-04-skew.png -text
+datasets/ocr/input/dev/dev-05-contrast.png -text
+datasets/ocr/input/dev/dev-06-compression.jpg -text
+datasets/ocr/input/dev/dev-07-table.png -text
+datasets/ocr/input/dev/dev-08-orientation.png -text
+datasets/ocr/input/holdout/.gitkeep -text
+datasets/ocr/input/holdout/holdout-01-digital.pdf -text
+datasets/ocr/input/holdout/holdout-02-scan.png -text
+datasets/ocr/input/holdout/holdout-03-poor.png -text
+datasets/ocr/input/holdout/holdout-04-skew.png -text
+datasets/ocr/input/holdout/holdout-05-contrast.png -text
+datasets/ocr/input/holdout/holdout-06-compression.jpg -text
+datasets/ocr/input/holdout/holdout-07-table.png -text
+datasets/ocr/input/holdout/holdout-08-orientation.png -text
+datasets/ocr/ground_truth/dev/.gitkeep -text
+datasets/ocr/ground_truth/dev/dev-01-digital.json -text
+datasets/ocr/ground_truth/dev/dev-02-scan.json -text
+datasets/ocr/ground_truth/dev/dev-03-poor.json -text
+datasets/ocr/ground_truth/dev/dev-04-skew.json -text
+datasets/ocr/ground_truth/dev/dev-05-contrast.json -text
+datasets/ocr/ground_truth/dev/dev-06-compression.json -text
+datasets/ocr/ground_truth/dev/dev-07-table.json -text
+datasets/ocr/ground_truth/dev/dev-08-orientation.json -text
+datasets/ocr/ground_truth/holdout/.gitkeep -text
+datasets/ocr/ground_truth/holdout/holdout-01-digital.json -text
+datasets/ocr/ground_truth/holdout/holdout-02-scan.json -text
+datasets/ocr/ground_truth/holdout/holdout-03-poor.json -text
+datasets/ocr/ground_truth/holdout/holdout-04-skew.json -text
+datasets/ocr/ground_truth/holdout/holdout-05-contrast.json -text
+datasets/ocr/ground_truth/holdout/holdout-06-compression.json -text
+datasets/ocr/ground_truth/holdout/holdout-07-table.json -text
+datasets/ocr/ground_truth/holdout/holdout-08-orientation.json -text
+configs/ocr-model-hashes.json -text
+docker-compose.ocr.yml -text
+ocr-services/paddle/installed-versions.txt -text
+ocr-services/tesseract/installed-versions.txt -text
+* whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

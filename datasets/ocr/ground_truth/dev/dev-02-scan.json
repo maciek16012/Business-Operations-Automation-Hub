@@ -1,0 +1,21 @@
+{
+  "document_id": "dev-02-scan",
+  "source_file": "datasets/ocr/input/dev/dev-02-scan.png",
+  "split": "dev",
+  "document_type": "invoice",
+  "language": "pl",
+  "pages": 1,
+  "conditions": [
+    "scan"
+  ],
+  "full_text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/101/2026\nNIP: 8567346215\nData wystawienia: 2026-02-11\nSprzedawca: Żółć i Źródło - Przykład Sp. z o.o.\nOpis: Usługa modernizacji biura, ilość 1\nNetto: 1137,00\nVAT: 261,51\nBrutto: 1398,51\nWaluta: PLN",
+  "fields": {
+    "document_number": "FV/101/2026",
+    "tax_id": "8567346215",
+    "issue_date": "2026-02-11",
+    "net_total": "1137,00",
+    "vat_total": "261,51",
+    "gross_total": "1398,51",
+    "currency": "PLN"
+  }
+}

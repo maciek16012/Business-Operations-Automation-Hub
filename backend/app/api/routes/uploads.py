@@ -9,6 +9,7 @@ from sqlalchemy import select
 from app.api.dependencies import Service
 from app.core.config import settings
 from app.models.entities import Attachment
+from app.ocr.pipeline import supported
 from app.services.errors import WorkflowError
 
 router = APIRouter()
@@ -21,12 +22,18 @@ async def upload(case_id: UUID, service: Service, files: Annotated[list[UploadFi
     incoming = []
     for file in files:
         name = (file.filename or "document.txt").replace("\\", "/").split("/")[-1]
-        if not name.lower().endswith(".txt") or file.content_type not in {
-            "text/plain",
-            "application/octet-stream",
-        }:
+        if not supported(name, file.content_type or "") and (
+            not name.lower().endswith(".txt")
+            or file.content_type
+            not in {
+                "text/plain",
+                "application/octet-stream",
+            }
+        ):
             raise WorkflowError(
-                "FILE_TYPE", "Development provider accepts UTF-8 .txt fixtures only", 415
+                "FILE_TYPE",
+                "Accepts UTF-8 .txt; enabled dual OCR also accepts PDF/PNG/JPEG/TIFF",
+                415,
             )
         content = await file.read(settings.max_upload_bytes + 1)
         await file.close()

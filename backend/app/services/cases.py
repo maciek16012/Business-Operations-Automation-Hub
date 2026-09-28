@@ -15,6 +15,7 @@ from app.models.entities import (
     Export,
     ExtractedField,
     InboundMessage,
+    OCRDocument,
     ReviewDecision,
     ValidationIssue,
 )
@@ -83,6 +84,7 @@ class CaseService:
             ("review_decisions", ReviewDecision),
             ("exports", Export),
             ("audit_events", AuditEvent),
+            ("ocr_documents", OCRDocument),
         ):
             result[name] = [row_json(row) for row in await self.rows(model, case.id)]
         inbound = await self.db.scalar(
@@ -155,7 +157,8 @@ class CaseService:
             RuleIssue(i.code, IssueSeverity(i.severity), i.message, i.field_name)
             for i in old
             if not i.resolved
-            and i.code in {"EMAIL_ATTACHMENT_UNSUPPORTED", "EMAIL_EXTRACTION_FAILED"}
+            and i.code
+            in {"EMAIL_ATTACHMENT_UNSUPPORTED", "EMAIL_EXTRACTION_FAILED", "OCR_REVIEW_REQUIRED"}
         )
         keys = {(r.code, r.field_name, r.message) for r in rules}
         active = {(i.code, i.field_name, i.message) for i in old if not i.resolved}
@@ -259,6 +262,46 @@ class CaseService:
                     "attachment_uploaded",
                     {"attachment_id": str(attachment.id), "sha256": digest},
                 )
+                from app.ocr import pipeline
+
+                if pipeline.supported(filename, mime):
+                    report = await pipeline.dual(str(attachment.id), content)
+                    document = OCRDocument(
+                        case_id=case.id, attachment_id=attachment.id, report=report
+                    )
+                    self.db.add(document)
+                    self.audit(
+                        case,
+                        "OCR_COMPLETED",
+                        {
+                            "attachment_id": str(attachment.id),
+                            "outcome": report["outcome"],
+                            "fields": report["fields"],
+                            "provider_errors": [p["error"] for p in report["providers"]],
+                        },
+                    )
+                    self.apply(
+                        case,
+                        {
+                            "tax_id": report["selected"].get("tax_id"),
+                            "estimated_value": report["selected"].get("gross_total"),
+                            "currency": report["selected"].get("currency"),
+                        },
+                        extracted=True,
+                    )
+                    if report["review_required"]:
+                        self.db.add(
+                            ValidationIssue(
+                                case_id=case.id,
+                                code="OCR_REVIEW_REQUIRED",
+                                severity="ERROR",
+                                field_name=f"attachment:{attachment.id}",
+                                message="Independent OCR needs human verification: "
+                                + report["outcome"],
+                            )
+                        )
+                    await self.db.flush()
+                    continue
                 if email_review and not (
                     filename.lower().endswith(".txt")
                     and mime.lower().split(";", 1)[0].strip()

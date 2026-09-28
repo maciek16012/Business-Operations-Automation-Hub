@@ -1,0 +1,68 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BOAH OCR Ground Truth",
+  "type": "object",
+  "required": [
+    "document_id",
+    "source_file",
+    "split",
+    "document_type",
+    "fields"
+  ],
+  "properties": {
+    "document_id": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "split": {
+      "enum": ["dev", "holdout"]
+    },
+    "document_type": {
+      "enum": [
+        "invoice",
+        "order",
+        "delivery_note",
+        "business_inquiry",
+        "other"
+      ]
+    },
+    "language": {
+      "type": "string",
+      "default": "pl"
+    },
+    "full_text": {
+      "type": ["string", "null"]
+    },
+    "fields": {
+      "type": "object",
+      "properties": {
+        "document_number": {
+          "type": ["string", "null"]
+        },
+        "tax_id": {
+          "type": ["string", "null"]
+        },
+        "contractor_name": {
+          "type": ["string", "null"]
+        },
+        "issue_date": {
+          "type": ["string", "null"]
+        },
+        "net_total": {
+          "type": ["string", "null"]
+        },
+        "vat_total": {
+          "type": ["string", "null"]
+        },
+        "gross_total": {
+          "type": ["string", "null"]
+        },
+        "currency": {
+          "type": ["string", "null"]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_id": "holdout-06-compression",
+  "source_file": "datasets/ocr/input/holdout/holdout-06-compression.jpg",
+  "split": "holdout",
+  "document_type": "invoice",
+  "language": "pl",
+  "pages": 1,
+  "conditions": [
+    "compression"
+  ],
+  "full_text": "DOKUMENT SYNTETYCZNY - NIE DO OBROTU\nFaktura: FV/145/2026\nNIP: 8567346215\nData wystawienia: 2026-06-15\nSprzedawca: Żółć i Źródło - Przykład Sp. z o.o.\nOpis: Usługa modernizacji biura, ilość 1\nNetto: 7165,00\nVAT: 1647,95\nBrutto: 8812,95\nWaluta: PLN",
+  "fields": {
+    "document_number": "FV/145/2026",
+    "tax_id": "8567346215",
+    "issue_date": "2026-06-15",
+    "net_total": "7165,00",
+    "vat_total": "1647,95",
+    "gross_total": "8812,95",
+    "currency": "PLN"
+  }
+}
