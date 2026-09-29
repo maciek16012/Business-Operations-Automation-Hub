@@ -33,7 +33,11 @@ async def tasks(
     service: Service,
     status: Literal["OPEN", "ACKNOWLEDGED", "RESOLVED", "DISMISSED"] | None = None,
     task_type: Literal[
-        "SECURITY_QUARANTINE", "OCR_REVIEW", "EXTRACTION_FAILURE", "UNSUPPORTED_ATTACHMENT"
+        "SECURITY_QUARANTINE",
+        "OCR_REVIEW",
+        "EXTRACTION_FAILURE",
+        "UNSUPPORTED_ATTACHMENT",
+        "DOCUMENT_REVIEW",
     ]
     | None = None,
     priority: Literal["CRITICAL", "HIGH", "NORMAL"] | None = None,
@@ -109,7 +113,7 @@ async def decision(task_id: UUID, data: TaskDecision, service: Service):
                 await close_task(service, case, pending, "Case rejected: " + data.reason)
         # Security issues and original verdicts deliberately remain unresolved evidence.
     else:
-        if task.task_type in {"SECURITY_QUARANTINE", "OCR_REVIEW"}:
+        if task.task_type in {"SECURITY_QUARANTINE", "OCR_REVIEW", "DOCUMENT_REVIEW"}:
             raise WorkflowError(
                 "RESOLUTION_FORBIDDEN",
                 "Security requires case rejection; OCR requires field review",

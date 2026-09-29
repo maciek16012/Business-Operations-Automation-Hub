@@ -18,4 +18,7 @@ __all__ = [
     "AuditEvent",
 ]
 
-from app.models import operations  # noqa: F401
+from app.models import (
+    documents,  # noqa: F401
+    operations,  # noqa: F401
+)

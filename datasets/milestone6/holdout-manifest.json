@@ -1,0 +1,82 @@
+[
+  {
+    "document": "holdout/invoice/sample-01.pdf",
+    "truth": "holdout/invoice/sample-01.json"
+  },
+  {
+    "document": "holdout/invoice/sample-02.pdf",
+    "truth": "holdout/invoice/sample-02.json"
+  },
+  {
+    "document": "holdout/invoice/sample-03.pdf",
+    "truth": "holdout/invoice/sample-03.json"
+  },
+  {
+    "document": "holdout/invoice/sample-04.pdf",
+    "truth": "holdout/invoice/sample-04.json"
+  },
+  {
+    "document": "holdout/handwritten_table/sample-01.pdf",
+    "truth": "holdout/handwritten_table/sample-01.json"
+  },
+  {
+    "document": "holdout/handwritten_table/sample-02.pdf",
+    "truth": "holdout/handwritten_table/sample-02.json"
+  },
+  {
+    "document": "holdout/handwritten_table/sample-03.pdf",
+    "truth": "holdout/handwritten_table/sample-03.json"
+  },
+  {
+    "document": "holdout/handwritten_table/sample-04.pdf",
+    "truth": "holdout/handwritten_table/sample-04.json"
+  },
+  {
+    "document": "holdout/printed_table/sample-01.pdf",
+    "truth": "holdout/printed_table/sample-01.json"
+  },
+  {
+    "document": "holdout/printed_table/sample-02.pdf",
+    "truth": "holdout/printed_table/sample-02.json"
+  },
+  {
+    "document": "holdout/printed_table/sample-03.pdf",
+    "truth": "holdout/printed_table/sample-03.json"
+  },
+  {
+    "document": "holdout/printed_table/sample-04.pdf",
+    "truth": "holdout/printed_table/sample-04.json"
+  },
+  {
+    "document": "holdout/generic_document/sample-01.pdf",
+    "truth": "holdout/generic_document/sample-01.json"
+  },
+  {
+    "document": "holdout/generic_document/sample-02.pdf",
+    "truth": "holdout/generic_document/sample-02.json"
+  },
+  {
+    "document": "holdout/generic_document/sample-03.pdf",
+    "truth": "holdout/generic_document/sample-03.json"
+  },
+  {
+    "document": "holdout/generic_document/sample-04.pdf",
+    "truth": "holdout/generic_document/sample-04.json"
+  },
+  {
+    "document": "holdout/unknown/sample-01.pdf",
+    "truth": "holdout/unknown/sample-01.json"
+  },
+  {
+    "document": "holdout/unknown/sample-02.pdf",
+    "truth": "holdout/unknown/sample-02.json"
+  },
+  {
+    "document": "holdout/unknown/sample-03.pdf",
+    "truth": "holdout/unknown/sample-03.json"
+  },
+  {
+    "document": "holdout/unknown/sample-04.pdf",
+    "truth": "holdout/unknown/sample-04.json"
+  }
+]

@@ -11,12 +11,15 @@ from app.validation.normalization import FIELDS
 
 
 def approved_payload(detail: dict) -> dict:
-    return {
+    payload = {
         "schema_version": 1,
         "case_id": detail["public_id"],
         "status": detail["status"],
         "data": {field: detail[field] for field in FIELDS},
     }
+    if detail.get("documents"):
+        payload["documents"] = detail["documents"]
+    return payload
 
 
 def json_export(detail: dict) -> bytes:
@@ -70,6 +73,18 @@ def xlsx_export(detail: dict) -> bytes:
                     for c in columns
                 ]
             )
+    for document in detail.get("documents", []):
+        for table in document["tables"]:
+            sheet = workbook.create_sheet(f"Table {len(workbook.sheetnames) - 3}")
+            values = [[None] * table["column_count"] for _ in range(table["row_count"])]
+            for cell in table["cells"]:
+                values[cell["row"]][cell["column"]] = (
+                    cell["corrected_value"]
+                    if cell["corrected_value"] is not None
+                    else cell["raw_value"]
+                )
+            for row in values:
+                sheet.append(row)
     for sheet in workbook:
         for cell in sheet[1]:
             if cell.value == "Created At":

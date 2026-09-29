@@ -1,0 +1,27 @@
+ M .env.example
+ M backend/app/api/router.py
+ M backend/app/api/routes/cases.py
+ M backend/app/api/routes/tasks.py
+ M backend/app/core/config.py
+ M backend/app/exports/render.py
+ M backend/app/models/__init__.py
+ M backend/app/models/operations.py
+ M backend/app/services/cases.py
+ M backend/app/services/operations.py
+ M backend/tests/conftest.py
+ M frontend/app/globals.css
+ M frontend/app/page.tsx
+ M frontend/app/review-queue.tsx
+ M frontend/lib/api.ts
+?? backend/alembic/versions/ad14d3ede9c3_document_classification_structured_.py
+?? backend/app/adaptive/
+?? backend/app/api/routes/documents.py
+?? backend/app/models/documents.py
+?? backend/tests/test_adaptive.py
+?? configs/milestone6/
+?? datasets/milestone6/
+?? docs/milestone6/
+?? frontend/app/admin-dashboard.tsx
+?? frontend/app/case-workspace.tsx
+?? frontend/app/document-panel.tsx
+?? scripts/milestone6/

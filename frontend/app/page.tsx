@@ -3,13 +3,14 @@
 import { useCallback, useEffect, useState } from "react";
 import { API_BASE, api, BusinessField, CaseData, CaseDetail, fields, jsonBody } from "../lib/api";
 
+import AdminDashboard from "./admin-dashboard";
 import ReviewQueue from "./review-queue";
 import OCRPanel from "./ocr-panel";
 
 const editableStatuses = ["RECEIVED", "READY", "REVIEW_REQUIRED"];
 const label = (value: string) => value.replaceAll("_", " ");
 
-export default function Home() {
+function LegacyWorkspace() {
   const [cases, setCases] = useState<CaseData[]>([]);
   const [total, setTotal] = useState(0);
   const [offset, setOffset] = useState(0);
@@ -113,3 +114,5 @@ export default function Home() {
     </>}
   </main>;
 }
+
+export default function Home() { return <AdminDashboard legacy={<LegacyWorkspace />} />; }

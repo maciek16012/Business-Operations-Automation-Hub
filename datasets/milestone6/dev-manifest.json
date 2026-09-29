@@ -1,0 +1,82 @@
+[
+  {
+    "document": "dev/invoice/sample-01.pdf",
+    "truth": "dev/invoice/sample-01.json"
+  },
+  {
+    "document": "dev/invoice/sample-02.pdf",
+    "truth": "dev/invoice/sample-02.json"
+  },
+  {
+    "document": "dev/invoice/sample-03.pdf",
+    "truth": "dev/invoice/sample-03.json"
+  },
+  {
+    "document": "dev/invoice/sample-04.pdf",
+    "truth": "dev/invoice/sample-04.json"
+  },
+  {
+    "document": "dev/handwritten_table/sample-01.pdf",
+    "truth": "dev/handwritten_table/sample-01.json"
+  },
+  {
+    "document": "dev/handwritten_table/sample-02.pdf",
+    "truth": "dev/handwritten_table/sample-02.json"
+  },
+  {
+    "document": "dev/handwritten_table/sample-03.pdf",
+    "truth": "dev/handwritten_table/sample-03.json"
+  },
+  {
+    "document": "dev/handwritten_table/sample-04.pdf",
+    "truth": "dev/handwritten_table/sample-04.json"
+  },
+  {
+    "document": "dev/printed_table/sample-01.pdf",
+    "truth": "dev/printed_table/sample-01.json"
+  },
+  {
+    "document": "dev/printed_table/sample-02.pdf",
+    "truth": "dev/printed_table/sample-02.json"
+  },
+  {
+    "document": "dev/printed_table/sample-03.pdf",
+    "truth": "dev/printed_table/sample-03.json"
+  },
+  {
+    "document": "dev/printed_table/sample-04.pdf",
+    "truth": "dev/printed_table/sample-04.json"
+  },
+  {
+    "document": "dev/generic_document/sample-01.pdf",
+    "truth": "dev/generic_document/sample-01.json"
+  },
+  {
+    "document": "dev/generic_document/sample-02.pdf",
+    "truth": "dev/generic_document/sample-02.json"
+  },
+  {
+    "document": "dev/generic_document/sample-03.pdf",
+    "truth": "dev/generic_document/sample-03.json"
+  },
+  {
+    "document": "dev/generic_document/sample-04.pdf",
+    "truth": "dev/generic_document/sample-04.json"
+  },
+  {
+    "document": "dev/unknown/sample-01.pdf",
+    "truth": "dev/unknown/sample-01.json"
+  },
+  {
+    "document": "dev/unknown/sample-02.pdf",
+    "truth": "dev/unknown/sample-02.json"
+  },
+  {
+    "document": "dev/unknown/sample-03.pdf",
+    "truth": "dev/unknown/sample-03.json"
+  },
+  {
+    "document": "dev/unknown/sample-04.pdf",
+    "truth": "dev/unknown/sample-04.json"
+  }
+]

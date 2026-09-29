@@ -5,10 +5,12 @@ from datetime import UTC, datetime
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.adaptive.service import document_json, process_safe
 from app.core.config import settings
 from app.domain.enums import IssueSeverity
 from app.domain.state_machine import ensure_transition
 from app.extraction.base import ExtractionProvider
+from app.models.documents import DocumentAnalysis
 from app.models.entities import (
     Attachment,
     AuditEvent,
@@ -95,6 +97,9 @@ class CaseService:
         inbound = await self.db.scalar(
             select(InboundMessage).where(InboundMessage.case_id == case.id)
         )
+        result["documents"] = [
+            await document_json(self, doc) for doc in await self.rows(DocumentAnalysis, case.id)
+        ]
         result["inbound_message"] = row_json(inbound) if inbound else None
         return result
 
@@ -168,6 +173,7 @@ class CaseService:
                 "EMAIL_EXTRACTION_FAILED",
                 "OCR_REVIEW_REQUIRED",
                 "SECURITY_UNSAFE",
+                "ADAPTIVE_REVIEW_REQUIRED",
             }
         )
         keys = {(r.code, r.field_name, r.message) for r in rules}
@@ -275,6 +281,9 @@ class CaseService:
                 )
                 if not await gate(self, case, attachment, content):
                     continue
+                if settings.adaptive_extraction_enabled:
+                    if await process_safe(self, case, attachment, content):
+                        continue
                 from app.document_routing.processor import process_document
                 from app.ocr import pipeline
 
@@ -289,6 +298,16 @@ class CaseService:
                         case_id=case.id, attachment_id=attachment.id, report=report
                     )
                     self.db.add(document)
+                    if settings.adaptive_extraction_enabled:
+                        self.audit(
+                            case,
+                            "ADAPTIVE_EXTRACTION_COMPLETED",
+                            {
+                                "attachment_id": str(attachment.id),
+                                "strategy": "existing-m4-invoice",
+                                "outcome": report["outcome"],
+                            },
+                        )
                     self.audit(
                         case,
                         "OCR_COMPLETED",

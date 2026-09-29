@@ -19,7 +19,9 @@ def legacy_intake_compatibility(monkeypatch):
     # M1-M4 fixtures deliberately contain fake PDF bytes. M5 tests opt back into
     # the default fail-closed gate explicitly; production defaults stay enabled.
     from app.core.config import settings
+
     monkeypatch.setattr(settings, "security_preflight_enabled", False)
+    monkeypatch.setattr(settings, "adaptive_extraction_enabled", False)
 
 
 @pytest.fixture

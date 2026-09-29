@@ -27,6 +27,7 @@ class Settings(BaseSettings):
     stp_native_max_image_area_ratio: float = 0.80
     stp_target_rate: float = 0.90
     stp_require_zero_critical_false_accepts: bool = True
+    adaptive_extraction_enabled: bool = True
     security_preflight_enabled: bool = True
     security_fail_closed: bool = True
     security_max_attachment_bytes: int = 5 * 1024 * 1024

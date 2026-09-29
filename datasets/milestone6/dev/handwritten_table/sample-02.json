@@ -1,0 +1,51 @@
+{
+  "type": "HANDWRITTEN_TABLE",
+  "tables": [
+    {
+      "rows": [
+        [
+          "Name",
+          "Score A",
+          "Score B",
+          "Total",
+          "Maximum",
+          "Percent"
+        ],
+        [
+          "Person A",
+          "5",
+          "2",
+          "7",
+          "10",
+          "70"
+        ],
+        [
+          "Person B",
+          "1",
+          "2",
+          "3",
+          "10",
+          "30"
+        ],
+        [
+          "Person C",
+          "4",
+          "3",
+          "7",
+          "10",
+          "70"
+        ],
+        [
+          "Person D",
+          "3",
+          "2",
+          "5",
+          "10",
+          "50"
+        ]
+      ],
+      "row_count": 5,
+      "column_count": 6
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.api.routes import cases, exports, inbound, ocr, review, tasks, uploads
+from app.api.routes import cases, documents, exports, inbound, ocr, review, tasks, uploads
 
 api_router = APIRouter()
 api_router.include_router(cases.router, prefix="/cases", tags=["cases"])
@@ -14,3 +14,5 @@ api_router.include_router(ocr.router, prefix="/ocr", tags=["OCR review"])
 
 
 api_router.include_router(tasks.router, prefix="/review-tasks", tags=["Review operations"])
+
+api_router.include_router(documents.router, prefix="/documents", tags=["Adaptive documents"])

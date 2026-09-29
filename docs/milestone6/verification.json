@@ -1,0 +1,32 @@
+{
+  "freeze_id": "6a7d664018681c92b79d655e23c1ffbcd5d3c925094e8fa2c81b613dc5c3389b",
+  "frozen_files": 166,
+  "freeze_unchanged": true,
+  "m4_protected_paths_unchanged": true,
+  "http_health": {
+    "8000": 200,
+    "8011": 200,
+    "8012": 200,
+    "5678": 200,
+    "3000": 200
+  },
+  "sqlite": {
+    "passed": 226,
+    "skipped": 2
+  },
+  "postgresql": {
+    "passed": 228
+  },
+  "m6_tests": 18,
+  "n8n_tests": 9,
+  "ruff": "PASS",
+  "mypy": "PASS (73 files)",
+  "frontend_lint": "PASS",
+  "frontend_typecheck": "PASS",
+  "frontend_build": "PASS",
+  "alembic_upgrade": "PASS",
+  "alembic_check": "No new upgrade operations detected",
+  "ui_review": "DEV handwritten table: 18 cells corrected through browser; READY; audit recorded; approve enabled",
+  "ui_mobile": "390x844; body scrollWidth 375 <= viewport390",
+  "ui_console_errors": 0
+}

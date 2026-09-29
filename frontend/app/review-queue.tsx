@@ -8,7 +8,7 @@ type Task = {id:string;case_id:string;task_type:string;priority:string;status:st
   security_scans?:Record<string,unknown>[]};
 type Queue = {items:Task[];total:number;open_count:number};
 
-export default function ReviewQueue({onCase}:{onCase:(id:string)=>Promise<void>}) {
+export default function ReviewQueue({onCase,navigateOnSelect=true}:{onCase:(id:string)=>Promise<void>;navigateOnSelect?:boolean}) {
   const [queue,setQueue] = useState<Queue>({items:[],total:0,open_count:0});
   const [task,setTask] = useState<Task|null>(null);
   const [reason,setReason] = useState("");
@@ -47,12 +47,14 @@ export default function ReviewQueue({onCase}:{onCase:(id:string)=>Promise<void>}
     <p className="muted">Showing {queue.items.length} of {queue.total} tasks. Refreshes every 10 seconds.</p>
     <div className="table-wrap"><table><thead><tr><th>Priority / type</th><th>Case / attachment</th><th>Reason</th><th>Created</th><th>Status</th></tr></thead><tbody>
       {queue.items.map(t=><tr key={t.id}><td><strong>{t.priority}</strong><br/>{t.task_type}</td>
-        <td><button className="link" disabled={busy} onClick={()=>run(async()=>{setTask(await api<Task>(`/review-tasks/${t.id}`));setReason("");await onCase(t.case_id);})}>{t.payload.public_case_id}</button><br/>{t.payload.attachment}</td>
+        <td><button className="link" disabled={busy} onClick={()=>run(async()=>{setTask(await api<Task>(`/review-tasks/${t.id}`));setReason("");if(navigateOnSelect)await onCase(t.case_id);})}>{t.payload.public_case_id}</button><br/>{t.payload.attachment}</td>
         <td>{t.description}</td><td>{new Date(t.created_at).toLocaleString()}</td><td>{t.status}</td></tr>)}
       {!queue.items.length && <tr><td colSpan={5}>No matching review tasks.</td></tr>}
     </tbody></table></div>
     <div className="toolbar"><button disabled={busy||offset===0} onClick={()=>setOffset(Math.max(0,offset-50))}>Previous tasks</button><span>{offset+1}–{offset+queue.items.length} / {queue.total}</span><button disabled={busy||offset+50>=queue.total} onClick={()=>setOffset(offset+50)}>Next tasks</button></div>
     {task && <div className="stack"><h3>{task.title} · {task.status}</h3><p>{task.description}</p>
+      <button onClick={()=>run(()=>onCase(task.case_id))}>Open case workspace</button>
+      {task.task_type === "DOCUMENT_REVIEW" && <p>Inspect the original and confirm uncertain cells in the document review panel.</p>}
       {task.security_scans?.length ? <details><summary>Security scan history</summary><pre>{JSON.stringify(task.security_scans,null,2)}</pre></details> : null}
       {task.task_type === "SECURITY_QUARANTINE" && <p>Attachment remains quarantined. Closing this incident requires rejecting the entire case. No manual SAFE override is available.</p>}
       {task.task_type === "OCR_REVIEW" && <p>Use the OCR evidence and field review panel below to resolve this task.</p>}

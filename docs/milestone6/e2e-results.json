@@ -1,0 +1,50 @@
+{
+  "started_at": "2026-09-29T05:20:09.590757+00:00",
+  "checks": [
+    {
+      "scenario": "INVOICE",
+      "case_id": "53a09264-a1e3-4a11-9f35-08120bf7fa00",
+      "document_id": "8cd0a10b-2b4b-4c98-bf95-ac12b81b814d",
+      "status_before_review": "REVIEW_REQUIRED",
+      "passed": true,
+      "invoice_route": "NATIVE_TEXT"
+    },
+    {
+      "scenario": "HANDWRITTEN_TABLE",
+      "case_id": "7eb5fe27-481b-4d58-9924-fe7d7683d90a",
+      "document_id": "c144a801-51c0-40aa-b59c-a69575a7b399",
+      "status_before_review": "REVIEW_REQUIRED",
+      "passed": true,
+      "corrected_approved_exported": true
+    },
+    {
+      "scenario": "PRINTED_TABLE",
+      "case_id": "60f6bac4-027e-4eec-a50e-a8e0db6ed5cc",
+      "document_id": "ede0b2ed-4813-4342-8c6a-6892626c163c",
+      "status_before_review": "REVIEW_REQUIRED",
+      "passed": true
+    },
+    {
+      "scenario": "GENERIC_DOCUMENT",
+      "case_id": "671c2b7c-f60c-4eb8-a5ac-92a004ae1567",
+      "document_id": "7cb560e3-8c1d-4f61-a5b7-ab3fbf19b59e",
+      "status_before_review": "REVIEW_REQUIRED",
+      "passed": true
+    },
+    {
+      "scenario": "UNKNOWN",
+      "case_id": "27945fdb-8921-4088-916a-2d14656b2ab4",
+      "document_id": "60b33adf-66c9-482f-b102-0374ed19009a",
+      "status_before_review": "REVIEW_REQUIRED",
+      "passed": true
+    },
+    {
+      "scenario": "MALICIOUS",
+      "case_id": "8861f471-84a2-4cbc-ba79-810038916f94",
+      "passed": true,
+      "classification_invocations": 0
+    }
+  ],
+  "notifications_delivered": true,
+  "completed_at": "2026-09-29T05:20:14.802992+00:00"
+}

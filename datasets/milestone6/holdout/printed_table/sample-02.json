@@ -1,0 +1,51 @@
+{
+  "type": "PRINTED_TABLE",
+  "tables": [
+    {
+      "rows": [
+        [
+          "Name",
+          "Score A",
+          "Score B",
+          "Total",
+          "Maximum",
+          "Percent"
+        ],
+        [
+          "Person A",
+          "1",
+          "1",
+          "2",
+          "10",
+          "20"
+        ],
+        [
+          "Person B",
+          "1",
+          "1",
+          "2",
+          "10",
+          "20"
+        ],
+        [
+          "Person C",
+          "3",
+          "3",
+          "6",
+          "10",
+          "60"
+        ],
+        [
+          "Person D",
+          "4",
+          "2",
+          "6",
+          "10",
+          "60"
+        ]
+      ],
+      "row_count": 5,
+      "column_count": 6
+    }
+  ]
+}
