@@ -1,0 +1,983 @@
+- button "Open Next.js Dev Tools":
+- alert
+- complementary:
+  - link "B BOAH DOCUMENT OPERATIONS":
+    - /url: /
+    - generic: B
+    - text: BOAH
+    - generic: DOCUMENT OPERATIONS
+  - paragraph: WORKSPACE
+  - navigation "Main navigation":
+    - button "Dashboard":
+      - generic: ◫
+      - text: Dashboard
+    - button "Cases":
+      - generic: ▤
+      - text: Cases
+    - button "Review Queue 90":
+      - generic: ✓
+      - text: Review Queue
+      - generic: "90"
+    - button "Documents":
+      - generic: ▧
+      - text: Documents
+    - button "System":
+      - generic: ◉
+      - text: System
+    - button "Settings":
+      - generic: ⚙
+      - text: Settings
+  - text: Local workspace
+  - generic: Secure intake · Human oversight
+- main:
+  - generic: Workspace / Settings
+  - generic: OP
+  - text: admin@example.com
+  - generic: ADMIN
+  - button "Sign out"
+  - paragraph: BUSINESS OPERATIONS AUTOMATION HUB
+  - heading "Settings" [level=1]
+  - paragraph: Inspect the evidence. Resolve uncertainty. Keep every decision traceable.
+  - button "＋ New case"
+  - paragraph: FIRST RUN · 1 OF 6
+  - heading "Company" [level=2]
+  - paragraph: Set your company's identity and defaults.
+  - button "Continue"
+  - navigation "Settings sections":
+    - button "Company"
+    - button "Sources"
+    - button "Destinations"
+    - button "Routing"
+    - button "Users"
+    - button "Notifications"
+    - button "System"
+    - button "Backup"
+  - heading "Company profile" [level=2]
+  - text: Company name
+  - textbox "Company name": BOAH Synthetic M7 Company
+  - text: Company identifier / NIP
+  - textbox "Company identifier / NIP": TEST-M7
+  - text: Timezone
+  - textbox "Timezone": Europe/Warsaw
+  - text: Locale
+  - textbox "Locale": pl-PL
+  - text: Default currency
+  - textbox "Default currency": PLN
+  - text: General notification email
+  - textbox "General notification email"
+  - button "Save company"
+  - text: BOAH · Document operations workspace
+  - generic: Local processing. Auditable decisions.
+
+--- NEXT CHECK ---
+
+- button "Open Next.js Dev Tools":
+- alert
+- complementary:
+  - link "B BOAH DOCUMENT OPERATIONS":
+    - /url: /
+    - generic: B
+    - text: BOAH
+    - generic: DOCUMENT OPERATIONS
+  - paragraph: WORKSPACE
+  - navigation "Main navigation":
+    - button "Dashboard":
+      - generic: ◫
+      - text: Dashboard
+    - button "Cases":
+      - generic: ▤
+      - text: Cases
+    - button "Review Queue 90":
+      - generic: ✓
+      - text: Review Queue
+      - generic: "90"
+    - button "Documents":
+      - generic: ▧
+      - text: Documents
+    - button "System":
+      - generic: ◉
+      - text: System
+    - button "Settings":
+      - generic: ⚙
+      - text: Settings
+  - text: Local workspace
+  - generic: Secure intake · Human oversight
+- main:
+  - generic: Workspace / Settings
+  - generic: OP
+  - text: admin@example.com
+  - generic: ADMIN
+  - button "Sign out"
+  - paragraph: BUSINESS OPERATIONS AUTOMATION HUB
+  - heading "Settings" [level=1]
+  - paragraph: Inspect the evidence. Resolve uncertainty. Keep every decision traceable.
+  - button "＋ New case"
+  - paragraph: FIRST RUN · 2 OF 6
+  - heading "Administrator" [level=2]
+  - paragraph: Signed in as admin@example.com. Add team members or keep this administrator.
+  - button "Back"
+  - button "Continue" [active]
+  - navigation "Settings sections":
+    - button "Company"
+    - button "Sources"
+    - button "Destinations"
+    - button "Routing"
+    - button "Users"
+    - button "Notifications"
+    - button "System"
+    - button "Backup"
+  - heading "Users & roles" [level=2]
+  - paragraph: Admin manages configuration · Operator handles intake · Reviewer resolves review · Viewer reads. Changing access revokes active sessions.
+  - strong: admin@example.com
+  - generic: Active
+  - combobox "Role for admin@example.com":
+    - option "ADMIN" [selected]
+    - option "OPERATOR"
+    - option "REVIEWER"
+    - option "VIEWER"
+  - button "Disable"
+  - strong: reviewer-m7@example.com
+  - generic: Active
+  - combobox "Role for reviewer-m7@example.com":
+    - option "ADMIN"
+    - option "OPERATOR"
+    - option "REVIEWER" [selected]
+    - option "VIEWER"
+  - button "Disable"
+  - strong: viewer-m7@example.com
+  - generic: Active
+  - combobox "Role for viewer-m7@example.com":
+    - option "ADMIN"
+    - option "OPERATOR"
+    - option "REVIEWER"
+    - option "VIEWER" [selected]
+  - button "Disable"
+  - heading "Add user" [level=3]
+  - text: Email
+  - textbox "Email"
+  - text: Initial password
+  - textbox "Initial password"
+  - text: Role
+  - combobox "Role":
+    - option "VIEWER" [selected]
+    - option "REVIEWER"
+    - option "OPERATOR"
+    - option "ADMIN"
+  - button "Add user"
+  - text: BOAH · Document operations workspace
+  - generic: Local processing. Auditable decisions.
+
+--- NEXT CHECK ---
+
+- button "Open Next.js Dev Tools":
+- alert
+- complementary:
+  - link "B BOAH DOCUMENT OPERATIONS":
+    - /url: /
+    - generic: B
+    - text: BOAH
+    - generic: DOCUMENT OPERATIONS
+  - paragraph: WORKSPACE
+  - navigation "Main navigation":
+    - button "Dashboard":
+      - generic: ◫
+      - text: Dashboard
+    - button "Cases":
+      - generic: ▤
+      - text: Cases
+    - button "Review Queue 90":
+      - generic: ✓
+      - text: Review Queue
+      - generic: "90"
+    - button "Documents":
+      - generic: ▧
+      - text: Documents
+    - button "System":
+      - generic: ◉
+      - text: System
+    - button "Settings":
+      - generic: ⚙
+      - text: Settings
+  - text: Local workspace
+  - generic: Secure intake · Human oversight
+- main:
+  - generic: Workspace / Settings
+  - generic: OP
+  - text: admin@example.com
+  - generic: ADMIN
+  - button "Sign out"
+  - paragraph: BUSINESS OPERATIONS AUTOMATION HUB
+  - heading "Settings" [level=1]
+  - paragraph: Inspect the evidence. Resolve uncertainty. Keep every decision traceable.
+  - button "＋ New case"
+  - paragraph: FIRST RUN · 3 OF 6
+  - heading "Storage" [level=2]
+  - paragraph: Storage paths are provisioned by your deployment administrator. Choose a named mount in a connector.
+  - paragraph: "Available mounts: archive, incoming"
+  - button "Back"
+  - button "Continue" [active]
+  - navigation "Settings sections":
+    - button "Company"
+    - button "Sources"
+    - button "Destinations"
+    - button "Routing"
+    - button "Users"
+    - button "Notifications"
+    - button "System"
+    - button "Backup"
+  - heading "Company profile" [level=2]
+  - text: Company name
+  - textbox "Company name": BOAH Synthetic M7 Company
+  - text: Company identifier / NIP
+  - textbox "Company identifier / NIP": TEST-M7
+  - text: Timezone
+  - textbox "Timezone": Europe/Warsaw
+  - text: Locale
+  - textbox "Locale": pl-PL
+  - text: Default currency
+  - textbox "Default currency": PLN
+  - text: General notification email
+  - textbox "General notification email"
+  - button "Save company"
+  - text: BOAH · Document operations workspace
+  - generic: Local processing. Auditable decisions.
+
+--- NEXT CHECK ---
+
+- button "Open Next.js Dev Tools":
+- alert
+- complementary:
+  - link "B BOAH DOCUMENT OPERATIONS":
+    - /url: /
+    - generic: B
+    - text: BOAH
+    - generic: DOCUMENT OPERATIONS
+  - paragraph: WORKSPACE
+  - navigation "Main navigation":
+    - button "Dashboard":
+      - generic: ◫
+      - text: Dashboard
+    - button "Cases":
+      - generic: ▤
+      - text: Cases
+    - button "Review Queue 90":
+      - generic: ✓
+      - text: Review Queue
+      - generic: "90"
+    - button "Documents":
+      - generic: ▧
+      - text: Documents
+    - button "System":
+      - generic: ◉
+      - text: System
+    - button "Settings":
+      - generic: ⚙
+      - text: Settings
+  - text: Local workspace
+  - generic: Secure intake · Human oversight
+- main:
+  - generic: Workspace / Settings
+  - generic: OP
+  - text: admin@example.com
+  - generic: ADMIN
+  - button "Sign out"
+  - paragraph: BUSINESS OPERATIONS AUTOMATION HUB
+  - heading "Settings" [level=1]
+  - paragraph: Inspect the evidence. Resolve uncertainty. Keep every decision traceable.
+  - button "＋ New case"
+  - paragraph: FIRST RUN · 4 OF 6
+  - heading "Source" [level=2]
+  - paragraph: Configure manual upload, API, IMAP or a watched folder.
+  - button "Back"
+  - button "Continue" [active]
+  - navigation "Settings sections":
+    - button "Company"
+    - button "Sources"
+    - button "Destinations"
+    - button "Routing"
+    - button "Users"
+    - button "Notifications"
+    - button "System"
+    - button "Backup"
+  - heading "Document sources" [level=2]
+  - button "New source"
+  - paragraph: All attachments pass the M5 security gate before extraction.
+  - article:
+    - strong: M7 f6ea6f24cd Inbox
+    - generic: IMAP · Enabled · HEALTHY
+    - generic: Credential configured
+    - button "Edit"
+    - button "Test connection"
+  - article:
+    - strong: M7 f6ea6f24cd Watched folder
+    - generic: WATCHED FOLDER · Enabled · HEALTHY
+    - generic: No credential
+    - button "Edit"
+    - button "Test connection"
+  - heading "Add configuration" [level=2]
+  - text: Name
+  - textbox "Name"
+  - text: Type
+  - combobox "Type":
+    - option "MANUAL" [selected]
+    - option "API"
+    - option "IMAP"
+    - option "WATCHED_FOLDER"
+  - checkbox "Enable connector"
+  - text: Enable connector
+  - button "Save configuration"
+  - status
+  - heading "Recent worker jobs" [level=3]
+  - table:
+    - rowgroup:
+      - row "Job State Attempts Result":
+        - columnheader "Job"
+        - columnheader "State"
+        - columnheader "Attempts"
+        - columnheader "Result"
+        - columnheader
+    - rowgroup:
+      - row "TEST 7176cd87 SUCCEEDED 1 —":
+        - cell "TEST 7176cd87"
+        - cell "SUCCEEDED"
+        - cell "1"
+        - cell "—"
+        - cell
+      - row "DELIVERY 9ee0a188 DEAD_LETTER 3 ValueError Retry":
+        - cell "DELIVERY 9ee0a188"
+        - cell "DEAD_LETTER"
+        - cell "3"
+        - cell "ValueError"
+        - cell "Retry":
+          - button "Retry"
+      - row "DELIVERY 483f049d SUCCEEDED 1 —":
+        - cell "DELIVERY 483f049d"
+        - cell "SUCCEEDED"
+        - cell "1"
+        - cell "—"
+        - cell
+      - row "DELIVERY b874dca4 SUCCEEDED 2 —":
+        - cell "DELIVERY b874dca4"
+        - cell "SUCCEEDED"
+        - cell "2"
+        - cell "—"
+        - cell
+      - row "DELIVERY b13e3534 SUCCEEDED 1 —":
+        - cell "DELIVERY b13e3534"
+        - cell "SUCCEEDED"
+        - cell "1"
+        - cell "—"
+        - cell
+  - text: BOAH · Document operations workspace
+  - generic: Local processing. Auditable decisions.
+
+--- NEXT CHECK ---
+
+- button "Open Next.js Dev Tools":
+- alert
+- complementary:
+  - link "B BOAH DOCUMENT OPERATIONS":
+    - /url: /
+    - generic: B
+    - text: BOAH
+    - generic: DOCUMENT OPERATIONS
+  - paragraph: WORKSPACE
+  - navigation "Main navigation":
+    - button "Dashboard":
+      - generic: ◫
+      - text: Dashboard
+    - button "Cases":
+      - generic: ▤
+      - text: Cases
+    - button "Review Queue 90":
+      - generic: ✓
+      - text: Review Queue
+      - generic: "90"
+    - button "Documents":
+      - generic: ▧
+      - text: Documents
+    - button "System":
+      - generic: ◉
+      - text: System
+    - button "Settings":
+      - generic: ⚙
+      - text: Settings
+  - text: Local workspace
+  - generic: Secure intake · Human oversight
+- main:
+  - generic: Workspace / Settings
+  - generic: OP
+  - text: admin@example.com
+  - generic: ADMIN
+  - button "Sign out"
+  - paragraph: BUSINESS OPERATIONS AUTOMATION HUB
+  - heading "Settings" [level=1]
+  - paragraph: Inspect the evidence. Resolve uncertainty. Keep every decision traceable.
+  - button "＋ New case"
+  - paragraph: FIRST RUN · 5 OF 6
+  - heading "Destination" [level=2]
+  - paragraph: Optionally add a destination. You can do this later.
+  - button "Back"
+  - button "Continue (destination optional)" [active]
+  - navigation "Settings sections":
+    - button "Company"
+    - button "Sources"
+    - button "Destinations"
+    - button "Routing"
+    - button "Users"
+    - button "Notifications"
+    - button "System"
+    - button "Backup"
+  - heading "Output destinations" [level=2]
+  - button "New destination"
+  - paragraph: Only approved cases with SAFE attachments can leave the workspace.
+  - article:
+    - strong: M7 f6ea6f24cd Archive
+    - generic: FILESYSTEM · Enabled · HEALTHY
+    - generic: No credential
+    - button "Edit"
+    - button "Test connection"
+  - article:
+    - strong: M7 f6ea6f24cd Failing webhook
+    - generic: WEBHOOK · Enabled · UNAVAILABLE
+    - generic: Credential configured
+    - button "Edit"
+    - button "Test connection"
+  - article:
+    - strong: M7 f6ea6f24cd SFTP
+    - generic: SFTP · Enabled · HEALTHY
+    - generic: Credential configured
+    - button "Edit"
+    - button "Test connection"
+  - article:
+    - strong: M7 f6ea6f24cd Signed webhook
+    - generic: WEBHOOK · Enabled · HEALTHY
+    - generic: Credential configured
+    - button "Edit"
+    - button "Test connection"
+  - heading "Add configuration" [level=2]
+  - text: Name
+  - textbox "Name"
+  - text: Type
+  - combobox "Type":
+    - option "FILESYSTEM" [selected]
+    - option "WEBHOOK"
+    - option "SFTP"
+  - text: Mounted storage root
+  - combobox "Mounted storage root":
+    - option "Choose a deployed mount"
+    - option "archive" [selected]
+    - option "incoming"
+  - text: Folder template
+  - textbox "Folder template": "{year}/{month}/{document_type}/{case_id}"
+  - text: Filename template
+  - textbox "Filename template": "{document_number_or_case_id}.{extension}"
+  - group "Artifacts":
+    - generic: Artifacts
+    - checkbox "ORIGINAL" [checked]
+    - text: ORIGINAL
+    - checkbox "JSON" [checked]
+    - text: JSON
+    - checkbox "XLSX"
+    - text: XLSX
+  - checkbox "Enable connector"
+  - text: Enable connector
+  - button "Save configuration"
+  - status
+  - heading "Recent worker jobs" [level=3]
+  - table:
+    - rowgroup:
+      - row "Job State Attempts Result":
+        - columnheader "Job"
+        - columnheader "State"
+        - columnheader "Attempts"
+        - columnheader "Result"
+        - columnheader
+    - rowgroup:
+      - row "TEST 7176cd87 SUCCEEDED 1 —":
+        - cell "TEST 7176cd87"
+        - cell "SUCCEEDED"
+        - cell "1"
+        - cell "—"
+        - cell
+      - row "DELIVERY 9ee0a188 DEAD_LETTER 3 ValueError Retry":
+        - cell "DELIVERY 9ee0a188"
+        - cell "DEAD_LETTER"
+        - cell "3"
+        - cell "ValueError"
+        - cell "Retry":
+          - button "Retry"
+      - row "DELIVERY 483f049d SUCCEEDED 1 —":
+        - cell "DELIVERY 483f049d"
+        - cell "SUCCEEDED"
+        - cell "1"
+        - cell "—"
+        - cell
+      - row "DELIVERY b874dca4 SUCCEEDED 2 —":
+        - cell "DELIVERY b874dca4"
+        - cell "SUCCEEDED"
+        - cell "2"
+        - cell "—"
+        - cell
+      - row "DELIVERY b13e3534 SUCCEEDED 1 —":
+        - cell "DELIVERY b13e3534"
+        - cell "SUCCEEDED"
+        - cell "1"
+        - cell "—"
+        - cell
+  - text: BOAH · Document operations workspace
+  - generic: Local processing. Auditable decisions.
+
+--- NEXT CHECK ---
+
+- button "Open Next.js Dev Tools":
+- alert
+- complementary:
+  - link "B BOAH DOCUMENT OPERATIONS":
+    - /url: /
+    - generic: B
+    - text: BOAH
+    - generic: DOCUMENT OPERATIONS
+  - paragraph: WORKSPACE
+  - navigation "Main navigation":
+    - button "Dashboard":
+      - generic: ◫
+      - text: Dashboard
+    - button "Cases":
+      - generic: ▤
+      - text: Cases
+    - button "Review Queue 90":
+      - generic: ✓
+      - text: Review Queue
+      - generic: "90"
+    - button "Documents":
+      - generic: ▧
+      - text: Documents
+    - button "System":
+      - generic: ◉
+      - text: System
+    - button "Settings":
+      - generic: ⚙
+      - text: Settings
+  - text: Local workspace
+  - generic: Secure intake · Human oversight
+- main:
+  - generic: Workspace / Settings
+  - generic: OP
+  - text: admin@example.com
+  - generic: ADMIN
+  - button "Sign out"
+  - paragraph: BUSINESS OPERATIONS AUTOMATION HUB
+  - heading "Settings" [level=1]
+  - paragraph: Inspect the evidence. Resolve uncertainty. Keep every decision traceable.
+  - button "＋ New case"
+  - paragraph: FIRST RUN · 6 OF 6
+  - heading "Finish" [level=2]
+  - paragraph: Check live services and finish. Security and review gates remain mandatory.
+  - button "Back"
+  - button "Finish setup" [active]
+  - navigation "Settings sections":
+    - button "Company"
+    - button "Sources"
+    - button "Destinations"
+    - button "Routing"
+    - button "Users"
+    - button "Notifications"
+    - button "System"
+    - button "Backup"
+  - heading "System health DEGRADED" [level=2]:
+    - text: System health
+    - generic: DEGRADED
+  - paragraph: Live probes and worker heartbeats · refreshed every 30 seconds
+  - button "Refresh"
+  - article:
+    - generic: postgresql
+    - strong: HEALTHY
+  - article:
+    - generic: clamav
+    - strong: HEALTHY
+  - article:
+    - generic: n8n
+    - strong: HEALTHY
+  - article:
+    - generic: tesseract
+    - strong: HEALTHY
+  - article:
+    - generic: paddle
+    - strong: HEALTHY
+  - article:
+    - generic: review worker
+    - strong: HEALTHY
+  - article:
+    - generic: delivery worker
+    - strong: HEALTHY
+  - paragraph: Checked 30.09.2026, 15:27:03
+  - heading "Mounted storage" [level=3]
+  - paragraph: document_store · HEALTHY · 923.6 GB free
+  - paragraph: incoming · HEALTHY · 179.3 GB free
+  - paragraph: archive · HEALTHY · 179.3 GB free
+  - heading "Connector observations" [level=3]
+  - paragraph: M7 f6ea6f24cd Inbox · HEALTHY
+  - paragraph: M7 f6ea6f24cd Watched folder · HEALTHY
+  - paragraph: M7 f6ea6f24cd SFTP · HEALTHY
+  - paragraph: M7 f6ea6f24cd Failing webhook · UNAVAILABLE · ValueError
+  - paragraph: M7 f6ea6f24cd Signed webhook · HEALTHY
+  - paragraph: M7 f6ea6f24cd Archive · HEALTHY
+  - paragraph: Connector status describes the last attempt; idle destinations are not continuously probed.
+  - text: BOAH · Document operations workspace
+  - generic: Local processing. Auditable decisions.
+
+--- NEXT CHECK ---
+
+Mobile sign-out visible: true
+
+--- NEXT CHECK ---
+
+- button "Open Next.js Dev Tools":
+- alert
+- complementary:
+  - link "B BOAH":
+    - /url: /
+    - generic: B
+    - generic: BOAH
+  - navigation "Main navigation":
+    - button "Dashboard"
+    - button "Cases"
+    - button "Review Queue"
+    - button "Documents"
+- main:
+  - generic: Workspace / Dashboard
+  - button "Sign out"
+  - paragraph: BUSINESS OPERATIONS AUTOMATION HUB
+  - heading "Operations overview" [level=1]
+  - paragraph: A clear view of documents, decisions and work that needs attention.
+  - article:
+    - generic: Total cases
+    - strong: "122"
+    - generic: All intake channels
+  - article:
+    - generic: Ready for approval
+    - strong: "12"
+    - generic: Business validation passed
+  - article:
+    - generic: Review required
+    - strong: "100"
+    - generic: Operator attention needed
+  - article:
+    - generic: Security incidents
+    - strong: "11"
+    - generic: Blocked or quarantined scans
+  - heading "Document distribution" [level=2]
+  - paragraph: Classified documents across your workspace
+  - generic: M6
+  - generic: PRINTED TABLE
+  - progressbar
+  - strong: "9"
+  - generic: INVOICE
+  - progressbar
+  - strong: "22"
+  - generic: UNKNOWN
+  - progressbar
+  - strong: "20"
+  - generic: GENERIC DOCUMENT
+  - progressbar
+  - strong: "24"
+  - generic: HANDWRITTEN TABLE
+  - progressbar
+  - strong: "16"
+  - paragraph: HUMAN OVERSIGHT
+  - heading "90 open review tasks" [level=2]
+  - paragraph: Uncertain cells, unknown documents and security incidents stay visible until an operator resolves them.
+  - button "Open review queue →"
+  - text: Processing
+  - strong: "0"
+  - text: Approved
+  - strong: "8"
+  - heading "Recent cases" [level=2]
+  - button "View all cases →"
+  - table:
+    - rowgroup:
+      - row "Case / document Customer Type Security Status Updated":
+        - columnheader "Case / document"
+        - columnheader "Customer"
+        - columnheader "Type"
+        - columnheader "Security"
+        - columnheader "Status"
+        - columnheader "Updated"
+    - rowgroup:
+      - row "M7 blocked f6ea6f24cd CASE-2026-9da6027a6f8a4e70b669 Synthetic Operator Unclassified / legacy BLOCKED REVIEW REQUIRED 29.09.2026":
+        - cell "M7 blocked f6ea6f24cd CASE-2026-9da6027a6f8a4e70b669":
+          - button "M7 blocked f6ea6f24cd"
+          - generic: CASE-2026-9da6027a6f8a4e70b669
+        - cell "Synthetic Operator"
+        - cell "Unclassified / legacy"
+        - cell "BLOCKED":
+          - generic: BLOCKED
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M7-watched-f6ea6f24cd.pdf CASE-2026-0f96040dc17d4a359e9c M7 f6ea6f24cd Watched folder INVOICE SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M7-watched-f6ea6f24cd.pdf CASE-2026-0f96040dc17d4a359e9c":
+          - button "M7-watched-f6ea6f24cd.pdf"
+          - generic: CASE-2026-0f96040dc17d4a359e9c
+        - cell "M7 f6ea6f24cd Watched folder"
+        - cell "INVOICE"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M7 email f6ea6f24cd CASE-2026-24062caf08454d42a60c Synthetic Operator INVOICE SAFE APPROVED 29.09.2026":
+        - cell "M7 email f6ea6f24cd CASE-2026-24062caf08454d42a60c":
+          - button "M7 email f6ea6f24cd"
+          - generic: CASE-2026-24062caf08454d42a60c
+        - cell "Synthetic Operator"
+        - cell "INVOICE"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "APPROVED":
+          - generic: APPROVED
+        - cell "29.09.2026"
+      - row "Untitled case CASE-2026-48367da44daf483f837b Not assigned HANDWRITTEN TABLE SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "Untitled case CASE-2026-48367da44daf483f837b":
+          - button "Untitled case"
+          - generic: CASE-2026-48367da44daf483f837b
+        - cell "Not assigned"
+        - cell "HANDWRITTEN TABLE"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/unknown/sample-04.pdf CASE-2026-3d610638965f4420bea6 Synthetic operator UNKNOWN SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/unknown/sample-04.pdf CASE-2026-3d610638965f4420bea6":
+          - button "M6 holdout holdout/unknown/sample-04.pdf"
+          - generic: CASE-2026-3d610638965f4420bea6
+        - cell "Synthetic operator"
+        - cell "UNKNOWN"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/unknown/sample-03.pdf CASE-2026-5d9bf03972d54448ad72 Synthetic operator UNKNOWN SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/unknown/sample-03.pdf CASE-2026-5d9bf03972d54448ad72":
+          - button "M6 holdout holdout/unknown/sample-03.pdf"
+          - generic: CASE-2026-5d9bf03972d54448ad72
+        - cell "Synthetic operator"
+        - cell "UNKNOWN"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/unknown/sample-02.pdf CASE-2026-6b3b2d55034d45378a8f Synthetic operator UNKNOWN SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/unknown/sample-02.pdf CASE-2026-6b3b2d55034d45378a8f":
+          - button "M6 holdout holdout/unknown/sample-02.pdf"
+          - generic: CASE-2026-6b3b2d55034d45378a8f
+        - cell "Synthetic operator"
+        - cell "UNKNOWN"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/unknown/sample-01.pdf CASE-2026-ac7d15ac09114f8e97a4 Synthetic operator UNKNOWN SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/unknown/sample-01.pdf CASE-2026-ac7d15ac09114f8e97a4":
+          - button "M6 holdout holdout/unknown/sample-01.pdf"
+          - generic: CASE-2026-ac7d15ac09114f8e97a4
+        - cell "Synthetic operator"
+        - cell "UNKNOWN"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/generic_document/sample-04.pdf CASE-2026-062b1f28cd7c4670a76e Synthetic operator GENERIC DOCUMENT SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/generic_document/sample-04.pdf CASE-2026-062b1f28cd7c4670a76e":
+          - button "M6 holdout holdout/generic_document/sample-04.pdf"
+          - generic: CASE-2026-062b1f28cd7c4670a76e
+        - cell "Synthetic operator"
+        - cell "GENERIC DOCUMENT"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/generic_document/sample-03.pdf CASE-2026-a95cb6f486b245c6b2a9 Synthetic operator GENERIC DOCUMENT SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/generic_document/sample-03.pdf CASE-2026-a95cb6f486b245c6b2a9":
+          - button "M6 holdout holdout/generic_document/sample-03.pdf"
+          - generic: CASE-2026-a95cb6f486b245c6b2a9
+        - cell "Synthetic operator"
+        - cell "GENERIC DOCUMENT"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/generic_document/sample-02.pdf CASE-2026-0c09d284907b4ec7bdf0 Synthetic operator GENERIC DOCUMENT SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/generic_document/sample-02.pdf CASE-2026-0c09d284907b4ec7bdf0":
+          - button "M6 holdout holdout/generic_document/sample-02.pdf"
+          - generic: CASE-2026-0c09d284907b4ec7bdf0
+        - cell "Synthetic operator"
+        - cell "GENERIC DOCUMENT"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/generic_document/sample-01.pdf CASE-2026-b9b9a3d193914d60980c Synthetic operator GENERIC DOCUMENT SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/generic_document/sample-01.pdf CASE-2026-b9b9a3d193914d60980c":
+          - button "M6 holdout holdout/generic_document/sample-01.pdf"
+          - generic: CASE-2026-b9b9a3d193914d60980c
+        - cell "Synthetic operator"
+        - cell "GENERIC DOCUMENT"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/printed_table/sample-04.pdf CASE-2026-e07ddce94db045688204 Synthetic operator GENERIC DOCUMENT SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/printed_table/sample-04.pdf CASE-2026-e07ddce94db045688204":
+          - button "M6 holdout holdout/printed_table/sample-04.pdf"
+          - generic: CASE-2026-e07ddce94db045688204
+        - cell "Synthetic operator"
+        - cell "GENERIC DOCUMENT"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/printed_table/sample-03.pdf CASE-2026-222c68a709744f9591e8 Synthetic operator HANDWRITTEN TABLE SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/printed_table/sample-03.pdf CASE-2026-222c68a709744f9591e8":
+          - button "M6 holdout holdout/printed_table/sample-03.pdf"
+          - generic: CASE-2026-222c68a709744f9591e8
+        - cell "Synthetic operator"
+        - cell "HANDWRITTEN TABLE"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/printed_table/sample-02.pdf CASE-2026-de20dc2b7ec4410eac5a Synthetic operator PRINTED TABLE SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/printed_table/sample-02.pdf CASE-2026-de20dc2b7ec4410eac5a":
+          - button "M6 holdout holdout/printed_table/sample-02.pdf"
+          - generic: CASE-2026-de20dc2b7ec4410eac5a
+        - cell "Synthetic operator"
+        - cell "PRINTED TABLE"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/printed_table/sample-01.pdf CASE-2026-75e8043532f24d06bd9c Synthetic operator PRINTED TABLE SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/printed_table/sample-01.pdf CASE-2026-75e8043532f24d06bd9c":
+          - button "M6 holdout holdout/printed_table/sample-01.pdf"
+          - generic: CASE-2026-75e8043532f24d06bd9c
+        - cell "Synthetic operator"
+        - cell "PRINTED TABLE"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/handwritten_table/sample-04.pdf CASE-2026-5bcea0f0e8b34254a92f Synthetic operator GENERIC DOCUMENT SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/handwritten_table/sample-04.pdf CASE-2026-5bcea0f0e8b34254a92f":
+          - button "M6 holdout holdout/handwritten_table/sample-04.pdf"
+          - generic: CASE-2026-5bcea0f0e8b34254a92f
+        - cell "Synthetic operator"
+        - cell "GENERIC DOCUMENT"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/handwritten_table/sample-03.pdf CASE-2026-27e7b40817dc47aaa35d Synthetic operator HANDWRITTEN TABLE SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/handwritten_table/sample-03.pdf CASE-2026-27e7b40817dc47aaa35d":
+          - button "M6 holdout holdout/handwritten_table/sample-03.pdf"
+          - generic: CASE-2026-27e7b40817dc47aaa35d
+        - cell "Synthetic operator"
+        - cell "HANDWRITTEN TABLE"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/handwritten_table/sample-02.pdf CASE-2026-6a019ec29477448aaced Synthetic operator HANDWRITTEN TABLE SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/handwritten_table/sample-02.pdf CASE-2026-6a019ec29477448aaced":
+          - button "M6 holdout holdout/handwritten_table/sample-02.pdf"
+          - generic: CASE-2026-6a019ec29477448aaced
+        - cell "Synthetic operator"
+        - cell "HANDWRITTEN TABLE"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/handwritten_table/sample-01.pdf CASE-2026-87abb1b81bb143a6a297 Synthetic operator HANDWRITTEN TABLE SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/handwritten_table/sample-01.pdf CASE-2026-87abb1b81bb143a6a297":
+          - button "M6 holdout holdout/handwritten_table/sample-01.pdf"
+          - generic: CASE-2026-87abb1b81bb143a6a297
+        - cell "Synthetic operator"
+        - cell "HANDWRITTEN TABLE"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/invoice/sample-04.pdf CASE-2026-f497fe56d10841ff9337 Synthetic operator INVOICE SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/invoice/sample-04.pdf CASE-2026-f497fe56d10841ff9337":
+          - button "M6 holdout holdout/invoice/sample-04.pdf"
+          - generic: CASE-2026-f497fe56d10841ff9337
+        - cell "Synthetic operator"
+        - cell "INVOICE"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/invoice/sample-03.pdf CASE-2026-ab4bb4a94c3b428b8ab8 Synthetic operator INVOICE SAFE READY 29.09.2026":
+        - cell "M6 holdout holdout/invoice/sample-03.pdf CASE-2026-ab4bb4a94c3b428b8ab8":
+          - button "M6 holdout holdout/invoice/sample-03.pdf"
+          - generic: CASE-2026-ab4bb4a94c3b428b8ab8
+        - cell "Synthetic operator"
+        - cell "INVOICE"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "READY":
+          - generic: READY
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/invoice/sample-02.pdf CASE-2026-dcf957898e874a4f97c9 Synthetic operator INVOICE SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/invoice/sample-02.pdf CASE-2026-dcf957898e874a4f97c9":
+          - button "M6 holdout holdout/invoice/sample-02.pdf"
+          - generic: CASE-2026-dcf957898e874a4f97c9
+        - cell "Synthetic operator"
+        - cell "INVOICE"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 holdout holdout/invoice/sample-01.pdf CASE-2026-6422029eb39d4abb87d5 Synthetic operator INVOICE SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 holdout holdout/invoice/sample-01.pdf CASE-2026-6422029eb39d4abb87d5":
+          - button "M6 holdout holdout/invoice/sample-01.pdf"
+          - generic: CASE-2026-6422029eb39d4abb87d5
+        - cell "Synthetic operator"
+        - cell "INVOICE"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+      - row "M6 dev dev/unknown/sample-04.pdf CASE-2026-28cc6ccf66a6410ba87e Synthetic operator UNKNOWN SAFE REVIEW REQUIRED 29.09.2026":
+        - cell "M6 dev dev/unknown/sample-04.pdf CASE-2026-28cc6ccf66a6410ba87e":
+          - button "M6 dev dev/unknown/sample-04.pdf"
+          - generic: CASE-2026-28cc6ccf66a6410ba87e
+        - cell "Synthetic operator"
+        - cell "UNKNOWN"
+        - cell "SAFE":
+          - generic: SAFE
+        - cell "REVIEW REQUIRED":
+          - generic: REVIEW REQUIRED
+        - cell "29.09.2026"
+  - generic: BOAH · Document operations workspace

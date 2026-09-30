@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "production_only_published_ports": {
+    "proxy": [
+      80,
+      443
+    ]
+  },
+  "all_services_restart_unless_stopped": true,
+  "application_read_only": true,
+  "caddy_validate": "PASS",
+  "actual_production_containers": {
+    "backend": {
+      "uid": "10001:10001",
+      "read_only": true,
+      "image_id": "sha256:06f111920bb3994161cdf16d795c7ac08d30880343fa9035bedeccd8c7c528ac"
+    },
+    "frontend": {
+      "uid": "10001:10001",
+      "read_only": true,
+      "image_id": "sha256:acb0ec4b894df7ab4265ed8e82cf340621986090409b407b9f983a20dea8235f"
+    }
+  },
+  "public_acme_tested": false
+}

@@ -1,6 +1,6 @@
 # Business Operations Automation Hub
 
-A local business-process automation system, implemented through Milestones 1 and 2. Operators can ingest inquiries, inspect sources, correct business data, approve cases and generate traceable JSON/XLSX exports.
+A local business-process automation system, implemented through Milestone 7. Operators can ingest inquiries, inspect sources, correct business data, approve cases and generate traceable JSON/XLSX exports.
 
 ```text
 EMAIL → n8n → INBOUND API / IDEMPOTENCY ┐
@@ -24,7 +24,7 @@ docker compose ps
 - Backend health: http://localhost:8000/health
 - n8n: http://localhost:5678 (loopback-only port)
 
-Backend startup applies `alembic upgrade head`. PostgreSQL/backend healthchecks gate dependent services. Development bind mounts remain: restart backend after Python edits; Next.js runs its development server. Local frontend builds and a running development container share `.next`, so restart frontend after a host build if needed. This is a trusted local environment without application authentication, not a public production deployment.
+Backend startup applies `alembic upgrade head`. PostgreSQL/backend healthchecks gate dependent services. Development bind mounts remain: restart backend after Python edits; Next.js runs its development server. Local frontend builds and a running development container share `.next`, so restart frontend after a host build if needed. This is a trusted development environment. M7 enables application authentication by default: initialize the first administrator with `docker compose exec backend python -m app.company.bootstrap_admin`. Public deployment must use the standalone production compose and HTTPS instructions below.
 
 ## Stack and architecture
 
@@ -167,3 +167,7 @@ Milestone 3 will address real PDF/scanned documents, OCR benchmarks/provider sel
 Run `docker compose -f docker-compose.yml -f docker-compose.ocr.yml up -d --build` to enable PDF/PNG/JPEG/TIFF ingestion through two independent CPU OCR services. TXT fixtures remain supported. The UI shows both readings, normalization, business checks and a reasoned human-review form. Agreement is not proof of correctness; current policy conservatively requires document review.
 
 See [Milestone 3 report](Milestone-3-raport.md), [OCR services](ocr-services/README.md), and `datasets/ocr/results/holdout-final/report.md`. HOLDOUT has been evaluated once after freezing configuration; do not rerun it or tune on its results.
+
+## Milestone 7 — Company integrations and production readiness
+
+See [deployment and operations](docs/milestone7/deployment.md), [security review](docs/milestone7/security-review.md) and [Milestone-7-raport.md](Milestone-7-raport.md). M7 adds company setup, authenticated roles, encrypted connector secrets, native IMAP/watched-folder intake, safe routing and filesystem/SFTP/signed-webhook delivery. Existing M5 security and M6 review gates remain mandatory. Production uses docker-compose.production.yml alone; only the reverse proxy publishes ports 80/443. Local protocol fixtures use generated synthetic credentials under ignored .runtime-m7/.

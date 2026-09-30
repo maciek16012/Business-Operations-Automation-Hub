@@ -43,3 +43,8 @@ build/
 /.n8n/
 /n8n_data/
 /paddle_models/
+
+# M7 local integration services, generated credentials and backup archives
+/.runtime-m7/
+
+.env.production

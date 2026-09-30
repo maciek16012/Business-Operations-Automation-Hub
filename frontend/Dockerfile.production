@@ -1,0 +1,15 @@
+FROM node:22-alpine AS build
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY . .
+ENV NEXT_PUBLIC_API_BASE_URL=/api/v1 NEXT_TELEMETRY_DISABLED=1
+RUN npm run build
+FROM node:22-alpine
+WORKDIR /app
+ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 HOSTNAME=0.0.0.0 PORT=3000
+RUN addgroup -g 10001 boah && adduser -D -u 10001 -G boah boah
+COPY --from=build --chown=boah:boah /app/.next/standalone ./
+COPY --from=build --chown=boah:boah /app/.next/static ./.next/static
+USER 10001:10001
+CMD ["node", "server.js"]

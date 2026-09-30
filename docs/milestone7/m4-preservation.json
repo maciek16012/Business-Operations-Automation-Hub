@@ -1,0 +1,41 @@
+{
+  "base": "c129e1e",
+  "files": [
+    {
+      "path": "backend/app/document_routing/policy/router.py",
+      "byte_identical": true,
+      "ast_identical": true,
+      "sha256": "5e0c8fd6dbc7a99e60b910f3b43d5b863f7f38de18c094c4fca265bc5b563e84",
+      "action": "Only nonfunctional formatting removed earlier; no further restore needed."
+    },
+    {
+      "path": "backend/app/document_routing/preflight/native_pdf.py",
+      "byte_identical": true,
+      "ast_identical": true,
+      "sha256": "c695d3dd25d89af6d90fbcc6b2e180a819a691b454fcb30bad44662da22b3355",
+      "action": "Only nonfunctional formatting removed earlier; no further restore needed."
+    },
+    {
+      "path": "backend/app/document_routing/processor.py",
+      "byte_identical": true,
+      "ast_identical": true,
+      "sha256": "d6cfd8f4906c30aee9a1e5ec9b7174b605d50e1d5c04913e399d020b1aca4942",
+      "action": "Only nonfunctional formatting removed earlier; no further restore needed."
+    },
+    {
+      "path": "backend/app/document_routing/reporting.py",
+      "byte_identical": true,
+      "ast_identical": true,
+      "sha256": "86be65147b7c9ed588b3e486a59716f2abc8a5dadc1b6c8dd78fffa4821d4260",
+      "action": "Only nonfunctional formatting removed earlier; no further restore needed."
+    },
+    {
+      "path": "backend/app/document_routing/scoring/native_fields.py",
+      "byte_identical": true,
+      "ast_identical": true,
+      "sha256": "adfde1ede327ff3b25a16f9887c186310361c5bd18795e77d27c0bc5d39e4250",
+      "action": "Only nonfunctional formatting removed earlier; no further restore needed."
+    }
+  ],
+  "datasets_unchanged": true
+}

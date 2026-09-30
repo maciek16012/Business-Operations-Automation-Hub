@@ -16,6 +16,10 @@ dependencies = [
   "email-validator>=2.2,<3",
   "httpx>=0.28,<0.29",
   "pymupdf==1.28.2",
+  "argon2-cffi>=25.1,<26",
+  "cryptography>=46,<50",
+  "paramiko>=4,<5",
+  "prometheus-client>=0.22,<1",
 ]
 
 [project.optional-dependencies]
@@ -27,6 +31,7 @@ dev = [
   "mypy>=1.17,<2",
   "aiosqlite>=0.21,<1",
   "types-openpyxl>=3.1,<4",
+  "types-paramiko>=5.0.0.20260724",
 ]
 
 [tool.pytest.ini_options]

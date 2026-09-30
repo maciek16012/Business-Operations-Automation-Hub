@@ -87,6 +87,8 @@ async def reconcile(service: "CaseService", case: Case) -> None:
     tasks = await service.rows(ReviewTask, case.id)
     active_issues = {str(i.id) for i in issues if not i.resolved}
     for task in tasks:
+        if task.task_type == "INTEGRATION_FAILURE":
+            continue
         if task.active_key and task.payload["issue_id"] not in active_issues:
             await close_task(service, case, task, "Resolved through validated document review")
     for issue in issues:
@@ -119,6 +121,11 @@ async def reconcile(service: "CaseService", case: Case) -> None:
             case, "REVIEW_TASK_CREATED", {"task_id": str(task.id), "type": task.task_type}
         )
         if settings.review_notifications_enabled:
+            from app.models.company import CompanySettings
+
+            company = await service.db.get(CompanySettings, 1)
+            category = "security" if task.task_type == "SECURITY_QUARANTINE" else "review"
+            recipient = company.notifications.get(category) if company else None
             event_id = uuid.uuid4()
             service.db.add(
                 NotificationOutbox(
@@ -133,7 +140,8 @@ async def reconcile(service: "CaseService", case: Case) -> None:
                         "task_type": task.task_type,
                         "priority": task.priority,
                         "reason": task.reason_code,
-                        "link": f"http://localhost:3000/?case={case.id}",
+                        "recipient": recipient,
+                        "link": f"{settings.public_url}/?case={case.id}",
                     },
                 )
             )

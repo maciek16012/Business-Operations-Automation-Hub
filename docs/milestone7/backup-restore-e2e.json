@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "project": "boah-m7-restore-c11ab2",
+  "schema_version": "2836cf000b0e",
+  "manifest_sha256": "be496a9a7af5c7c82a123cb1c1a0a10599c64d31d8e02e14a255b9f3e202d753",
+  "archive_sha256": "28532282a5c9c54cc3d4d0b5488b063a0c119f735f5558c8b48a289edaf8aabe",
+  "restored_objects_verified": 140,
+  "encrypted_secrets_decrypted": 4,
+  "master_key_included": false,
+  "case_id": "24062caf-0845-4d42-a60c-099d83e29588",
+  "documents": 1,
+  "attachments": 1,
+  "existing_volumes_deleted": false
+}

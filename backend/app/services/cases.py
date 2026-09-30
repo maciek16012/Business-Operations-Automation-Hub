@@ -40,8 +40,16 @@ class CaseService:
     def audit(
         self, case: Case, event: str, details: dict | None = None, actor: str = "system"
     ) -> None:
+        from app.company.context import actor as current_actor
+        from app.company.context import correlation
+
+        context = {**(details or {})}
+        if correlation.get():
+            context["request_id"] = correlation.get()
+        if current_actor.get():
+            context["user_id"] = current_actor.get()
         self.db.add(
-            AuditEvent(case_id=case.id, event_type=event, details=details, actor_type=actor)
+            AuditEvent(case_id=case.id, event_type=event, details=context, actor_type=actor)
         )
         case.updated_at = datetime.now(UTC)
 

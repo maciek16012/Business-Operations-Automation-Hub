@@ -19,6 +19,7 @@ __all__ = [
 ]
 
 from app.models import (
+    company,  # noqa: F401
     documents,  # noqa: F401
     operations,  # noqa: F401
 )

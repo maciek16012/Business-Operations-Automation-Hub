@@ -1,0 +1,45 @@
+ M .env.example
+ M .gitignore
+ M README.md
+ M backend/app/api/router.py
+ M backend/app/api/routes/documents.py
+ M backend/app/api/routes/exports.py
+ M backend/app/api/routes/uploads.py
+ M backend/app/core/config.py
+ M backend/app/db/session.py
+ M backend/app/main.py
+ M backend/app/models/__init__.py
+ M backend/app/models/operations.py
+ M backend/app/services/cases.py
+ M backend/app/services/notifications.py
+ M backend/app/services/operations.py
+ M backend/app/storage/base.py
+ M backend/pyproject.toml
+ M backend/tests/conftest.py
+ M backend/uv.lock
+ M frontend/.dockerignore
+ M frontend/app/admin-dashboard.tsx
+ M frontend/app/case-workspace.tsx
+ M frontend/app/globals.css
+ M frontend/app/layout.tsx
+ M frontend/app/page.tsx
+ M frontend/lib/api.ts
+ M frontend/next-env.d.ts
+?? Milestone-7-raport.md
+?? backend/Dockerfile.production
+?? backend/alembic/versions/2836cf000b0e_company_setup_identities_connectors_.py
+?? backend/app/company/
+?? backend/app/models/company.py
+?? backend/tests/test_m7_operations.py
+?? backend/tests/test_m7_security.py
+?? deploy/
+?? docker-compose.m7-test.yml
+?? docker-compose.production.yml
+?? docs/milestone7/
+?? frontend/Dockerfile.production
+?? frontend/app/auth-gate.tsx
+?? frontend/app/company-settings.tsx
+?? frontend/next.config.ts
+?? scripts/backup/
+?? scripts/milestone7/
+?? tests/

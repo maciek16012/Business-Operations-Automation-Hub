@@ -16,6 +16,9 @@ class LocalFilesystemStorage(ObjectStorage):
         self.base = Path(base_directory).resolve()
         self.base.mkdir(parents=True, exist_ok=True)
 
+    def delete(self, key: str) -> None:
+        self._path(key).unlink(missing_ok=True)
+
     def _path(self, key: str) -> Path:
         if not key or "\\" in key or ":" in key:
             raise ValueError("Invalid storage key")

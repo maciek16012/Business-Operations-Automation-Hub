@@ -1,0 +1,49 @@
+# Local-only M7 protocol fixtures. Generate .runtime-m7/integration.env first.
+services:
+  backend:
+    env_file: [.runtime-m7/integration.env]
+    volumes:
+      - ./.runtime-m7/incoming:/mnt/incoming:ro
+      - ./.runtime-m7/archive:/mnt/archive
+  review-worker:
+    env_file: [.runtime-m7/integration.env]
+  delivery-worker:
+    build: ./backend
+    command: [python, -m, app.company.worker]
+    env_file: [.runtime-m7/integration.env]
+    environment:
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-boah}:${POSTGRES_PASSWORD:-boah_dev_password}@postgres:5432/${POSTGRES_DB:-boah}
+      STORAGE_PATH: /data/documents
+      REVIEW_NOTIFICATION_WEBHOOK_URL: http://n8n:5678/webhook/boah-review-m5
+    volumes:
+      - ./backend:/app
+      - boah_files:/data/documents
+      - ./.runtime-m7/incoming:/mnt/incoming:ro
+      - ./.runtime-m7/archive:/mnt/archive
+    restart: unless-stopped
+    depends_on:
+      backend: {condition: service_healthy}
+  greenmail:
+    image: greenmail/standalone:2.1.14
+    env_file: [.runtime-m7/integration.env]
+    entrypoint: [sh, -c]
+    command: ['exec java -Dgreenmail.setup.test.all -Dgreenmail.hostname=0.0.0.0 -Dgreenmail.users="synthetic:$${M7_MAIL_PASSWORD}@example.com" -jar /home/greenmail/greenmail-standalone.jar']
+    ports: ["127.0.0.1:3025:3025", "127.0.0.1:3143:3143"]
+  m7-webhook:
+    build: ./backend
+    command: [python, /fixtures/m7_protocols.py, webhook]
+    env_file: [.runtime-m7/integration.env]
+    volumes: ["./tests/services:/fixtures:ro", "./.runtime-m7/test-services:/test-data"]
+    ports: ["127.0.0.1:8021:8080"]
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 10s
+  m7-sftp:
+    build: ./backend
+    command: [python, /fixtures/m7_protocols.py, sftp]
+    env_file: [.runtime-m7/integration.env]
+    volumes: ["./tests/services:/fixtures:ro", "./.runtime-m7/test-services:/test-data"]
+    ports: ["127.0.0.1:2222:2222"]
+    healthcheck:
+      test: [CMD, python, -c, "import socket; s=socket.create_connection(('localhost',2222),3); assert s.recv(64).startswith(b'SSH-')"]
+      interval: 10s

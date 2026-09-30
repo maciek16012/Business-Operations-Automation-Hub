@@ -8,6 +8,7 @@ from sqlalchemy import select
 
 from app.api.dependencies import Service
 from app.core.config import settings
+from app.models.company import RetentionDeletion
 from app.models.entities import Attachment
 from app.models.operations import AttachmentSecurityScan
 from app.ocr.pipeline import supported
@@ -71,6 +72,8 @@ async def download(case_id: UUID, attachment_id: UUID, service: Service):
             raise WorkflowError(
                 "ATTACHMENT_QUARANTINED", "Unsafe or unscanned download blocked", 403
             )
+    if await service.db.get(RetentionDeletion, attachment.storage_key):
+        raise WorkflowError("ARTIFACT_RETAINED", "Stored artifact removed by retention policy", 410)
     return Response(
         service.storage.get(attachment.storage_key),
         media_type="application/octet-stream",

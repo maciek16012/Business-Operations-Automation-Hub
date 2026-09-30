@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "https_certificate_verified": true,
+  "trust": "explicit local Caddy CA, no system trust changes",
+  "secure_httponly_samesite_cookie": true,
+  "bootstrap_admin_login_logout": true,
+  "fresh_company_wizard_api": true,
+  "readiness": true,
+  "backend_uid": "10001",
+  "frontend_uid": "10001",
+  "read_only_app_containers": true,
+  "host_binding": "127.0.0.1:8443",
+  "public_acme_certificate_tested": false
+}

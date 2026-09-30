@@ -1,0 +1,6 @@
+{
+  "real_sftp_host_key_mismatch": "REJECTED",
+  "runtime_logs_secret_scan": "PASS",
+  "synthetic_document_body_absent_from_logs": true,
+  "structured_http_logs_present": true
+}

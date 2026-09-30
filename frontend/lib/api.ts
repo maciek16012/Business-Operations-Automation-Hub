@@ -9,8 +9,17 @@ export type Audit = { id: string; event_type: string; actor_type: string; create
 export type InboundMessage = { id: string; source_type: string; external_message_id: string | null; sender_address: string; sender_name: string | null; subject: string; received_at: string; text_body: string; html_body: string | null; identity_method: string; processing_status: string; recipients: {address:string;name:string|null}[] };
 export type CaseDetail = CaseData & { documents: AdaptiveDocument[]; security_scans: {attachment_id:string;verdict:string;reason:string;scanner_version:string|null}[]; ocr_documents: OCRDocument[]; inbound_message: InboundMessage | null; attachments: Attachment[]; extracted_fields: Extracted[]; validation_issues: Issue[]; audit_events: Audit[]; exports: {id: string; export_type: string; storage_key: string | null}[] };
 
+let csrfToken = "";
+export const setCsrfToken = (value: string) => { csrfToken = value; };
+export async function authenticatedFetch(url: string, init?: RequestInit) {
+  const headers = new Headers(init?.headers);
+  if (csrfToken && !["GET", "HEAD", "OPTIONS"].includes(init?.method?.toUpperCase() ?? "GET")) headers.set("X-CSRF-Token", csrfToken);
+  const response = await fetch(url, {cache: "no-store", ...init, credentials: "include", headers});
+  if (response.status === 401 && typeof window !== "undefined") window.dispatchEvent(new Event("boah-session-expired"));
+  return response;
+}
 export async function api<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(`${API_BASE}${path}`, { cache: "no-store", ...init });
+  const response = await authenticatedFetch(`${API_BASE}${path}`, init);
   if (!response.ok) {
     const data = await response.json().catch(() => null);
     throw new Error(data?.error?.message ?? (data?.detail ? JSON.stringify(data.detail) : `API error ${response.status}`));

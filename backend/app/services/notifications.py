@@ -67,10 +67,18 @@ async def run():
             try:
                 if settings.review_notifications_enabled:
                     async with SessionLocal() as db:
+                        from app.models.company import WorkerHeartbeat
+
+                        heartbeat = await db.get(WorkerHeartbeat, "review")
+                        if heartbeat:
+                            heartbeat.updated_at = datetime.now(UTC)
+                        else:
+                            db.add(WorkerHeartbeat(name="review"))
+                        await db.commit()
                         if await deliver_one(db, client):
                             continue
-            except Exception:
-                logging.exception("Notification worker iteration failed")
+            except Exception as exc:
+                logging.error("Notification worker failed: %s", type(exc).__name__)
             await asyncio.sleep(2)
 
 

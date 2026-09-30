@@ -5,6 +5,7 @@ from fastapi.responses import Response
 
 from app.api.dependencies import Service
 from app.core.config import settings
+from app.models.company import RetentionDeletion
 from app.models.entities import Export
 from app.services.errors import WorkflowError
 from app.services.exports import MIME, ExportService
@@ -34,6 +35,8 @@ async def fetch(export_id: UUID, service: Service):
     artifact = await service.db.get(Export, export_id)
     if artifact is None or not artifact.storage_key:
         raise WorkflowError("NOT_FOUND", "Export not found", 404)
+    if await service.db.get(RetentionDeletion, artifact.storage_key):
+        raise WorkflowError("ARTIFACT_RETAINED", "Stored artifact removed by retention policy", 410)
     return Response(
         service.storage.get(artifact.storage_key),
         media_type=MIME[artifact.export_type],

@@ -20,6 +20,7 @@ def legacy_intake_compatibility(monkeypatch):
     # the default fail-closed gate explicitly; production defaults stay enabled.
     from app.core.config import settings
 
+    monkeypatch.setattr(settings, "auth_enabled", False)
     monkeypatch.setattr(settings, "security_preflight_enabled", False)
     monkeypatch.setattr(settings, "adaptive_extraction_enabled", False)
 

@@ -1,0 +1,41 @@
+{
+  "sqlite": {
+    "passed": 281,
+    "skipped": 2,
+    "seconds": 14.35,
+    "skip_reason": "PostgreSQL-only concurrent unique arbitration and row locking"
+  },
+  "postgresql": {
+    "passed": 283,
+    "skipped": 0,
+    "seconds": 60.41
+  },
+  "m7_tests": {
+    "security": 44,
+    "operations": 11
+  },
+  "ruff": "PASS",
+  "mypy": {
+    "status": "PASS",
+    "files": 88
+  },
+  "scoped_format": {
+    "status": "PASS",
+    "files": 39
+  },
+  "frontend_eslint": "PASS",
+  "frontend_typecheck": "PASS",
+  "frontend_build": "PASS",
+  "production_backend_image": "PASS",
+  "production_frontend_image": "PASS",
+  "n8n": {
+    "passed": 9
+  },
+  "alembic_check": "PASS",
+  "review_delivery_heartbeats": "PASS",
+  "production_https": "PASS",
+  "caddy_validate": "PASS",
+  "production_ports": "proxy only 80/443",
+  "datasets_and_m4_unchanged": true,
+  "new_system_wizard_screenshot": "capture tool unavailable; six existing screenshots and current DOM preserved"
+}

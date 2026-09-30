@@ -1,16 +1,33 @@
 from functools import lru_cache
 from typing import Literal
 
-from pydantic import field_validator
+from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
     app_env: str = "development"
+    auth_enabled: bool = True
+    auth_cookie_secure: bool = False
+    auth_session_hours: int = 8
+    boah_master_key: str = Field(default="", repr=False)
+    boah_master_key_file: str = ""
+    boah_initial_admin_email: str = ""
+    boah_initial_admin_password: str = Field(default="", repr=False)
+    boah_service_token: str = Field(default="", repr=False)
+    mounted_roots: dict[str, str] = {}
+    connector_network_allowlist: list[str] = []
+    connector_allow_plaintext_test: bool = False
+    debug: bool = False
+    public_url: str = "http://localhost:3000"
+    delivery_max_attempts: int = 5
+    delivery_retry_seconds: int = 30
     app_name: str = "Business Operations Automation Hub"
     api_v1_prefix: str = "/api/v1"
     backend_cors_origins: str = "http://localhost:3000"
-    database_url: str = "postgresql+asyncpg://boah:boah_dev_password@postgres:5432/boah"
+    database_url: str = Field(
+        default="postgresql+asyncpg://boah:boah_dev_password@postgres:5432/boah", repr=False
+    )
     storage_backend: Literal["filesystem"] = "filesystem"
     storage_path: str = "/data/documents"
     ocr_enabled: bool = False

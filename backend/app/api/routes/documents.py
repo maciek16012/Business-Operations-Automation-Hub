@@ -10,6 +10,7 @@ from app.adaptive.layout import open_document
 from app.adaptive.service import assert_safe, document_json
 from app.adaptive.validation import validate_table
 from app.api.dependencies import Service
+from app.models.company import RetentionDeletion
 from app.models.documents import DocumentAnalysis, DocumentCell, DocumentCorrection, DocumentTable
 from app.models.entities import Attachment, Case, ValidationIssue
 from app.models.operations import AttachmentSecurityScan, ReviewTask
@@ -66,6 +67,8 @@ async def preview(document_id: UUID, service: Service, page: int = Query(1, ge=1
     scan = await assert_safe(service, document.attachment_id)
     attachment = await service.db.get(Attachment, document.attachment_id)
     assert attachment is not None
+    if await service.db.get(RetentionDeletion, attachment.storage_key):
+        raise WorkflowError("ARTIFACT_RETAINED", "Stored artifact removed by retention policy", 410)
     content = service.storage.get(attachment.storage_key)
     if scan.detected_mime == "text/plain":
         return Response(

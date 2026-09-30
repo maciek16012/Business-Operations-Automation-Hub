@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "candidate_file_count": 80,
+  "generated_secrets_scanned": 6,
+  "secret_matches": 0,
+  "runtime_candidates": 0,
+  "protected_paths_ignored": [
+    ".runtime-m7/integration.env",
+    ".runtime-m7/master-key.secret",
+    ".env",
+    ".env.production",
+    "n8n_data/placeholder",
+    "backend/storage/placeholder"
+  ],
+  "index_empty": true,
+  "head": "c129e1ecc36f2bb6593579a9e6e59d47dfaec18b",
+  "commit_created": false,
+  "push_performed": false,
+  "scoped_python_format_files": 39
+}

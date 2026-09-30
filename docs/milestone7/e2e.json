@@ -1,0 +1,61 @@
+{
+  "run": "f6ea6f24cd",
+  "checks": {
+    "A_admin_login_company": true,
+    "B_imap_real_pdf_m5_m6": {
+      "case_id": "24062caf-0845-4d42-a60c-099d83e29588",
+      "document_type": "INVOICE",
+      "security": "SAFE"
+    },
+    "C_duplicate_email": true,
+    "D_watched_folder": {
+      "case_id": "0f96040d-c17d-4a35-9e9c-a0dd94666f40"
+    },
+    "E_filesystem_original_json_xlsx": {
+      "files": 4
+    },
+    "F_signed_webhook_retry": {
+      "attempts": 2,
+      "signature_valid": true,
+      "byte_stable": true
+    },
+    "G_sftp_pinned_host_key": true,
+    "H_dead_letter_review_outbox": {
+      "attempts": 3
+    },
+    "I_J_viewer_reviewer_backend_403": true,
+    "K_secrets_never_returned": true,
+    "L_malicious_email_blocked_before_extraction": {
+      "case_id": "9da6027a-6f8a-4e70-b669-1b9e1501a28c",
+      "verdict": "BLOCKED"
+    },
+    "live_system_health": {
+      "postgresql": "HEALTHY",
+      "clamav": "HEALTHY",
+      "paddle": "HEALTHY",
+      "n8n": "HEALTHY",
+      "tesseract": "HEALTHY",
+      "review_worker": "HEALTHY",
+      "delivery_worker": "HEALTHY"
+    },
+    "metrics_without_pii": true
+  },
+  "jobs": [
+    {
+      "status": "DEAD_LETTER",
+      "attempts": 3
+    },
+    {
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "status": "SUCCEEDED",
+      "attempts": 2
+    },
+    {
+      "status": "SUCCEEDED",
+      "attempts": 1
+    }
+  ]
+}

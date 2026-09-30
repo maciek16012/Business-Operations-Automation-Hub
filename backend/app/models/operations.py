@@ -52,7 +52,7 @@ class ReviewTask(Base):
         CheckConstraint("priority IN ('CRITICAL','HIGH','NORMAL')", name="ck_task_priority"),
         CheckConstraint(
             "task_type IN ('SECURITY_QUARANTINE','OCR_REVIEW',"
-            "'EXTRACTION_FAILURE','UNSUPPORTED_ATTACHMENT','DOCUMENT_REVIEW')",
+            "'EXTRACTION_FAILURE','UNSUPPORTED_ATTACHMENT','DOCUMENT_REVIEW','INTEGRATION_FAILURE')",
             name="ck_task_type",
         ),
     )

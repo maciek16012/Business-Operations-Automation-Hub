@@ -1,4 +1,5 @@
 "use client";
+import { authenticatedFetch } from "../lib/api";
 
 import { useCallback, useEffect, useState } from "react";
 import { API_BASE, api, BusinessField, CaseData, CaseDetail, fields, jsonBody } from "../lib/api";
@@ -52,7 +53,7 @@ function LegacyWorkspace() {
   }
   async function exportFile(kind: string) {
     if (!selected) return;
-    const response = await fetch(`${API_BASE}/exports/${selected.id}/${kind}`, {method: "POST"});
+    const response = await authenticatedFetch(`${API_BASE}/exports/${selected.id}/${kind}`, {method: "POST"});
     if (!response.ok) { const data = await response.json(); throw new Error(data.error?.message ?? "Export failed"); }
     const url = URL.createObjectURL(await response.blob());
     const link = document.createElement("a"); link.href = url; link.download = `${selected.public_id}.${kind}`;
