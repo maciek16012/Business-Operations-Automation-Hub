@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "case_id": "659732d1-b76e-4c36-90ac-80772d160eb2",
+  "smtp_imap_real_local": true,
+  "security": "SAFE",
+  "classification": "INVOICE",
+  "synthetic_only": true
+}

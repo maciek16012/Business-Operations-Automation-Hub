@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "base": "a80f9631b7953f56335fd4c75ad0440ff7c80e1d",
+  "release_candidate_files": 60,
+  "markdown_files_checked": 15,
+  "local_links_checked": 134,
+  "broken_local_links": 0,
+  "generated_secret_values_checked": 9,
+  "secret_hits": 0,
+  "runtime_private_candidates": 0,
+  "frozen_scopes": [
+    "datasets",
+    "configs",
+    "ocr-services",
+    "backend/app/adaptive",
+    "backend/app/stp",
+    "backend/app/ocr",
+    "docs/milestone4",
+    "docs/milestone6",
+    "docs/milestone7"
+  ],
+  "frozen_scopes_unchanged": true,
+  "git_diff_check": "PASS",
+  "scope": "Changed/untracked release files; unchanged historical links excluded; exact generated-secret/private-key scan, not an independent DLP audit."
+}

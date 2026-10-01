@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "production_seed_rejected": true,
+  "unowned_reset_rejected": true,
+  "dedicated_reset_completed": true,
+  "non_demo_container_count": 31,
+  "non_demo_volume_count": 23,
+  "non_demo_ids_and_volumes_unchanged": true,
+  "runtime_removed": true,
+  "inventory_method": "All resources, excluding only exact demo name prefix; sorted full container ID/name and volume-name comparison"
+}

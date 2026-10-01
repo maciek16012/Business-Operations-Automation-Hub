@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "login_dashboard_case_document_review_approve_export_delivery_audit": true,
+  "case_id": "700b35dd-d78d-42c4-9d79-b2b97314da34",
+  "status_after": "EXPORTED",
+  "delivery_jobs": [
+    {
+      "status": "SUCCEEDED",
+      "attempts": 2
+    },
+    {
+      "status": "SUCCEEDED",
+      "attempts": 1
+    }
+  ],
+  "signed_webhook": true,
+  "original_json_xlsx_archive": true,
+  "security_before_classification": true,
+  "service_checks": {
+    "postgresql": "HEALTHY",
+    "clamav": "HEALTHY",
+    "tesseract": "HEALTHY",
+    "n8n": "HEALTHY",
+    "paddle": "HEALTHY",
+    "review_worker": "HEALTHY",
+    "delivery_worker": "HEALTHY"
+  },
+  "synthetic_only": true,
+  "holdout_used": false
+}

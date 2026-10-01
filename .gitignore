@@ -48,3 +48,6 @@ build/
 /.runtime-m7/
 
 .env.production
+
+# M8 isolated local demo credentials, protocol recordings and archives
+/.runtime-demo/

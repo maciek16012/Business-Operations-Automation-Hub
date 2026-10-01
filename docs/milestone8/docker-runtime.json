@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "running_services": 12,
+  "published_ports": [
+    [
+      "proxy",
+      3080,
+      "127.0.0.1"
+    ]
+  ],
+  "services": [
+    {
+      "service": "backend",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "clamav",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "delivery-worker",
+      "state": "running",
+      "health": ""
+    },
+    {
+      "service": "frontend",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "greenmail",
+      "state": "running",
+      "health": ""
+    },
+    {
+      "service": "n8n",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "paddle",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "postgres",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "proxy",
+      "state": "running",
+      "health": ""
+    },
+    {
+      "service": "review-worker",
+      "state": "running",
+      "health": ""
+    },
+    {
+      "service": "tesseract",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "webhook",
+      "state": "running",
+      "health": "healthy"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "development": {
+    "status": "PASS",
+    "services": 4
+  },
+  "ocr_security": {
+    "status": "PASS",
+    "services": 8
+  },
+  "demo": {
+    "status": "PASS",
+    "services": 12,
+    "published_ports": [
+      [
+        "proxy",
+        "3080",
+        "127.0.0.1"
+      ]
+    ]
+  },
+  "production": {
+    "status": "PASS",
+    "published_ports": [
+      [
+        "proxy",
+        "80"
+      ],
+      [
+        "proxy",
+        "443"
+      ]
+    ],
+    "auth_secure_fail_closed_private_services": true,
+    "method": "Configuration validation with non-secret placeholders; M7 historical local HTTPS evidence preserved."
+  }
+}

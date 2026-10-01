@@ -1,0 +1,124 @@
+{
+  "synthetic": true,
+  "independent_of_holdout": true,
+  "fixtures": [
+    {
+      "file": "invoice-ready.pdf",
+      "type": "INVOICE",
+      "review_exercise": false,
+      "review_values": {
+        "document_number": "DEMO/2026/001",
+        "tax_id": "9900000000",
+        "issue_date": "2026-09-30",
+        "net_total": "1000.00",
+        "vat_total": "230.00",
+        "gross_total": "1230.00",
+        "currency": "PLN"
+      }
+    },
+    {
+      "file": "invoice-review.pdf",
+      "type": "INVOICE",
+      "review_exercise": true,
+      "review_values": {
+        "document_number": "DEMO/2026/002",
+        "tax_id": "9900000000",
+        "issue_date": "2026-09-30",
+        "net_total": "1000.00",
+        "vat_total": "230.00",
+        "gross_total": "1230.00",
+        "currency": "PLN"
+      }
+    },
+    {
+      "file": "printed-table.pdf",
+      "type": "PRINTED_TABLE",
+      "review_rows": [
+        [
+          "Name",
+          "Score A",
+          "Score B",
+          "Total",
+          "Maximum",
+          "Percent"
+        ],
+        [
+          "Team A",
+          "3",
+          "4",
+          "7",
+          "10",
+          "70"
+        ],
+        [
+          "Team B",
+          "4",
+          "5",
+          "9",
+          "10",
+          "90"
+        ],
+        [
+          "Team C",
+          "2",
+          "3",
+          "5",
+          "10",
+          "50"
+        ]
+      ]
+    },
+    {
+      "file": "handwritten-table-like.pdf",
+      "type": "HANDWRITTEN_TABLE",
+      "review_rows": [
+        [
+          "Name",
+          "Score A",
+          "Score B",
+          "Total",
+          "Maximum",
+          "Percent"
+        ],
+        [
+          "Team A",
+          "3",
+          "4",
+          "7",
+          "10",
+          "70"
+        ],
+        [
+          "Team B",
+          "4",
+          "5",
+          "9",
+          "10",
+          "90"
+        ],
+        [
+          "Team C",
+          "2",
+          "3",
+          "5",
+          "10",
+          "50"
+        ]
+      ]
+    },
+    {
+      "file": "generic-document.pdf",
+      "type": "GENERIC_DOCUMENT"
+    },
+    {
+      "file": "unknown.pdf",
+      "type": "UNKNOWN"
+    },
+    {
+      "file": "blocked-sample.exe.txt",
+      "type": "BLOCKED",
+      "reason": "EXECUTABLE_CONTENT",
+      "safe_representation": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "case_count_after_repeated_seed": 9,
+  "unique_demo_titles": 9,
+  "ui_review_status": "EXPORTED",
+  "ui_delivery_jobs_succeeded": 2,
+  "ui_original_json_xlsx_archive": true,
+  "blocked_without_ocr_or_classification": true,
+  "blocked_approval_http": 409,
+  "states_after_ui": {
+    "[DEMO] Live flow verification": "EXPORTED",
+    "[DEMO] Optional local email": "REVIEW_REQUIRED",
+    "[DEMO] Blocked filename policy - harmless text": "REVIEW_REQUIRED",
+    "[DEMO] Unknown document": "REVIEW_REQUIRED",
+    "[DEMO] Operations memo": "REVIEW_REQUIRED",
+    "[DEMO] Handwritten-like table - review required": "REVIEW_REQUIRED",
+    "[DEMO] Printed score table": "REVIEW_REQUIRED",
+    "[DEMO] Invoice needs review": "EXPORTED",
+    "[DEMO] Completed invoice": "EXPORTED"
+  }
+}

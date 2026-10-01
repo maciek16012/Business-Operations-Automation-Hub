@@ -1,0 +1,10 @@
+Login UI PASS (random protected local credentials).
+Dashboard PASS: 9 cases, 7 review tasks before UI correction; all five document classes visible, blocked unclassified sample visible.
+Completed case workspace PASS: EXPORTED, originals, persisted SAFE, class/route/confidence, OCR raw/final values, exports and chronological audit.
+Printed table PASS: 4x6 cells, native source/confidence, original preview, review reason, guarded approval.
+Company/Sources/Destinations/Routing/Users/System PASS: fictional config, write-only credential presence, ordered rule, roles, seven healthy dependencies/workers and healthy mounted roots.
+Source Test connection PASS: queued notice, observed RUNNING -> SUCCEEDED job 603327cc. PENDING is the creation state; browser observation caught RUNNING.
+Invoice UI review PASS: CONFLICT_REVIEW / invalid checksum -> correct document number DEMO/2026/002 and NIP 9900000000 with reason -> READY -> APPROVED -> EXPORTED, JSON + XLSX, delivery enqueue/success and audit.
+Original machine values preserved: both engines agreed on wrong document number VAT/INVOICE; reviewer corrected it. No extractor tuning.
+Thirteen real M8 JPEG viewport captures saved. Full-page API failed; viewport API succeeded. No page alteration, invented screens or historical substitution.
+The initially seeded Invoice needs review case is now completed by this UI test; reset/start gives a fresh presentation.

@@ -1,0 +1,12 @@
+﻿ M .gitignore
+ M README.md
+ M frontend/app/admin-dashboard.tsx
+?? demo/
+?? deploy/demo/
+?? docker-compose.demo.yml
+?? docs/CONFIGURATION.md
+?? docs/TROUBLESHOOTING.md
+?? docs/demo/
+?? docs/milestone8/
+?? docs/portfolio/
+?? scripts/demo/

@@ -1,173 +1,208 @@
 # Business Operations Automation Hub
 
-A local business-process automation system, implemented through Milestone 7. Operators can ingest inquiries, inspect sources, correct business data, approve cases and generate traceable JSON/XLSX exports.
+**A self-hosted document operations platform for secure intake, classification, extraction, human review and downstream delivery.**
+
+BOAH brings incoming documents into one traceable workflow. It separates machine readings from business validation and human decisions, then routes approved records to configured destinations.
 
 ```text
-EMAIL → n8n → INBOUND API / IDEMPOTENCY ┐
-                                    ├→ CASE → STORAGE → EXTRACTION → NORMALIZATION
-MANUAL UPLOAD / API ─────────────────┘       → VALIDATION → REVIEW → APPROVAL → EXPORT → AUDIT
+Email / Folder / API / Upload → Security → Classification → Extraction → Validation
+→ Human Review → Approval → Routing → Archive / JSON / XLSX / SFTP / Webhook
 ```
 
-## Run locally
+[Run the demo](#quick-start) · [Case study](docs/portfolio/CASE-STUDY.md) · [Capabilities](docs/portfolio/CAPABILITIES.md) · [Demo guide](docs/demo/DEMO-GUIDE.md) · [Security review](docs/milestone7/security-review.md)
 
-Requirements: Docker Desktop with Linux containers and Compose v2.24+, available ports 3000, 8000, 5432 and 5678.
+## Overview
 
-```powershell
-Set-Location C:\AI\BusinessOperationsAutomationHub
-if (-not (Test-Path .env)) { Copy-Item .env.example .env }
-docker compose up -d --build
-docker compose ps
-```
+The project addresses a practical operations problem: documents arrive through different channels, while staff must check their safety, interpret their contents, resolve uncertainty and transfer reliable data elsewhere. BOAH provides an operator workspace, original-document evidence, controlled approval and an audit trail.
 
-- Operator UI: http://localhost:3000
-- API/OpenAPI: http://localhost:8000/docs and http://localhost:8000/openapi.json
-- Backend health: http://localhost:8000/health
-- n8n: http://localhost:5678 (loopback-only port)
+This is an independently developed portfolio project with measured local tests and synthetic demonstrations. It has not been deployed at a customer. It is a single-company application, not a hosted multi-tenant SaaS.
 
-Backend startup applies `alembic upgrade head`. PostgreSQL/backend healthchecks gate dependent services. Development bind mounts remain: restart backend after Python edits; Next.js runs its development server. Local frontend builds and a running development container share `.next`, so restart frontend after a host build if needed. This is a trusted development environment. M7 enables application authentication by default: initialize the first administrator with `docker compose exec backend python -m app.company.bootstrap_admin`. Public deployment must use the standalone production compose and HTTPS instructions below.
+## Key capabilities
 
-## Stack and architecture
+- Upload/API, native IMAP and watched-folder intake with content/message deduplication.
+- MIME/magic validation, ClamAV and fail-closed security before document analysis.
+- Invoice routing using native PDF text, primary OCR and selective dual OCR.
+- Conservative document classification, table/cell evidence and human review of unresolved values.
+- Business validation, reasoned corrections, approval guards, JSON/XLSX exports and audit.
+- Filesystem/NAS mounts, pinned-key SFTP and signed webhooks with durable jobs/retries.
+- Company configuration, local authentication/RBAC, encrypted secrets, service health and backup/restore.
 
-Python 3.12, FastAPI, Pydantic, async SQLAlchemy, Alembic, PostgreSQL 17, Next.js 16, TypeScript, openpyxl and n8n 2.40.7. Business logic stays in FastAPI; n8n handles when/where delivery happens.
+## Screenshots
+
+The views below were captured from the running **synthetic M8 demo**. See the [gallery and provenance](docs/portfolio/screenshots/README.md) for case, intelligence, review, settings and service-health views.
+
+| Operator overview | Document and human review |
+|---|---|
+| ![Dashboard](docs/portfolio/screenshots/dashboard.jpg) | ![Document review](docs/portfolio/screenshots/human-review.jpg) |
+
+| Company settings | Routing |
+|---|---|
+| ![Company settings](docs/portfolio/screenshots/company-settings.jpg) | ![Routing](docs/portfolio/screenshots/routing.jpg) |
+
+## Architecture
 
 ```mermaid
 flowchart LR
-    MAIL[Generic IMAP mailbox] --> N8N[n8n orchestration]
-    N8N --> IN[Inbound email API / idempotency]
-    IN --> S[Case and export services]
-    UI[Next.js review desk] --> API[FastAPI routes]
-    API --> S
-    S --> DB[(PostgreSQL)]
-    S --> OBJ[ObjectStorage]
-    OBJ --> FS[(LocalFilesystemStorage / volume)]
-    S --> EXT[Development extraction provider]
-    EXT --> NORM[Decimal-safe normalization]
-    NORM --> VAL[Deterministic validation]
-    VAL --> REVIEW[Human review / approval]
-    REVIEW --> EXP[JSON / XLSX]
-    S --> AUDIT[Audit events]
-    AUDIT --> DB
-    N8N --> ERR[Error Trigger / recovery summary]
+    IN["Upload · API · IMAP · Folder"] --> SEC["MIME / magic + ClamAV"]
+    SEC -->|Unsafe or inconclusive| STOP["Block / quarantine + review"]
+    SEC -->|Persisted SAFE| CLASS["Local classifier"]
+    CLASS --> INV["Invoice: native / primary / dual OCR"]
+    CLASS --> TAB["Printed tables / handwritten-like review"]
+    CLASS --> GEN["Generic / unknown: review"]
+    INV --> OPS["Validation + human review + audit"]
+    TAB --> OPS
+    GEN --> OPS
+    OPS --> APPROVE["Guarded approval + routing"]
+    APPROVE --> OUT["Filesystem / NAS · JSON / XLSX · Webhook / API · SFTP"]
+    PLATFORM["PostgreSQL · Auth/RBAC · Encrypted secrets · Workers · Monitoring · Backup"] -.-> OPS
 ```
 
-Local filesystem object storage is behind `ObjectStorage`. Only LocalFilesystemStorage knows physical paths. `boah_files` persists originals/exports at `/data/documents`; `postgres_data` persists business data; `n8n_data` persists workflow, credential and execution state. Back up these volumes; `docker compose down -v` destroys them. MinIO is not an active dependency.
+FastAPI owns the workflow and database transactions; n8n provides orchestration and the review-notification handoff. Storage is accessed through an abstraction backed by local filesystem volumes. OCR runs in separate CPU services. See [architecture](docs/architecture.md) and the [engineering case study](docs/portfolio/CASE-STUDY.md).
 
-## Configuration
+## Example workflow
 
-`.env.example` documents defaults. Compose derives the backend connection from POSTGRES_DB/USER/PASSWORD; a host-run backend uses DATABASE_URL with localhost. Compose sets STORAGE_BACKEND=filesystem and STORAGE_PATH=/data/documents; outside Docker choose a writable storage path. MAX_UPLOAD_BYTES defaults to 5242880. BACKEND_CORS_ORIGINS defaults to http://localhost:3000. NEXT_PUBLIC_API_BASE_URL must be browser-reachable, not an internal Docker hostname. Development database credentials are nonproduction defaults.
+An invoice arrives through IMAP. BOAH stores and hashes its original, scans it, classifies it and chooses the invoice route. Missing fields, invalid checksums or conflicts create review work. A reviewer confirms values against the original with a reason. Only valid, safe cases can be approved. Workers archive the PDF, create JSON/XLSX and send a signed webhook. Every significant operation remains auditable.
 
-n8n uses the official image pinned to `docker.n8n.io/n8nio/n8n:2.40.7`, timezone N8N_TIMEZONE (Europe/Warsaw by default), filesystem binary data and seven-day execution retention. Its credential-encryption key is generated inside the persistent volume. Never commit that key, mailbox credentials or instance-specific credential exports.
+## Security
 
-## Milestone 1 manual demo
+Upload preflight includes size, MIME/magic and dangerous-content checks. ClamAV must provide a conclusive result; unavailable scanning does not permit extraction. Authentication uses Argon2id and opaque HttpOnly sessions, CSRF protection and backend role enforcement. Connector secrets are write-only AES-GCM records. Outbound connections use DNS/IP checks, no redirects and SFTP host-key verification; mount paths/templates reject traversal. The production profile uses HTTPS and private service ports.
 
-1. Create a case in the UI and upload `sample_data/review_required.txt`.
-2. Inspect REVIEW_REQUIRED, NIP/amount errors, source extraction, original attachment and audit. Approval is blocked by the backend, not merely the UI.
-3. Correct tax_id to `5260250274` and estimated_value to `12 500,00 PLN`; save corrections and revalidate. READY appears; raw extraction remains unchanged and resolved issues stay in history.
-4. Approve, then export JSON and XLSX. EXPORTED cases remain immutable but allow additional export generation/downloads.
-5. In another case upload valid_inquiry.txt and duplicate_renamed.txt. The second upload is ignored with a duplicate warning/audit; only one original is stored.
-6. Rejection requires a reason, records ReviewDecision/audit and ends in FAILED.
+These controls are backed by negative-path tests and local E2E evidence, not an independent security certification. See the [full review and residual risks](docs/milestone7/security-review.md).
 
-`uv run python ../scripts/demo.py` from backend repeats the HTTP scenario. All fixtures are synthetic; the valid deadline is intentionally distant. `sample_data/README.md` covers missing data, bad NIP, malformed/negative money and manual review.
+## Integrations
 
-## Milestone 2 email demo and IMAP setup
+| Input | Output / orchestration |
+|---|---|
+| Manual upload, REST API | Stored originals and JSON/XLSX exports |
+| Native IMAP with production TLS | Filesystem / mounted NAS archive |
+| Stable watched-folder files | SFTP with pinned host key |
+| n8n inbound orchestration | HMAC-signed webhook / API receiver, review outbox |
 
-After Compose starts, import sanitized workflows and publish the error and local fixture workflows:
+Credentials belong to the deployed instance, never workflow templates. Delivery is at least once: receivers must honor idempotency keys. A recorded n8n receipt means durable handoff, not proof that a final email was sent.
+
+## Human review
+
+Uncertain results remain visible with their original evidence. Raw machine values and reviewed values are separate. Corrections require a reason; table review uses revisions to reject stale edits. Approval is enforced by the backend, including attempts made directly through the API. Security quarantine cannot be waived through ordinary document review.
+
+## Document intelligence
+
+The classifier uses versioned local content/layout heuristics; its score is not a calibrated probability. Invoices retain the existing native-text/selective-OCR route. Printed tables expose cell geometry and confidence. Generic and unknown documents require review.
+
+**BOAH does not include a full model for recognizing real human handwriting.** The handwritten-table workflow is human-in-the-loop: unsupported readings remain unresolved. The demo's rasterized italic text is a clearly labeled proxy, not real handwriting or evidence of HTR accuracy.
+
+## Deployment
+
+Two distinct profiles are provided:
+
+- **Local demo:** isolated project, loopback HTTP, random runtime credentials and synthetic data. Never expose this profile publicly.
+- **Production-oriented deployment:** standalone [production compose](docker-compose.production.yml), Caddy HTTPS, private services, persistent volumes and non-root/read-only application containers. Requires your own master key, administrator credentials, DNS/TLS and connector credentials.
+
+The recorded HTTPS smoke test used an explicitly trusted local CA. It is not a public production deployment. Follow [production operations](docs/milestone7/deployment.md), [configuration](docs/CONFIGURATION.md) and [troubleshooting](docs/TROUBLESHOOTING.md).
+
+## Quick Start
+
+### A. Local demo / showcase
+
+Requirements: Windows PowerShell, Git checkout, Docker Desktop in Linux-container mode and free loopback port **3080**. Internet is needed on first use for images, OCR models and antivirus signatures. Allow sufficient RAM/disk for both CPU OCR services; first start can take several minutes.
 
 ```powershell
-docker compose exec -T n8n n8n import:workflow --separate --input=/workflows
-docker compose exec -T n8n n8n publish:workflow --id=boahEmailErrors2
-docker compose exec -T n8n n8n publish:workflow --id=boahEmailFixture2
-docker compose restart n8n
-Set-Location backend
-uv sync --python 3.12 --extra dev
-uv run python ../scripts/demo_email_ingestion.py
+# From the repository root:
+.\scripts\demo\start_demo.ps1
 ```
 
-This executes real n8n nodes with 0/1/multiple binary attachments, verifies replay creates no additional cases, then corrects/approves a case and verifies JSON/XLSX. `--via api` runs the direct API variant. Use a new/default run ID for a fresh measured run.
+Open **http://localhost:3080**. Random local login details are saved in ignored `.runtime-demo/login.txt`; do not publish that file. The script builds the existing application, applies migrations, bootstraps identities, imports the scoped local n8n workflow and seeds seven synthetic cases.
 
-The real `inbound-email.json` workflow uses n8n's generic IMAP Email Trigger. Complete the local n8n owner setup, bind your host/port/user/password in an IMAP credential, keep TLS enabled, choose the mailbox and publish the workflow. No mailbox credentials were available during implementation, so external IMAP receipt is not claimed as tested. See [n8n/README.md](n8n/README.md) for exact binding, import/export, recovery steps and verified behavior. Reimporting workflows can overwrite local bindings; back up first.
+Optional local email demo:
 
-## Rules, states and traceability
+```powershell
+.\scripts\demo\start_demo.ps1 -WithEmail
+```
 
-- A customer/company and request title are required. Email, NIP, date and amount are validated when present; an amount requires PLN/EUR/USD/GBP. NIP uses checksum validation. Deadlines must be ISO dates today or later. Money uses Decimal and NUMERIC(14,2).
-- Public IDs are server-generated CASE-year-20 UUID hex characters with a unique database constraint.
-- Controlled states: RECEIVED → PROCESSING → READY/REVIEW_REQUIRED → APPROVED → EXPORTED. Editable cases can receive more documents and move between READY/REVIEW_REQUIRED. Rejection/provider/storage processing failure is terminal FAILED. DUPLICATE is reserved; a skipped within-case attachment duplicate does not invalidate the original case.
-- ERROR/CRITICAL issues block approval, which reruns validation under a row lock. Approved/exported cases are immutable. Unsaved UI corrections block approval until saved.
-- Raw ExtractedField records retain source/provider/normalization. Reviewed business values live on Case; corrections and inferred changes are audited.
-- Attachment SHA-256 deduplication stays within-case. Message identity is separate: `(source_type, identity_key)` is unique globally for IMAP. A usable Message-ID drives identity; otherwise a stable fingerprint uses sender/recipients/subject/sent time/body/content hashes, excluding receipt time and filenames. Identical ID-less emails may collapse; never reuse a Message-ID for different messages.
-- Email metadata/body/HTML live on InboundMessage, linked to source=email. Subject/sender seed fields deterministically. No semantic interpretation is faked. HTML is rendered only as escaped text.
-- Unsupported/failed-extraction email attachments are preserved and require explicit operator acknowledgment with a reason. Their issues survive revalidation; acknowledgment cannot waive NIP/money/required-field rules.
-- Delivery uses up to three HTTP attempts and replay with the same identity. A duplicate is successful no-op. Error Trigger distinguishes unavailable, timeout, invalid payload and unexpected failures. This is not distributed exactly-once execution; originals remain unread and failed executions need recovery before retention expires.
+No Gmail/Office365 account is needed. Re-running start preserves credentials/data and seeds without duplicate sample cases. To stop without deletion, use the compose command in the [demo guide](docs/demo/DEMO-GUIDE.md). To reset only the dedicated demo:
 
-## API
+```powershell
+.\scripts\demo\reset_demo.ps1
+# Requires typing the fixed demo project name before permanent deletion.
+```
 
-All paths below have `/api/v1` prefix. M1 money/date input values are strings, allowing invalid business values to enter review. PATCH omission preserves a value; null/empty clears it. Unknown keys are rejected.
+### B. Production-oriented local deployment
 
-| Method | Path | Purpose |
+Prepare protected `.env.production` from [the production example](deploy/milestone7/production.env.example), dedicated directories, a separately stored 32-byte base64 master key and a real HTTPS domain. Then:
+
+```powershell
+docker compose --env-file .env.production -f docker-compose.production.yml config --quiet
+docker compose --env-file .env.production -f docker-compose.production.yml up -d --build
+```
+
+Do not combine this file with development/demo overlays. Only the reverse proxy publishes 80/443. See [deployment instructions](docs/milestone7/deployment.md) for ownership, bootstrap, backup and key recovery.
+
+## Demo
+
+[Seven independent synthetic fixtures](demo/README.md) cover a completed invoice, an invoice requiring checksum correction, printed and handwritten-like tables, a memo, an unknown document and harmless text blocked by filename policy. Seed confirmation is explicit demo setup, not an accuracy measurement. No benchmark/HOLDOUT data is read by the demo.
+
+Use the [5–10 minute walkthrough](docs/demo/DEMO-GUIDE.md) or [3–5 minute recording script](docs/demo/VIDEO-SCRIPT.md). The main story is intake → SAFE → invoice → review → approval → archive/exports/webhook → audit.
+
+## Test coverage
+
+Tests exercise workflow states, business rules, API/DB transactions, PostgreSQL concurrency, security boundaries, review revisions, routing/retries and exports. Local protocol E2E covers SMTP/IMAP, SFTP and signed HTTP. Backup/restore checks actual storage hashes and encrypted records; production smoke checks real HTTPS and secure session cookies.
+
+The recorded M7 baseline is **281 passed / 2 PostgreSQL-only skips on SQLite**, **283 passed on PostgreSQL**, and **9 n8n tests passed**. Current release checks and exact commands are in [the M8 report](docs/milestone8/Milestone-8-raport.md) and [release checklist](docs/portfolio/RELEASE-CHECKLIST.md). These are local verification results; no GitHub Actions badge or hosted CI result is claimed.
+
+## Benchmark / evaluation results
+
+| Recorded evaluation | Result | Practical boundary |
 |---|---|---|
-| POST | /cases | Create manual_upload/api case, 201 |
-| GET | /cases?offset=0&limit=25 | Paginated list, maximum 200 |
-| GET | /cases/{id} | Business record, related history, optional inbound_message |
-| POST | /uploads/{id} | Multipart files, 1–10 UTF-8 TXT fixtures |
-| GET | /uploads/{case_id}/{attachment_id} | Original download |
-| PATCH | /review/{id} | Save corrections and revalidate |
-| POST | /review/{id}/validate, /approve, /reject | Guarded actions; reject accepts reason |
-| POST | /exports/{id}/json or /xlsx | Generate artifact; 201, Location, X-Export-ID |
-| GET | /exports/{export_id} | Download stored export |
-| GET | /cases/{id}/audit | Chronological audit |
-| POST | /inbound/email | Atomic JSON metadata/body/base64 attachments; 201 created / 200 duplicate |
-| POST | /inbound/messages/{message_id}/attachments/{attachment_id}/review | Acknowledge attachment review with reason |
+| [Invoice STP HOLDOUT](datasets/stp/results/stp-holdout-final/report.md) | 19/20 = **95% STP**, zero observed critical/document false accepts | Small synthetic dataset; not universal invoice accuracy |
+| [Classification/table HOLDOUT](docs/milestone6/holdout-results.md) | **85% classification**, **75% table structure**, **30.56% cell accuracy**, **25% numeric-cell accuracy** | 20 synthetic documents; missing cells count as incorrect; handwriting proxy |
+| Same M6 evaluation | **95% review rate**, zero measured unsafe bypasses | Conservative workflow, not fully automatic table processing |
+| [Company integration E2E](docs/milestone7/e2e.json) | Real local IMAP/SFTP/signed webhook, retry/dead-letter and security checks passed | Synthetic credentials and local services |
+| [Backup/restore](docs/milestone7/backup-restore-e2e.json) / [HTTPS](docs/milestone7/production-smoke.json) | 140 stored objects verified, 4 encrypted records decrypted; HTTPS smoke passed | Isolated local targets; public ACME not tested |
 
-The full email JSON contract, limits and replay semantics are in n8n/README.md and OpenAPI. `/cases` intentionally still rejects source=email without an inbound source record. Workflow errors use error.code/message; malformed requests use FastAPI's 422 detail. JSON exports use explicit schema_version/case_id/status/data with decimal strings. XLSX has Summary, Attachments, Validation and Audit with dates, numeric values and formula-injection protection.
+Historical HOLDOUTs were frozen and evaluated once. The demo does not reuse them and release checks do not rerun them. See [evaluation notes](docs/portfolio/EVALUATION.md) for denominators and limitations.
 
-## Repository and checks
+## Known limitations
 
-- backend/app/api, schemas: HTTP contracts and dependency wiring.
-- backend/app/services, domain, models: transactional workflow, guards and persistence.
-- backend/app/extraction, validation, storage, exports: separate provider/rules/storage/rendering boundaries.
-- backend/alembic/versions and backend/tests: migrations and regression/integration suites.
-- frontend/app and frontend/lib: existing review desk and typed client.
-- n8n/workflows, code, tests: sanitized real IMAP/fixture/error workflows and verification.
-- sample_data, scripts, docs: demos, architecture and measured reports.
+Single-company local identities; no multi-tenancy, SSO/MFA, public SaaS, HA or PITR. Table layout and handwriting need substantial human supervision. No manual reconstruction of missing table structure is provided. Private network/mount administration is trusted. Dead-letter integration failures require action; malformed IMAP input may stall a source batch. Notification channels, n8n backup and external archive backup need deployment-specific configuration. Durable delivery snapshots do not yet have a retention lifecycle. No customer deployment or broad real-world document accuracy is claimed.
 
-```powershell
-Set-Location backend
-uv sync --python 3.12 --extra dev
-uv run pytest -q
-uv run ruff format --check app tests alembic
-uv run ruff check app tests alembic
-uv run mypy app
-$env:TEST_DATABASE_URL='postgresql+asyncpg://boah:boah_dev_password@localhost:5432/boah'
-uv run pytest -q
-Remove-Item Env:TEST_DATABASE_URL
-$env:DATABASE_URL='postgresql+asyncpg://boah:boah_dev_password@localhost:5432/boah'
-uv run alembic upgrade head
-uv run alembic check
-Set-Location ../frontend
-npm ci
-npm run lint
-npm run typecheck
-npm run build
-Set-Location ..
-node --test n8n/tests/workflows.test.cjs
-docker compose config --quiet
+## Technology stack
+
+| Area | Technologies actually used |
+|---|---|
+| Backend | Python, FastAPI, Pydantic, SQLAlchemy, Alembic, PostgreSQL |
+| Frontend | Next.js, React, TypeScript |
+| Documents | PyMuPDF, Tesseract, PaddleOCR, openpyxl; ReportLab for synthetic demo fixtures |
+| Automation | n8n, IMAP, SFTP, signed webhooks |
+| Security / operations | ClamAV, Argon2id, AES-GCM, Caddy, Docker Compose, Prometheus-compatible metrics |
+
+## Repository structure
+
+```text
+backend/       API, domain services, security, extraction, migrations and tests
+frontend/      Operator dashboard, document review and company settings
+n8n/           Sanitized workflows, code and workflow tests
+ocr-services/  Existing CPU Tesseract and PaddleOCR services
+security/      ClamAV profile
+scripts/       Demo, operations and evaluation tooling
+demo/          Independent synthetic showcase fixtures
+docs/          Architecture, operations, portfolio, demo and measured reports
+datasets/      Preserved evaluation data and results; not used as demo seed
+deploy/        Production and local-demo reverse-proxy configuration
 ```
 
-SQLite tests enable foreign keys. PostgreSQL tests create/drop isolated test_<uuid> schemas and exercise concurrent identity/row-lock behavior. Migration upgrade/downgrade verification uses a disposable database, never the populated application DB. `scripts/verify_email_delivery_errors.py` briefly stops/pauses backend and resumes it in finally to verify n8n recovery.
+## Documentation
 
-## Limits and next stage
+- [Portfolio case study](docs/portfolio/CASE-STUDY.md) and [business summary](docs/portfolio/PORTFOLIO-SUMMARY.md)
+- [Capability matrix](docs/portfolio/CAPABILITIES.md), [evaluation](docs/portfolio/EVALUATION.md), [screenshots](docs/portfolio/screenshots/README.md)
+- [Demo guide](docs/demo/DEMO-GUIDE.md), [video script](docs/demo/VIDEO-SCRIPT.md), [fixtures](demo/README.md)
+- [Configuration](docs/CONFIGURATION.md), [troubleshooting](docs/TROUBLESHOOTING.md), [production operations](docs/milestone7/deployment.md), [security review](docs/milestone7/security-review.md)
+- [Architecture](docs/architecture.md), [domain model](docs/domain-model.md), [n8n](n8n/README.md), [OCR services](ocr-services/README.md)
+- Historical reports: [M1](docs/verification.md), [M2](Milestone-2-raport.md), [M3](Milestone-3-raport.md), [M4](docs/milestone4/Milestone-4-raport.md), [M5](docs/milestone5/Milestone-5-raport.md), [M6](docs/milestone6/Milestone-6-raport.md), [M7](docs/milestone7/Milestone-7-raport.md)
+- [Proposed demo release notes](docs/portfolio/RELEASE-NOTES.md), [checklist](docs/portfolio/RELEASE-CHECKLIST.md), [M8 report](docs/milestone8/Milestone-8-raport.md)
 
-The provider handles UTF-8 fixture text, not OCR/PDF extraction. Processing is synchronous; actors are placeholders, there is no auth/RBAC or automatic reopening of FAILED cases. A storage-processing failure is preserved on a terminal case and flagged by n8n; replay does not create another case. The DB/filesystem cannot share a transaction, so interrupted commits may leave orphaned objects. Back up DB and files together. n8n UID/retention/replay operational limits are documented explicitly in n8n/README.md.
+## Roadmap / future possibilities
 
-Milestone 3 will address real PDF/scanned documents, OCR benchmarks/provider selection, structured extraction and an evaluation dataset with accuracy metrics. LLM/OpenAI, RAG, outbound replies, CRM/ERP, PDF offers, RBAC and cloud deployment remain out of scope.
+Independent evaluations on unseen templates and real consented/anonymized data; better deskew/layout handling; a separately evaluated local handwriting provider; confidence calibration; SSO/MFA; dedicated metrics authentication; snapshot retention and stronger backup authentication. These are possibilities, not implemented capabilities. Existing HOLDOUTs must not be used for further tuning.
 
+## License / project status
 
-## Milestone 3: local dual OCR
-
-Run `docker compose -f docker-compose.yml -f docker-compose.ocr.yml up -d --build` to enable PDF/PNG/JPEG/TIFF ingestion through two independent CPU OCR services. TXT fixtures remain supported. The UI shows both readings, normalization, business checks and a reasoned human-review form. Agreement is not proof of correctness; current policy conservatively requires document review.
-
-See [Milestone 3 report](Milestone-3-raport.md), [OCR services](ocr-services/README.md), and `datasets/ocr/results/holdout-final/report.md`. HOLDOUT has been evaluated once after freezing configuration; do not rerun it or tune on its results.
-
-## Milestone 7 — Company integrations and production readiness
-
-See [deployment and operations](docs/milestone7/deployment.md), [security review](docs/milestone7/security-review.md) and [Milestone-7-raport.md](Milestone-7-raport.md). M7 adds company setup, authenticated roles, encrypted connector secrets, native IMAP/watched-folder intake, safe routing and filesystem/SFTP/signed-webhook delivery. Existing M5 security and M6 review gates remain mandatory. Production uses docker-compose.production.yml alone; only the reverse proxy publishes ports 80/443. Local protocol fixtures use generated synthetic credentials under ignored .runtime-m7/.
+No LICENSE file is currently included; a licensing decision is pending. Third-party components retain their own licenses. This is an independent portfolio/demo project using fictional data; proposed `v1.0.0-demo` notes do not create a Git tag or GitHub Release.

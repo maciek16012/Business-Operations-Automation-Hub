@@ -1,0 +1,139 @@
+# Isolated local showcase. Never combine with production/development compose files.
+name: boah-portfolio-demo
+x-app: &app
+  image: boah-portfolio-demo-backend:local
+  build: {context: ./backend, dockerfile: Dockerfile.production}
+  env_file: [.runtime-demo/demo.env]
+  environment: &app-env
+    APP_ENV: development
+    AUTH_ENABLED: "true"
+    AUTH_COOKIE_SECURE: "false"
+    PUBLIC_URL: http://localhost:3080
+    BACKEND_CORS_ORIGINS: http://localhost:3080
+    DATABASE_URL: postgresql+asyncpg://boah:${POSTGRES_PASSWORD:?run scripts/demo/start_demo.ps1}@postgres:5432/boah
+    STORAGE_PATH: /data/documents
+    MOUNTED_ROOTS: '{"incoming":"/demo-runtime/incoming","archive":"/demo-runtime/archive"}'
+    CONNECTOR_NETWORK_ALLOWLIST: '["greenmail","webhook"]'
+    CONNECTOR_ALLOW_PLAINTEXT_TEST: "true"
+    OCR_ENABLED: "true"
+    OCR_TESSERACT_URL: http://tesseract:8080/ocr
+    OCR_PADDLE_URL: http://paddle:8080/ocr
+    OCR_TESSERACT_PROFILE: orientation
+    OCR_PADDLE_PROFILE: orientation
+    STP_ENABLED: "true"
+    SECURITY_PREFLIGHT_ENABLED: "true"
+    SECURITY_FAIL_CLOSED: "true"
+    CLAMAV_HOST: clamav
+    REVIEW_NOTIFICATION_WEBHOOK_URL: http://n8n:5678/webhook/boah-review-m5
+    BOAH_DEMO_INSTANCE: portfolio-v1
+    DELIVERY_RETRY_SECONDS: "2"
+  volumes:
+    - demo_storage:/data/documents
+    - ./demo/fixtures:/demo-fixtures:ro
+    - ./scripts/demo:/demo-tools:ro
+    - ./.runtime-demo:/demo-runtime
+    - ./n8n/workflows:/demo-workflows:ro
+  restart: unless-stopped
+services:
+  proxy:
+    image: caddy:2.11-alpine
+    ports: ["127.0.0.1:3080:80"]
+    volumes: ["./deploy/demo/Caddyfile:/etc/caddy/Caddyfile:ro"]
+    depends_on: {backend: {condition: service_healthy}, frontend: {condition: service_healthy}}
+    restart: unless-stopped
+  postgres:
+    image: postgres:17-alpine
+    environment: {POSTGRES_USER: boah, POSTGRES_DB: boah, POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?run demo initializer}"}
+    volumes: [demo_db:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD, pg_isready, -U, boah]
+      interval: 3s
+      retries: 30
+    restart: unless-stopped
+  backend:
+    <<: *app
+    depends_on: {postgres: {condition: service_healthy}, clamav: {condition: service_healthy}, tesseract: {condition: service_healthy}, paddle: {condition: service_healthy}}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8000/health/ready')"]
+      interval: 10s
+      timeout: 15s
+      retries: 30
+  frontend:
+    image: boah-portfolio-demo-frontend:local
+    build: {context: ./frontend, dockerfile: Dockerfile.production}
+    read_only: true
+    tmpfs: [/tmp]
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://localhost:3000').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 5s
+      retries: 30
+  delivery-worker:
+    <<: *app
+    command: [python, -m, app.company.worker]
+    depends_on: {backend: {condition: service_healthy}}
+  review-worker:
+    <<: *app
+    command: [python, -m, app.services.notifications]
+    depends_on: {backend: {condition: service_healthy}}
+  tesseract:
+    build: ./ocr-services/tesseract
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 10s
+      retries: 60
+  paddle:
+    build: ./ocr-services/paddle
+    volumes: [demo_paddle_models:/root/.paddlex]
+    shm_size: 2gb
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 10s
+      retries: 120
+      start_period: 180s
+  clamav:
+    build: ./security/clamav
+    volumes: [demo_clam_signatures:/var/lib/clamav]
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, /usr/local/bin/clamdcheck.sh]
+      interval: 15s
+      retries: 60
+      start_period: 180s
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:2.40.7
+    environment:
+      N8N_SECURE_COOKIE: "false"
+      N8N_DIAGNOSTICS_ENABLED: "false"
+      N8N_VERSION_NOTIFICATIONS_ENABLED: "false"
+      EXECUTIONS_DATA_PRUNE: "true"
+      EXECUTIONS_DATA_MAX_AGE: "24"
+    volumes: [demo_n8n:/home/node/.n8n]
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://localhost:5678/healthz').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 5s
+      retries: 40
+  greenmail:
+    image: greenmail/standalone:2.1.14
+    env_file: [.runtime-demo/demo.env]
+    entrypoint: [sh, -c]
+    command: ['exec java -Dgreenmail.setup.test.all -Dgreenmail.hostname=0.0.0.0 -Dgreenmail.users="synthetic:$${M7_MAIL_PASSWORD}@example.com" -jar /home/greenmail/greenmail-standalone.jar']
+    restart: unless-stopped
+  webhook:
+    image: boah-portfolio-demo-backend:local
+    env_file: [.runtime-demo/demo.env]
+    command: [python, /fixtures/m7_protocols.py, webhook]
+    volumes: ["./tests/services:/fixtures:ro", "./.runtime-demo/protocols:/test-data"]
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 5s
+volumes:
+  demo_db:
+  demo_storage:
+  demo_n8n:
+  demo_paddle_models:
+  demo_clam_signatures:

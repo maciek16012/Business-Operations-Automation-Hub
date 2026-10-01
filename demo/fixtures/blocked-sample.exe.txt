@@ -1,0 +1,1 @@
+Harmless plain text. The executable-like filename suffix demonstrates the security filename policy. No executable code, antivirus signature or malware is present.

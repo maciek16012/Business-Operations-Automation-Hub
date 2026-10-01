@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "tracked_files_scanned": 754,
+  "actual_generated_secrets_checked": 9,
+  "generated_secret_or_private_key_hits": 0,
+  "tracked_runtime_env_key_database_backup_files": 0,
+  "method": "All tracked file bytes; generated values and PEM private-key headers, plus separate tracked-path inventory. Not a general DLP guarantee."
+}

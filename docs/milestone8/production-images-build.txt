@@ -1,0 +1,120 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 2.60kB 0.0s done
+#1 DONE 0.0s
+
+#2 [frontend internal] load build definition from Dockerfile.production
+#2 transferring dockerfile: 593B done
+#2 DONE 0.0s
+
+#3 [backend internal] load build definition from Dockerfile.production
+#3 transferring dockerfile: 659B done
+#3 DONE 0.0s
+
+#4 [backend internal] load metadata for docker.io/library/python:3.12-slim
+#4 DONE 0.0s
+
+#5 [backend internal] load .dockerignore
+#5 transferring context: 103B done
+#5 DONE 0.0s
+
+#6 [backend 1/9] FROM docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+#6 resolve docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 0.0s done
+#6 DONE 0.0s
+
+#7 [backend internal] load build context
+#7 transferring context: 15.28kB 0.0s done
+#7 DONE 0.0s
+
+#8 [backend 8/9] COPY alembic.ini ./
+#8 CACHED
+
+#9 [backend 4/9] COPY pyproject.toml uv.lock ./
+#9 CACHED
+
+#10 [backend 2/9] WORKDIR /app
+#10 CACHED
+
+#11 [backend 6/9] COPY app ./app
+#11 CACHED
+
+#12 [backend 3/9] RUN pip install --no-cache-dir uv==0.12.15 && groupadd --gid 10001 boah && useradd --uid 10001 --gid boah --no-create-home boah
+#12 CACHED
+
+#13 [backend 5/9] RUN uv sync --frozen --no-dev --no-editable
+#13 CACHED
+
+#14 [backend 7/9] COPY alembic ./alembic
+#14 CACHED
+
+#15 [backend 9/9] RUN mkdir -p /data/documents && chown -R boah:boah /data/documents
+#15 CACHED
+
+#16 [backend] exporting to image
+#16 exporting layers done
+#16 exporting manifest sha256:21834627179e084ba8c8dd778d29d13f5ae73d5e9ceddad6ccefbf6ca3183b81 done
+#16 exporting config sha256:2fffe7193be6c81b5d08c8d642e0bfd90d51acb771c1b3fcecb4624f7d33cd4d done
+#16 exporting attestation manifest sha256:b83e4c05cc205b062a7f52cb98ad94e2e53d578235082508d4da539e9682c15d 0.0s done
+#16 exporting manifest list sha256:15d077c0330671e03aabcc44779f11470d4130f79201919bb22cfa09c524a1e5 0.0s done
+#16 naming to docker.io/library/boah-portfolio-demo-backend:local done
+#16 unpacking to docker.io/library/boah-portfolio-demo-backend:local 0.0s done
+#16 DONE 0.1s
+
+#17 [backend] resolving provenance for metadata file
+#17 DONE 0.0s
+
+#18 [frontend internal] load metadata for docker.io/library/node:22-alpine
+#18 DONE 0.9s
+
+#19 [frontend internal] load .dockerignore
+#19 transferring context: 83B done
+#19 DONE 0.0s
+
+#20 [frontend internal] load build context
+#20 DONE 0.0s
+
+#21 [frontend build 1/6] FROM docker.io/library/node:22-alpine@sha256:0a7108bf6c7bf5de370ffb1a3ed6be93d405b43ff159f681a8d18c0e2bc2e402
+#21 resolve docker.io/library/node:22-alpine@sha256:0a7108bf6c7bf5de370ffb1a3ed6be93d405b43ff159f681a8d18c0e2bc2e402 0.1s done
+#21 DONE 0.1s
+
+#20 [frontend internal] load build context
+#20 transferring context: 774B done
+#20 DONE 0.0s
+
+#22 [frontend stage-1 4/5] COPY --from=build --chown=boah:boah /app/.next/standalone ./
+#22 CACHED
+
+#23 [frontend build 4/6] RUN npm ci
+#23 CACHED
+
+#24 [frontend build 5/6] COPY . .
+#24 CACHED
+
+#25 [frontend stage-1 3/5] RUN addgroup -g 10001 boah && adduser -D -u 10001 -G boah boah
+#25 CACHED
+
+#26 [frontend build 3/6] COPY package.json package-lock.json ./
+#26 CACHED
+
+#27 [frontend build 6/6] RUN npm run build
+#27 CACHED
+
+#28 [frontend build 2/6] WORKDIR /app
+#28 CACHED
+
+#29 [frontend stage-1 5/5] COPY --from=build --chown=boah:boah /app/.next/static ./.next/static
+#29 CACHED
+
+#30 [frontend] exporting to image
+#30 exporting layers done
+#30 exporting manifest sha256:5bb12441f79ca10d2f2e7aa484fe2357e553681219f01c9975f4f54b69893858 done
+#30 exporting config sha256:9c8246f50a9c8d5e0c735d9566d837345d6b585cf515d4bf539c3941b7ccc396 done
+#30 exporting attestation manifest sha256:5fe0ec1f4d4c3f67148772ee910d52afb4f9529f766c5a130908e9f8281a0e3a
+#30 exporting attestation manifest sha256:5fe0ec1f4d4c3f67148772ee910d52afb4f9529f766c5a130908e9f8281a0e3a 0.3s done
+#30 exporting manifest list sha256:fd8e90c9bd8e2032b2ec40db7aa9ee3cc4767d4227c0b0f62b8962ab546bd4c6
+#30 exporting manifest list sha256:fd8e90c9bd8e2032b2ec40db7aa9ee3cc4767d4227c0b0f62b8962ab546bd4c6 0.1s done
+#30 naming to docker.io/library/boah-portfolio-demo-frontend:local done
+#30 unpacking to docker.io/library/boah-portfolio-demo-frontend:local 0.0s done
+#30 DONE 0.5s
+
+#31 [frontend] resolving provenance for metadata file
+#31 DONE 0.0s
